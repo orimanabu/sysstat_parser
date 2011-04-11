@@ -183,6 +183,7 @@ module Sysstat
     class LinuxSar < Sar
         def initialize
             super(
+                # Statistics covered with '-A' option:
                 Sysstat::SarMetric.new(
                     'proc/s',
                     'proc',
@@ -288,14 +289,38 @@ module Sysstat
                     'runq',
                     '(-q) queue length and load averages',
                     0
+                ),
+                # Statistics not covered with '-A' option:
+                # command: LANG=C sar -A -x ALL -X ALL -y -d 5 50 -o sample_extra2.sar
+                Sysstat::SarMetric.new(
+                    'DEV',
+                    'blkdev',
+                    '(-d) activity  for each block device',
+                    0,
+                    'have_instance'
+                ),
+                Sysstat::SarMetric.new(
+                    'PID',
+                    'pid',
+                    '(-x pid|SELF|ALL) statistics for a given process',
+                    0,
+                    'have_instance'
+                ),
+                Sysstat::SarMetric.new(
+                    'PPID',
+                    'ppid',
+                    '(-X pid|SELF|ALL) statistics for the child processes of the process',
+                    0,
+                    'have_instance'
+                ),
+                Sysstat::SarMetric.new(
+                    'TTY',
+                    'tty',
+                    '(-y) TTY device activity',
+                    0,
+                    'have_instance'
                 )
             )
         end
     end
 end
-
-# not yet implemented options:
-# (-d) activity  for each block device
-# (-x pid|SELF|ALL) statistics for a given process
-# (-X pid|SELF|ALL) statistics for the child processes of the process
-# (-y) TTY device activity
