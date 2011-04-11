@@ -1,4 +1,4 @@
-This is sysstat parsers written in ruby.
+Sysstat parsers written in ruby.
 
 Supported sysstat commands:
   - sar

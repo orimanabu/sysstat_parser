@@ -216,14 +216,14 @@ module Sysstat
                 Sysstat::SarMetric.new(
                     'CPU  i0',
                     'intr_xall',
-                    '(-I XALL) statistics for a given interrup',
+                    '(-I XALL) statistics for a given interrupt',
                     0,
                     'have_instance'
                 ),
                 Sysstat::SarMetric.new(
                     'INTR',
                     'intr_sum',
-                    '(-I SUM) statistics for a given interrup',
+                    '(-I SUM) statistics for a given interrupt',
                     1
                 ),
                 Sysstat::SarMetric.new(
@@ -272,7 +272,7 @@ module Sysstat
                 ),
                 Sysstat::SarMetric.new(
                     'totsck',
-                    'net_socket',
+                    'net_sock',
                     '(-n SOCK) network statistics',
                     0
                 ),
