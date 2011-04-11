@@ -148,7 +148,12 @@ module Sysstat
                     next if metric == "cpu_prct"
                 sort_instances(metric).each { |instance|
                     labels[metric].each { |column|
-                        print "#{metric}:#{instance}:#{column}, "
+                        if instance == "none"
+                            label = "#{metric}:#{column}"
+                        else
+                            label = "#{metric}:#{instance}:#{column}"
+                        end
+                        print "#{label}, "
                     }
                 }
             }
