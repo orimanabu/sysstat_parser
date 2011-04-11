@@ -89,7 +89,7 @@ module Sysstat
                 else
                     if sd = match(line)
 #                        print "\t=== block (#{sd.name}) start ===\n"
-                        @data[sd.name] = Hash.new
+                        @data[sd.name] = Hash.new unless @data[sd.name]
                         current_metric = sd.name
                         @labels[sd.name] = sd.data
                     else
@@ -106,11 +106,14 @@ module Sysstat
         def sort_instances(metric)
             instances = data[metric].keys
             index_of_all = instances.index("all")
+            index_of_sum = instances.index("sum")
             index_of_none = instances.index("none")
             instances.delete_at(index_of_all) if index_of_all
+            instances.delete_at(index_of_sum) if index_of_sum
             instances.delete_at(index_of_none) if index_of_none
             instances.sort!{|a,b| a.to_i <=> b.to_i}
             instances.unshift("all") if index_of_all
+            instances.unshift("sum") if index_of_sum
             instances.unshift("none") if index_of_none
             return instances
         end
@@ -215,16 +218,17 @@ module Sysstat
                 ),
                 Sysstat::SarMetric.new(
                     'CPU  i0',
-                    'intr_xall',
-                    '(-I XALL) statistics for a given interrupt',
+                    'intr_cpu',
+                    'statistics for a given interrupt',
                     0,
                     'have_instance'
                 ),
                 Sysstat::SarMetric.new(
                     'INTR',
-                    'intr_sum',
-                    '(-I SUM) statistics for a given interrupt',
-                    1
+                    'intr_xall',
+                    '(-I SUM|XALL) statistics for a given interrupt',
+                    0,
+                    'have_instance'
                 ),
                 Sysstat::SarMetric.new(
                     'pswpin/s',
