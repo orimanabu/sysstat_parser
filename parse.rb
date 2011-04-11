@@ -5,5 +5,7 @@ require 'sysstat/sar'
 
 sar = Sysstat::LinuxSar.new
 sar.parse(ARGV.shift)
-sar.dump
+#sar.dump
 sar.print_csv_header
+#sar.get_times
+sar.print_csv_data
