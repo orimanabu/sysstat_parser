@@ -7,7 +7,11 @@ module Sysstat
         def initialize(name, time, instance, data)
             @name = name
             @time = time
-            @instance = instance
+            if instance
+                @instance = instance
+            else
+                @instance = "all"
+            end
             @data = data
         end
     end
@@ -91,11 +95,9 @@ module Sysstat
                         current_metric = sd.name
                     else
                         sd = self.metric(current_metric).parse(line)
-                        instance = sd.instance
-                        instance = "all" unless instance
 #                        print "### instance: #{instance}\n"
-                        @data[current_metric][instance] = Hash.new unless @data[current_metric][instance]
-                        @data[current_metric][instance][sd.time] = sd.data
+                        @data[current_metric][sd.instance] = Hash.new unless @data[current_metric][sd.instance]
+                        @data[current_metric][sd.instance][sd.time] = sd.data
                     end
                 end
                 nline = nline + 1
