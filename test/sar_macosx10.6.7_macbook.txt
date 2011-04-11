@@ -1,0 +1,3230 @@
+
+07:39:12  %usr  %nice   %sys   %idle
+
+07:39:12    pgout/s
+
+07:39:12     pgin/s        pflt/s        vflt/s
+
+07:39:12   device    r+w/s    blks/s
+
+07:39:12    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+
+07:39:12    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+New Disk: [disk0] IODeviceTree:/PCI0@0/SATA@B/PRT0@0/PMP@0/@0:0
+New Disk: [disk1] IOService:/IOResources/IOHDIXController/IOHDIXHDDriveOutKernel@0/IODiskImageBlockStorageDeviceOutKernel/IOBlockStorageDriver/Apple スパースバンドル・ディスクイメージ Media
+
+07:39:13  %usr  %nice   %sys   %idle
+07:39:13    4      0      3     93
+
+07:39:13    pgout/s
+07:39:13        0.0   
+
+07:39:13     pgin/s        pflt/s        vflt/s
+07:39:13        0.0           2.0         222.0
+
+07:39:13   device    r+w/s    blks/s
+07:39:13   disk0        0          0
+07:39:13   disk1        0          0
+
+07:39:13    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:13    lo0           20          2760          20          2760
+07:39:13    gif0           0             0           0             0
+07:39:13    stf0           0             0           0             0
+07:39:13    en0            0             0           0             0
+07:39:13    en1            2           340           0             0
+07:39:13    vmnet1         0             0           0             0
+07:39:13    vmnet8         0             0           0             0
+
+07:39:13    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:13    lo0             0          0        0           0
+07:39:13    gif0            0          0        0           0
+07:39:13    stf0            0          0        0           0
+07:39:13    en0             0          0        0           0
+07:39:13    en1             0          0        0           0
+07:39:13    vmnet1          0          0        0           0
+07:39:13    vmnet8          0          0        0           0
+
+07:39:14  %usr  %nice   %sys   %idle
+07:39:14    3      0      3     94
+
+07:39:14    pgout/s
+07:39:14        0.0   
+
+07:39:14     pgin/s        pflt/s        vflt/s
+07:39:14        0.0           0.0         152.0
+
+07:39:14   device    r+w/s    blks/s
+07:39:14   disk0        0          0
+07:39:14   disk1        0          0
+
+07:39:14    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:14    lo0            0             0           0             0
+07:39:14    gif0           0             0           0             0
+07:39:14    stf0           0             0           0             0
+07:39:14    en0            0             0           0             0
+07:39:14    en1            2           340           0             0
+07:39:14    vmnet1         0             0           0             0
+07:39:14    vmnet8         0             0           0             0
+
+07:39:14    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:14    lo0             0          0        0           0
+07:39:14    gif0            0          0        0           0
+07:39:14    stf0            0          0        0           0
+07:39:14    en0             0          0        0           0
+07:39:14    en1             0          0        0           0
+07:39:14    vmnet1          0          0        0           0
+07:39:14    vmnet8          0          0        0           0
+
+07:39:15  %usr  %nice   %sys   %idle
+07:39:15    3      0      3     94
+
+07:39:15    pgout/s
+07:39:15        0.0   
+
+07:39:15     pgin/s        pflt/s        vflt/s
+07:39:15        0.0           0.0         190.0
+
+07:39:15   device    r+w/s    blks/s
+07:39:15   disk0        0          0
+07:39:15   disk1        0          0
+
+07:39:15    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:15    lo0           24          3297          24          3297
+07:39:15    gif0           0             0           0             0
+07:39:15    stf0           0             0           0             0
+07:39:15    en0            0             0           0             0
+07:39:15    en1            2           340           2           296
+07:39:15    vmnet1         0             0           0             0
+07:39:15    vmnet8         0             0           0             0
+
+07:39:15    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:15    lo0             0          0        0           0
+07:39:15    gif0            0          0        0           0
+07:39:15    stf0            0          0        0           0
+07:39:15    en0             0          0        0           0
+07:39:15    en1             0          0        0           0
+07:39:15    vmnet1          0          0        0           0
+07:39:15    vmnet8          0          0        0           0
+
+07:39:16  %usr  %nice   %sys   %idle
+07:39:16    4      0      2     94
+
+07:39:16    pgout/s
+07:39:16        0.0   
+
+07:39:16     pgin/s        pflt/s        vflt/s
+07:39:16        0.0           0.0         182.0
+
+07:39:16   device    r+w/s    blks/s
+07:39:16   disk0        0          0
+07:39:16   disk1        0          0
+
+07:39:16    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:16    lo0           20          2744          20          2744
+07:39:16    gif0           0             0           0             0
+07:39:16    stf0           0             0           0             0
+07:39:16    en0            0             0           0             0
+07:39:16    en1            2           340           0             0
+07:39:16    vmnet1         0             0           0             0
+07:39:16    vmnet8         0             0           0             0
+
+07:39:16    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:16    lo0             0          0        0           0
+07:39:16    gif0            0          0        0           0
+07:39:16    stf0            0          0        0           0
+07:39:16    en0             0          0        0           0
+07:39:16    en1             0          0        0           0
+07:39:16    vmnet1          0          0        0           0
+07:39:16    vmnet8          0          0        0           0
+
+07:39:17  %usr  %nice   %sys   %idle
+07:39:17    4      0      3     92
+
+07:39:17    pgout/s
+07:39:17        0.0   
+
+07:39:17     pgin/s        pflt/s        vflt/s
+07:39:17        0.0           0.0         191.0
+
+07:39:17   device    r+w/s    blks/s
+07:39:17   disk0        0          0
+07:39:17   disk1        0          0
+
+07:39:17    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:17    lo0           20          2750          20          2750
+07:39:17    gif0           0             0           0             0
+07:39:17    stf0           0             0           0             0
+07:39:17    en0            0             0           0             0
+07:39:17    en1            2           340           0             0
+07:39:17    vmnet1         0             0           0             0
+07:39:17    vmnet8         0             0           0             0
+
+07:39:17    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:17    lo0             0          0        0           0
+07:39:17    gif0            0          0        0           0
+07:39:17    stf0            0          0        0           0
+07:39:17    en0             0          0        0           0
+07:39:17    en1             0          0        0           0
+07:39:17    vmnet1          0          0        0           0
+07:39:17    vmnet8          0          0        0           0
+
+07:39:18  %usr  %nice   %sys   %idle
+07:39:18    4      0      3     94
+
+07:39:18    pgout/s
+07:39:18        0.0   
+
+07:39:18     pgin/s        pflt/s        vflt/s
+07:39:18        0.0           0.0         186.0
+
+07:39:18   device    r+w/s    blks/s
+07:39:18   disk0        0          0
+07:39:18   disk1        0          0
+
+07:39:18    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:18    lo0           20          2765          20          2765
+07:39:18    gif0           0             0           0             0
+07:39:18    stf0           0             0           0             0
+07:39:18    en0            0             0           0             0
+07:39:18    en1            4           651           2           304
+07:39:18    vmnet1         0             0           0             0
+07:39:18    vmnet8         0             0           0             0
+
+07:39:18    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:18    lo0             0          0        0           0
+07:39:18    gif0            0          0        0           0
+07:39:18    stf0            0          0        0           0
+07:39:18    en0             0          0        0           0
+07:39:18    en1             0          0        0           0
+07:39:18    vmnet1          0          0        0           0
+07:39:18    vmnet8          0          0        0           0
+
+07:39:19  %usr  %nice   %sys   %idle
+07:39:19    4      0      2     94
+
+07:39:19    pgout/s
+07:39:19        0.0   
+
+07:39:19     pgin/s        pflt/s        vflt/s
+07:39:19        0.0           0.0          64.0
+
+07:39:19   device    r+w/s    blks/s
+07:39:19   disk0        0          0
+07:39:19   disk1        0          0
+
+07:39:19    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:19    lo0            0             0           0             0
+07:39:19    gif0           0             0           0             0
+07:39:19    stf0           0             0           0             0
+07:39:19    en0            0             0           0             0
+07:39:19    en1            3           458           1            66
+07:39:19    vmnet1         0             0           0             0
+07:39:19    vmnet8         0             0           0             0
+
+07:39:19    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:19    lo0             0          0        0           0
+07:39:19    gif0            0          0        0           0
+07:39:19    stf0            0          0        0           0
+07:39:19    en0             0          0        0           0
+07:39:19    en1             0          0        0           0
+07:39:19    vmnet1          0          0        0           0
+07:39:19    vmnet8          0          0        0           0
+
+07:39:20  %usr  %nice   %sys   %idle
+07:39:20    3      0      3     94
+
+07:39:20    pgout/s
+07:39:20        0.0   
+
+07:39:20     pgin/s        pflt/s        vflt/s
+07:39:20        0.0           0.0         188.0
+
+07:39:20   device    r+w/s    blks/s
+07:39:20   disk0        0          0
+07:39:20   disk1        0          0
+
+07:39:20    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:20    lo0           20          2752          20          2752
+07:39:20    gif0           0             0           0             0
+07:39:20    stf0           0             0           0             0
+07:39:20    en0            0             0           0             0
+07:39:20    en1            2           340           0             0
+07:39:20    vmnet1         0             0           0             0
+07:39:20    vmnet8         0             0           0             0
+
+07:39:20    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:20    lo0             0          0        0           0
+07:39:20    gif0            0          0        0           0
+07:39:20    stf0            0          0        0           0
+07:39:20    en0             0          0        0           0
+07:39:20    en1             0          0        0           0
+07:39:20    vmnet1          0          0        0           0
+07:39:20    vmnet8          0          0        0           0
+
+07:39:21  %usr  %nice   %sys   %idle
+07:39:21    4      0      3     93
+
+07:39:21    pgout/s
+07:39:21        0.0   
+
+07:39:21     pgin/s        pflt/s        vflt/s
+07:39:21        0.0           4.0         246.0
+
+07:39:21   device    r+w/s    blks/s
+07:39:21   disk0        0          0
+07:39:21   disk1        0          0
+
+07:39:21    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:21    lo0           20          2755          20          2755
+07:39:21    gif0           0             0           0             0
+07:39:21    stf0           0             0           0             0
+07:39:21    en0            0             0           0             0
+07:39:21    en1            2           340           0             0
+07:39:21    vmnet1         0             0           0             0
+07:39:21    vmnet8         0             0           0             0
+
+07:39:21    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:21    lo0             0          0        0           0
+07:39:21    gif0            0          0        0           0
+07:39:21    stf0            0          0        0           0
+07:39:21    en0             0          0        0           0
+07:39:21    en1             0          0        0           0
+07:39:21    vmnet1          0          0        0           0
+07:39:21    vmnet8          0          0        0           0
+
+07:39:22  %usr  %nice   %sys   %idle
+07:39:22    5      0      4     92
+
+07:39:22    pgout/s
+07:39:22        0.0   
+
+07:39:22     pgin/s        pflt/s        vflt/s
+07:39:22        0.0           1.0         193.0
+
+07:39:22   device    r+w/s    blks/s
+07:39:22   disk0        0          0
+07:39:22   disk1        0          0
+
+07:39:22    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:22    lo0           20          2739          20          2739
+07:39:22    gif0           0             0           0             0
+07:39:22    stf0           0             0           0             0
+07:39:22    en0            0             0           0             0
+07:39:22    en1           12          3806           0             0
+07:39:22    vmnet1         0             0           0             0
+07:39:22    vmnet8         0             0           0             0
+
+07:39:22    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:22    lo0             0          0        0           0
+07:39:22    gif0            0          0        0           0
+07:39:22    stf0            0          0        0           0
+07:39:22    en0             0          0        0           0
+07:39:22    en1             0          0        0           0
+07:39:22    vmnet1          0          0        0           0
+07:39:22    vmnet8          0          0        0           0
+
+07:39:23  %usr  %nice   %sys   %idle
+07:39:23    5      0      4     91
+
+07:39:23    pgout/s
+07:39:23        0.0   
+
+07:39:23     pgin/s        pflt/s        vflt/s
+07:39:23        0.0           1.0          73.0
+
+07:39:23   device    r+w/s    blks/s
+07:39:23   disk0        0          0
+07:39:23   disk1        0          0
+
+07:39:23    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:23    lo0            0             0           0             0
+07:39:23    gif0           0             0           0             0
+07:39:23    stf0           0             0           0             0
+07:39:23    en0            0             0           0             0
+07:39:23    en1           12          3806           0             0
+07:39:23    vmnet1         0             0           0             0
+07:39:23    vmnet8         0             0           0             0
+
+07:39:23    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:23    lo0             0          0        0           0
+07:39:23    gif0            0          0        0           0
+07:39:23    stf0            0          0        0           0
+07:39:23    en0             0          0        0           0
+07:39:23    en1             0          0        0           0
+07:39:23    vmnet1          0          0        0           0
+07:39:23    vmnet8          0          0        0           0
+
+07:39:24  %usr  %nice   %sys   %idle
+07:39:24    5      0      4     90
+
+07:39:24    pgout/s
+07:39:24        0.0   
+
+07:39:24     pgin/s        pflt/s        vflt/s
+07:39:24        0.0           0.0         214.0
+
+07:39:24   device    r+w/s    blks/s
+07:39:24   disk0        1          8
+07:39:24   disk1        0          0
+
+07:39:24    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:24    lo0           21          2806          21          2806
+07:39:24    gif0           0             0           0             0
+07:39:24    stf0           0             0           0             0
+07:39:24    en0            0             0           0             0
+07:39:24    en1            4           488           2           148
+07:39:24    vmnet1         0             0           0             0
+07:39:24    vmnet8         0             0           0             0
+
+07:39:24    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:24    lo0             0          0        0           0
+07:39:24    gif0            0          0        0           0
+07:39:24    stf0            0          0        0           0
+07:39:24    en0             0          0        0           0
+07:39:24    en1             0          0        0           0
+07:39:24    vmnet1          0          0        0           0
+07:39:24    vmnet8          0          0        0           0
+
+07:39:25  %usr  %nice   %sys   %idle
+07:39:25    5      0      6     89
+
+07:39:25    pgout/s
+07:39:25        0.0   
+
+07:39:25     pgin/s        pflt/s        vflt/s
+07:39:25        0.0           0.0         198.0
+
+07:39:25   device    r+w/s    blks/s
+07:39:25   disk0       20        564
+07:39:25   disk1        0          0
+
+07:39:25    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:25    lo0           20          2746          20          2746
+07:39:25    gif0           0             0           0             0
+07:39:25    stf0           0             0           0             0
+07:39:25    en0            0             0           0             0
+07:39:25    en1            2           340           0             0
+07:39:25    vmnet1         0             0           0             0
+07:39:25    vmnet8         0             0           0             0
+
+07:39:25    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:25    lo0             0          0        0           0
+07:39:25    gif0            0          0        0           0
+07:39:25    stf0            0          0        0           0
+07:39:25    en0             0          0        0           0
+07:39:25    en1             0          0        0           0
+07:39:25    vmnet1          0          0        0           0
+07:39:25    vmnet8          0          0        0           0
+
+07:39:26  %usr  %nice   %sys   %idle
+07:39:26    6      0      4     90
+
+07:39:26    pgout/s
+07:39:26        0.0   
+
+07:39:26     pgin/s        pflt/s        vflt/s
+07:39:26        2.0           0.0         307.0
+
+07:39:26   device    r+w/s    blks/s
+07:39:26   disk0        2         16
+07:39:26   disk1        0          0
+
+07:39:26    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:26    lo0           20          2756          20          2756
+07:39:26    gif0           0             0           0             0
+07:39:26    stf0           0             0           0             0
+07:39:26    en0            0             0           0             0
+07:39:26    en1            2           340           0             0
+07:39:26    vmnet1         0             0           0             0
+07:39:26    vmnet8         0             0           0             0
+
+07:39:26    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:26    lo0             0          0        0           0
+07:39:26    gif0            0          0        0           0
+07:39:26    stf0            0          0        0           0
+07:39:26    en0             0          0        0           0
+07:39:26    en1             0          0        0           0
+07:39:26    vmnet1          0          0        0           0
+07:39:26    vmnet8          0          0        0           0
+
+07:39:27  %usr  %nice   %sys   %idle
+07:39:27    3      0      3     94
+
+07:39:27    pgout/s
+07:39:27        0.0   
+
+07:39:27     pgin/s        pflt/s        vflt/s
+07:39:27        0.0           0.0         175.0
+
+07:39:27   device    r+w/s    blks/s
+07:39:27   disk0        0          0
+07:39:27   disk1        0          0
+
+07:39:27    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:27    lo0            8           678           8           678
+07:39:27    gif0           0             0           0             0
+07:39:27    stf0           0             0           0             0
+07:39:27    en0            0             0           0             0
+07:39:27    en1            2           340           0             0
+07:39:27    vmnet1         0             0           0             0
+07:39:27    vmnet8         0             0           0             0
+
+07:39:27    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:27    lo0             0          0        0           0
+07:39:27    gif0            0          0        0           0
+07:39:27    stf0            0          0        0           0
+07:39:27    en0             0          0        0           0
+07:39:27    en1             0          0        0           0
+07:39:27    vmnet1          0          0        0           0
+07:39:27    vmnet8          0          0        0           0
+
+07:39:28  %usr  %nice   %sys   %idle
+07:39:28   13      0      6     80
+
+07:39:28    pgout/s
+07:39:28        0.0   
+
+07:39:28     pgin/s        pflt/s        vflt/s
+07:39:28        2.0         292.0        2839.0
+
+07:39:28   device    r+w/s    blks/s
+07:39:28   disk0        0          0
+07:39:28   disk1        0          0
+
+07:39:28    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:28    lo0           16          2369          16          2369
+07:39:28    gif0           0             0           0             0
+07:39:28    stf0           0             0           0             0
+07:39:28    en0            0             0           0             0
+07:39:28    en1           15          1837          20          1561
+07:39:28    vmnet1         0             0           0             0
+07:39:28    vmnet8         0             0           0             0
+
+07:39:28    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:28    lo0             0          0        0           0
+07:39:28    gif0            0          0        0           0
+07:39:28    stf0            0          0        0           0
+07:39:28    en0             0          0        0           0
+07:39:28    en1             0          0        0           0
+07:39:28    vmnet1          0          0        0           0
+07:39:28    vmnet8          0          0        0           0
+
+07:39:29  %usr  %nice   %sys   %idle
+07:39:29    7      0      6     87
+
+07:39:29    pgout/s
+07:39:29        0.0   
+
+07:39:29     pgin/s        pflt/s        vflt/s
+07:39:29        0.0           1.0         420.0
+
+07:39:29   device    r+w/s    blks/s
+07:39:29   disk0        0          0
+07:39:29   disk1        0          0
+
+07:39:29    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:29    lo0           20          2757          20          2757
+07:39:29    gif0           0             0           0             0
+07:39:29    stf0           0             0           0             0
+07:39:29    en0            0             0           0             0
+07:39:29    en1           12          1154           8           702
+07:39:29    vmnet1         0             0           0             0
+07:39:29    vmnet8         0             0           0             0
+
+07:39:29    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:29    lo0             0          0        0           0
+07:39:29    gif0            0          0        0           0
+07:39:29    stf0            0          0        0           0
+07:39:29    en0             0          0        0           0
+07:39:29    en1             0          0        0           0
+07:39:29    vmnet1          0          0        0           0
+07:39:29    vmnet8          0          0        0           0
+
+07:39:30  %usr  %nice   %sys   %idle
+07:39:30   30      0      9     61
+
+07:39:30    pgout/s
+07:39:30        0.0   
+
+07:39:30     pgin/s        pflt/s        vflt/s
+07:39:30        0.0         367.0        5517.0
+
+07:39:30   device    r+w/s    blks/s
+07:39:30   disk0        5         19
+07:39:30   disk1        0          0
+
+07:39:30    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:30    lo0           24          3115          24          3115
+07:39:30    gif0           0             0           0             0
+07:39:30    stf0           0             0           0             0
+07:39:30    en0            0             0           0             0
+07:39:30    en1           81         10207         131         11714
+07:39:30    vmnet1         0             0           0             0
+07:39:30    vmnet8         0             0           0             0
+
+07:39:30    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:30    lo0             0          0        0           0
+07:39:30    gif0            0          0        0           0
+07:39:30    stf0            0          0        0           0
+07:39:30    en0             0          0        0           0
+07:39:30    en1             0          0        0           0
+07:39:30    vmnet1          0          0        0           0
+07:39:30    vmnet8          0          0        0           0
+
+07:39:31  %usr  %nice   %sys   %idle
+07:39:31    6      0      6     88
+
+07:39:31    pgout/s
+07:39:31        0.0   
+
+07:39:31     pgin/s        pflt/s        vflt/s
+07:39:31        0.0           1.0         303.0
+
+07:39:31   device    r+w/s    blks/s
+07:39:31   disk0        0          0
+07:39:31   disk1        0          0
+
+07:39:31    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:31    lo0           20          2768          20          2768
+07:39:31    gif0           0             0           0             0
+07:39:31    stf0           0             0           0             0
+07:39:31    en0            0             0           0             0
+07:39:31    en1           37          4926          69          5948
+07:39:31    vmnet1         0             0           0             0
+07:39:31    vmnet8         0             0           0             0
+
+07:39:31    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:31    lo0             0          0        0           0
+07:39:31    gif0            0          0        0           0
+07:39:31    stf0            0          0        0           0
+07:39:31    en0             0          0        0           0
+07:39:31    en1             0          0        0           0
+07:39:31    vmnet1          0          0        0           0
+07:39:31    vmnet8          0          0        0           0
+
+07:39:32  %usr  %nice   %sys   %idle
+07:39:32    7      0      5     88
+
+07:39:32    pgout/s
+07:39:32        0.0   
+
+07:39:32     pgin/s        pflt/s        vflt/s
+07:39:32        0.0           0.0         210.0
+
+07:39:32   device    r+w/s    blks/s
+07:39:32   disk0        0          0
+07:39:32   disk1        0          0
+
+07:39:32    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:32    lo0            0             0           0             0
+07:39:32    gif0           0             0           0             0
+07:39:32    stf0           0             0           0             0
+07:39:32    en0            0             0           0             0
+07:39:32    en1            2           340           0             0
+07:39:32    vmnet1         0             0           0             0
+07:39:32    vmnet8         0             0           0             0
+
+07:39:32    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:32    lo0             0          0        0           0
+07:39:32    gif0            0          0        0           0
+07:39:32    stf0            0          0        0           0
+07:39:32    en0             0          0        0           0
+07:39:32    en1             0          0        0           0
+07:39:32    vmnet1          0          0        0           0
+07:39:32    vmnet8          0          0        0           0
+
+07:39:33  %usr  %nice   %sys   %idle
+07:39:33    8      0     11     81
+
+07:39:33    pgout/s
+07:39:33        0.0   
+
+07:39:33     pgin/s        pflt/s        vflt/s
+07:39:33        0.0         300.0        1843.0
+
+07:39:33   device    r+w/s    blks/s
+07:39:33   disk0        1          8
+07:39:33   disk1        0          0
+
+07:39:33    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:33    lo0           20          2763          20          2763
+07:39:33    gif0           0             0           0             0
+07:39:33    stf0           0             0           0             0
+07:39:33    en0            0             0           0             0
+07:39:33    en1          430        514049         279         21802
+07:39:33    vmnet1         0             0           0             0
+07:39:33    vmnet8         0             0           0             0
+
+07:39:33    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:33    lo0             0          0        0           0
+07:39:33    gif0            0          0        0           0
+07:39:33    stf0            0          0        0           0
+07:39:33    en0             0          0        0           0
+07:39:33    en1             0          0        0           0
+07:39:33    vmnet1          0          0        0           0
+07:39:33    vmnet8          0          0        0           0
+New Disk: [disk3] IOService:/IOResources/IOHDIXController/IOHDIXHDDriveOutKernel@7b/IODiskImageBlockStorageDeviceOutKernel/IOBlockStorageDriver/Apple スパースバンドル・ディスクイメージ Media
+
+07:39:34  %usr  %nice   %sys   %idle
+07:39:34    8      0     14     78
+
+07:39:34    pgout/s
+07:39:34        0.0   
+
+07:39:34     pgin/s        pflt/s        vflt/s
+07:39:34        0.0        1058.0        4437.0
+
+07:39:34   device    r+w/s    blks/s
+07:39:34   disk0        0          0
+07:39:34   disk1        0          0
+07:39:34   disk3        0          0
+
+07:39:34    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:34    lo0           20          2746          20          2746
+07:39:34    gif0           0             0           0             0
+07:39:34    stf0           0             0           0             0
+07:39:34    en0            0             0           0             0
+07:39:34    en1          471        536894         340         26567
+07:39:34    vmnet1         0             0           0             0
+07:39:34    vmnet8         0             0           0             0
+
+07:39:34    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:34    lo0             0          0        0           0
+07:39:34    gif0            0          0        0           0
+07:39:34    stf0            0          0        0           0
+07:39:34    en0             0          0        0           0
+07:39:34    en1             0          0        0           0
+07:39:34    vmnet1          0          0        0           0
+07:39:34    vmnet8          0          0        0           0
+
+07:39:35  %usr  %nice   %sys   %idle
+07:39:35    7      0      9     84
+
+07:39:35    pgout/s
+07:39:35        0.0   
+
+07:39:35     pgin/s        pflt/s        vflt/s
+07:39:35        0.0         517.0        3476.0
+
+07:39:35   device    r+w/s    blks/s
+07:39:35   disk0        0          0
+07:39:35   disk1        0          0
+07:39:35   disk3        8        100
+
+07:39:35    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:35    lo0           20          2780          20          2780
+07:39:35    gif0           0             0           0             0
+07:39:35    stf0           0             0           0             0
+07:39:35    en0            0             0           0             0
+07:39:35    en1           83         87404          70          5686
+07:39:35    vmnet1         0             0           0             0
+07:39:35    vmnet8         0             0           0             0
+
+07:39:35    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:35    lo0             0          0        0           0
+07:39:35    gif0            0          0        0           0
+07:39:35    stf0            0          0        0           0
+07:39:35    en0             0          0        0           0
+07:39:35    en1             0          0        0           0
+07:39:35    vmnet1          0          0        0           0
+07:39:35    vmnet8          0          0        0           0
+
+07:39:36  %usr  %nice   %sys   %idle
+07:39:36    7      0      8     86
+
+07:39:36    pgout/s
+07:39:36        0.0   
+
+07:39:36     pgin/s        pflt/s        vflt/s
+07:39:36        0.0           9.0         486.0
+
+07:39:36   device    r+w/s    blks/s
+07:39:36   disk0        1          8
+07:39:36   disk1        0          0
+07:39:36   disk3        1         64
+
+07:39:36    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:36    lo0            0             0           0             0
+07:39:36    gif0           0             0           0             0
+07:39:36    stf0           0             0           0             0
+07:39:36    en0            0             0           0             0
+07:39:36    en1            8          4887           9           721
+07:39:36    vmnet1         0             0           0             0
+07:39:36    vmnet8         0             0           0             0
+
+07:39:36    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:36    lo0             0          0        0           0
+07:39:36    gif0            0          0        0           0
+07:39:36    stf0            0          0        0           0
+07:39:36    en0             0          0        0           0
+07:39:36    en1             0          0        0           0
+07:39:36    vmnet1          0          0        0           0
+07:39:36    vmnet8          0          0        0           0
+
+07:39:37  %usr  %nice   %sys   %idle
+07:39:37    7      0      5     88
+
+07:39:37    pgout/s
+07:39:37        0.0   
+
+07:39:37     pgin/s        pflt/s        vflt/s
+07:39:37        0.0         148.0        1684.0
+
+07:39:37   device    r+w/s    blks/s
+07:39:37   disk0        1          8
+07:39:37   disk1        0          0
+07:39:37   disk3        2        128
+
+07:39:37    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:37    lo0           20          2790          20          2790
+07:39:37    gif0           0             0           0             0
+07:39:37    stf0           0             0           0             0
+07:39:37    en0            0             0           0             0
+07:39:37    en1           48         68944          18          1260
+07:39:37    vmnet1         0             0           0             0
+07:39:37    vmnet8         0             0           0             0
+
+07:39:37    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:37    lo0             0          0        0           0
+07:39:37    gif0            0          0        0           0
+07:39:37    stf0            0          0        0           0
+07:39:37    en0             0          0        0           0
+07:39:37    en1             0          0        0           0
+07:39:37    vmnet1          0          0        0           0
+07:39:37    vmnet8          0          0        0           0
+New Disk: [disk4] IOService:/IOResources/IOHDIXController/IOHDIXHDDriveOutKernel@7c/IODiskImageBlockStorageDeviceOutKernel/IOBlockStorageDriver/Apple スパースバンドル・ディスクイメージ Media
+
+07:39:38  %usr  %nice   %sys   %idle
+07:39:38    9      0     15     77
+
+07:39:38    pgout/s
+07:39:38        0.0   
+
+07:39:38     pgin/s        pflt/s        vflt/s
+07:39:38        0.0        1033.0        4926.0
+
+07:39:38   device    r+w/s    blks/s
+07:39:38   disk0        0          0
+07:39:38   disk1        0          0
+07:39:38   disk4        0          0
+
+07:39:38    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:38    lo0           20          2776          20          2776
+07:39:38    gif0           0             0           0             0
+07:39:38    stf0           0             0           0             0
+07:39:38    en0            0             0           0             0
+07:39:38    en1          509        567404         403         32363
+07:39:38    vmnet1         0             0           0             0
+07:39:38    vmnet8         0             0           0             0
+
+07:39:38    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:38    lo0             0          0        0           0
+07:39:38    gif0            0          0        0           0
+07:39:38    stf0            0          0        0           0
+07:39:38    en0             0          0        0           0
+07:39:38    en1             0          0        0           0
+07:39:38    vmnet1          0          0        0           0
+07:39:38    vmnet8          0          0        0           0
+
+07:39:39  %usr  %nice   %sys   %idle
+07:39:39    9      0     19     72
+
+07:39:39    pgout/s
+07:39:39        0.0   
+
+07:39:39     pgin/s        pflt/s        vflt/s
+07:39:39        0.0        2377.0        9491.0
+
+07:39:39   device    r+w/s    blks/s
+07:39:39   disk0        3         32
+07:39:39   disk1        0          0
+07:39:39   disk4       86        973
+
+07:39:39    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:39    lo0           20          2781          20          2781
+07:39:39    gif0           0             0           0             0
+07:39:39    stf0           0             0           0             0
+07:39:39    en0            0             0           0             0
+07:39:39    en1          447        532835         350         28821
+07:39:39    vmnet1         0             0           0             0
+07:39:39    vmnet8         0             0           0             0
+
+07:39:39    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:39    lo0             0          0        0           0
+07:39:39    gif0            0          0        0           0
+07:39:39    stf0            0          0        0           0
+07:39:39    en0             0          0        0           0
+07:39:39    en1             0          0        0           0
+07:39:39    vmnet1          0          0        0           0
+07:39:39    vmnet8          0          0        0           0
+
+07:39:40  %usr  %nice   %sys   %idle
+07:39:40   12      0     12     76
+
+07:39:40    pgout/s
+07:39:40        0.0   
+
+07:39:40     pgin/s        pflt/s        vflt/s
+07:39:40        0.0         250.0        2503.0
+
+07:39:40   device    r+w/s    blks/s
+07:39:40   disk0        2         16
+07:39:40   disk1        0          0
+07:39:40   disk4       29        384
+
+07:39:40    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:40    lo0           20          2776          20          2776
+07:39:40    gif0           0             0           0             0
+07:39:40    stf0           0             0           0             0
+07:39:40    en0            0             0           0             0
+07:39:40    en1          257        221573         265         21629
+07:39:40    vmnet1         0             0           0             0
+07:39:40    vmnet8         0             0           0             0
+
+07:39:40    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:40    lo0             0          0        0           0
+07:39:40    gif0            0          0        0           0
+07:39:40    stf0            0          0        0           0
+07:39:40    en0             0          0        0           0
+07:39:40    en1             0          0        0           0
+07:39:40    vmnet1          0          0        0           0
+07:39:40    vmnet8          0          0        0           0
+
+07:39:41  %usr  %nice   %sys   %idle
+07:39:41   12      0     11     77
+
+07:39:41    pgout/s
+07:39:41        0.0   
+
+07:39:41     pgin/s        pflt/s        vflt/s
+07:39:41        0.0         101.0        1685.0
+
+07:39:41   device    r+w/s    blks/s
+07:39:41   disk0        8         15
+07:39:41   disk1        0          0
+07:39:41   disk4       19        616
+
+07:39:41    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:41    lo0            0             0           0             0
+07:39:41    gif0           0             0           0             0
+07:39:41    stf0           0             0           0             0
+07:39:41    en0            0             0           0             0
+07:39:41    en1          297        339994         204         16293
+07:39:41    vmnet1         0             0           0             0
+07:39:41    vmnet8         0             0           0             0
+
+07:39:41    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:41    lo0             0          0        0           0
+07:39:41    gif0            0          0        0           0
+07:39:41    stf0            0          0        0           0
+07:39:41    en0             0          0        0           0
+07:39:41    en1             0          0        0           0
+07:39:41    vmnet1          0          0        0           0
+07:39:41    vmnet8          0          0        0           0
+
+07:39:42  %usr  %nice   %sys   %idle
+07:39:42    9      0      7     84
+
+07:39:42    pgout/s
+07:39:42        0.0   
+
+07:39:42     pgin/s        pflt/s        vflt/s
+07:39:42        0.0           0.0         348.0
+
+07:39:42   device    r+w/s    blks/s
+07:39:42   disk0        0          0
+07:39:42   disk1        0          0
+07:39:42   disk4       15        344
+
+07:39:42    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:42    lo0           20          2760          20          2760
+07:39:42    gif0           0             0           0             0
+07:39:42    stf0           0             0           0             0
+07:39:42    en0            0             0           0             0
+07:39:42    en1          185        192168         142         11516
+07:39:42    vmnet1         0             0           0             0
+07:39:42    vmnet8         0             0           0             0
+
+07:39:42    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:42    lo0             0          0        0           0
+07:39:42    gif0            0          0        0           0
+07:39:42    stf0            0          0        0           0
+07:39:42    en0             0          0        0           0
+07:39:42    en1             0          0        0           0
+07:39:42    vmnet1          0          0        0           0
+07:39:42    vmnet8          0          0        0           0
+
+07:39:43  %usr  %nice   %sys   %idle
+07:39:43    9      0      8     83
+
+07:39:43    pgout/s
+07:39:43        0.0   
+
+07:39:43     pgin/s        pflt/s        vflt/s
+07:39:43        0.0           0.0         320.0
+
+07:39:43   device    r+w/s    blks/s
+07:39:43   disk0        0          0
+07:39:43   disk1        0          0
+07:39:43   disk4       17        376
+
+07:39:43    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:43    lo0           20          2758          20          2758
+07:39:43    gif0           0             0           0             0
+07:39:43    stf0           0             0           0             0
+07:39:43    en0            0             0           0             0
+07:39:43    en1          212        211073         167         13602
+07:39:43    vmnet1         0             0           0             0
+07:39:43    vmnet8         0             0           0             0
+
+07:39:43    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:43    lo0             0          0        0           0
+07:39:43    gif0            0          0        0           0
+07:39:43    stf0            0          0        0           0
+07:39:43    en0             0          0        0           0
+07:39:43    en1             0          0        0           0
+07:39:43    vmnet1          0          0        0           0
+07:39:43    vmnet8          0          0        0           0
+
+07:39:44  %usr  %nice   %sys   %idle
+07:39:44   10      0      7     83
+
+07:39:44    pgout/s
+07:39:44        0.0   
+
+07:39:44     pgin/s        pflt/s        vflt/s
+07:39:44        0.0           1.0         344.0
+
+07:39:44   device    r+w/s    blks/s
+07:39:44   disk0        0          0
+07:39:44   disk1        0          0
+07:39:44   disk4       23        344
+
+07:39:44    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:44    lo0           20          2769          20          2769
+07:39:44    gif0           0             0           0             0
+07:39:44    stf0           0             0           0             0
+07:39:44    en0            0             0           0             0
+07:39:44    en1          197        194145         181         14884
+07:39:44    vmnet1         0             0           0             0
+07:39:44    vmnet8         0             0           0             0
+
+07:39:44    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:44    lo0             0          0        0           0
+07:39:44    gif0            0          0        0           0
+07:39:44    stf0            0          0        0           0
+07:39:44    en0             0          0        0           0
+07:39:44    en1             0          0        0           0
+07:39:44    vmnet1          0          0        0           0
+07:39:44    vmnet8          0          0        0           0
+
+07:39:45  %usr  %nice   %sys   %idle
+07:39:45    9      0      8     82
+
+07:39:45    pgout/s
+07:39:45        0.0   
+
+07:39:45     pgin/s        pflt/s        vflt/s
+07:39:45        0.0           0.0         439.0
+
+07:39:45   device    r+w/s    blks/s
+07:39:45   disk0        0          0
+07:39:45   disk1        0          0
+07:39:45   disk4       30        480
+
+07:39:45    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:45    lo0            4           552           4           552
+07:39:45    gif0           0             0           0             0
+07:39:45    stf0           0             0           0             0
+07:39:45    en0            0             0           0             0
+07:39:45    en1          268        271345         223         18567
+07:39:45    vmnet1         0             0           0             0
+07:39:45    vmnet8         0             0           0             0
+
+07:39:45    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:45    lo0             0          0        0           0
+07:39:45    gif0            0          0        0           0
+07:39:45    stf0            0          0        0           0
+07:39:45    en0             0          0        0           0
+07:39:45    en1             0          0        0           0
+07:39:45    vmnet1          0          0        0           0
+07:39:45    vmnet8          0          0        0           0
+
+07:39:46  %usr  %nice   %sys   %idle
+07:39:46    9      0      8     82
+
+07:39:46    pgout/s
+07:39:46        0.0   
+
+07:39:46     pgin/s        pflt/s        vflt/s
+07:39:46        0.0           4.0         332.0
+
+07:39:46   device    r+w/s    blks/s
+07:39:46   disk0        0          0
+07:39:46   disk1        0          0
+07:39:46   disk4       29        464
+
+07:39:46    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:46    lo0           20          2772          20          2772
+07:39:46    gif0           0             0           0             0
+07:39:46    stf0           0             0           0             0
+07:39:46    en0            0             0           0             0
+07:39:46    en1          255        261572         212         17606
+07:39:46    vmnet1         0             0           0             0
+07:39:46    vmnet8         0             0           0             0
+
+07:39:46    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:46    lo0             0          0        0           0
+07:39:46    gif0            0          0        0           0
+07:39:46    stf0            0          0        0           0
+07:39:46    en0             0          0        0           0
+07:39:46    en1             0          0        0           0
+07:39:46    vmnet1          0          0        0           0
+07:39:46    vmnet8          0          0        0           0
+
+07:39:47  %usr  %nice   %sys   %idle
+07:39:47    9      0      9     82
+
+07:39:47    pgout/s
+07:39:47        0.0   
+
+07:39:47     pgin/s        pflt/s        vflt/s
+07:39:47        0.0           0.0         367.0
+
+07:39:47   device    r+w/s    blks/s
+07:39:47   disk0        0          0
+07:39:47   disk1        0          0
+07:39:47   disk4       53        848
+
+07:39:47    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:47    lo0           20          2763          20          2763
+07:39:47    gif0           0             0           0             0
+07:39:47    stf0           0             0           0             0
+07:39:47    en0            0             0           0             0
+07:39:47    en1          398        465324         266         22180
+07:39:47    vmnet1         0             0           0             0
+07:39:47    vmnet8         0             0           0             0
+
+07:39:47    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:47    lo0             0          0        0           0
+07:39:47    gif0            0          0        0           0
+07:39:47    stf0            0          0        0           0
+07:39:47    en0             0          0        0           0
+07:39:47    en1             0          0        0           0
+07:39:47    vmnet1          0          0        0           0
+07:39:47    vmnet8          0          0        0           0
+
+07:39:48  %usr  %nice   %sys   %idle
+07:39:48   12      0     14     74
+
+07:39:48    pgout/s
+07:39:48        0.0   
+
+07:39:48     pgin/s        pflt/s        vflt/s
+07:39:48        0.0         144.0        2269.0
+
+07:39:48   device    r+w/s    blks/s
+07:39:48   disk0        0          0
+07:39:48   disk1        0          0
+07:39:48   disk4      119       1248
+
+07:39:48    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:48    lo0           20          2731          20          2731
+07:39:48    gif0           0             0           0             0
+07:39:48    stf0           0             0           0             0
+07:39:48    en0            0             0           0             0
+07:39:48    en1          529        676038         356         29823
+07:39:48    vmnet1         0             0           0             0
+07:39:48    vmnet8         0             0           0             0
+
+07:39:48    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:48    lo0             0          0        0           0
+07:39:48    gif0            0          0        0           0
+07:39:48    stf0            0          0        0           0
+07:39:48    en0             0          0        0           0
+07:39:48    en1             0          0        0           0
+07:39:48    vmnet1          0          0        0           0
+07:39:48    vmnet8          0          0        0           0
+
+07:39:49  %usr  %nice   %sys   %idle
+07:39:49    9      0      9     82
+
+07:39:49    pgout/s
+07:39:49        0.0   
+
+07:39:49     pgin/s        pflt/s        vflt/s
+07:39:49        0.0           0.0         334.0
+
+07:39:49   device    r+w/s    blks/s
+07:39:49   disk0        0          0
+07:39:49   disk1        0          0
+07:39:49   disk4       35        560
+
+07:39:49    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:49    lo0           20          2772          20          2772
+07:39:49    gif0           0             0           0             0
+07:39:49    stf0           0             0           0             0
+07:39:49    en0            0             0           0             0
+07:39:49    en1          336        317576         306         29452
+07:39:49    vmnet1         0             0           0             0
+07:39:49    vmnet8         0             0           0             0
+
+07:39:49    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:49    lo0             0          0        0           0
+07:39:49    gif0            0          0        0           0
+07:39:49    stf0            0          0        0           0
+07:39:49    en0             0          0        0           0
+07:39:49    en1             0          0        0           0
+07:39:49    vmnet1          0          0        0           0
+07:39:49    vmnet8          0          0        0           0
+
+07:39:50  %usr  %nice   %sys   %idle
+07:39:50    9      0      8     83
+
+07:39:50    pgout/s
+07:39:50        0.0   
+
+07:39:50     pgin/s        pflt/s        vflt/s
+07:39:50        0.0           0.0         248.0
+
+07:39:50   device    r+w/s    blks/s
+07:39:50   disk0        0          0
+07:39:50   disk1        0          0
+07:39:50   disk4       36        576
+
+07:39:50    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:50    lo0            0             0           0             0
+07:39:50    gif0           0             0           0             0
+07:39:50    stf0           0             0           0             0
+07:39:50    en0            0             0           0             0
+07:39:50    en1          321        324159         281         23365
+07:39:50    vmnet1         0             0           0             0
+07:39:50    vmnet8         0             0           0             0
+
+07:39:50    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:50    lo0             0          0        0           0
+07:39:50    gif0            0          0        0           0
+07:39:50    stf0            0          0        0           0
+07:39:50    en0             0          0        0           0
+07:39:50    en1             0          0        0           0
+07:39:50    vmnet1          0          0        0           0
+07:39:50    vmnet8          0          0        0           0
+
+07:39:51  %usr  %nice   %sys   %idle
+07:39:51   10      0     10     81
+
+07:39:51    pgout/s
+07:39:51        0.0   
+
+07:39:51     pgin/s        pflt/s        vflt/s
+07:39:51        0.0           0.0         409.0
+
+07:39:51   device    r+w/s    blks/s
+07:39:51   disk0        0          0
+07:39:51   disk1        0          0
+07:39:51   disk4       46        736
+
+07:39:51    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:51    lo0           20          2752          20          2752
+07:39:51    gif0           0             0           0             0
+07:39:51    stf0           0             0           0             0
+07:39:51    en0            0             0           0             0
+07:39:51    en1          410        413978         357         29668
+07:39:51    vmnet1         0             0           0             0
+07:39:51    vmnet8         0             0           0             0
+
+07:39:51    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:51    lo0             0          0        0           0
+07:39:51    gif0            0          0        0           0
+07:39:51    stf0            0          0        0           0
+07:39:51    en0             0          0        0           0
+07:39:51    en1             0          0        0           0
+07:39:51    vmnet1          0          0        0           0
+07:39:51    vmnet8          0          0        0           0
+
+07:39:52  %usr  %nice   %sys   %idle
+07:39:52   10      0     10     80
+
+07:39:52    pgout/s
+07:39:52        0.0   
+
+07:39:52     pgin/s        pflt/s        vflt/s
+07:39:52        0.0           0.0         387.0
+
+07:39:52   device    r+w/s    blks/s
+07:39:52   disk0        0          0
+07:39:52   disk1        0          0
+07:39:52   disk4       50        760
+
+07:39:52    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:52    lo0           20          2750          20          2750
+07:39:52    gif0           0             0           0             0
+07:39:52    stf0           0             0           0             0
+07:39:52    en0            0             0           0             0
+07:39:52    en1          416        426528         361         30019
+07:39:52    vmnet1         0             0           0             0
+07:39:52    vmnet8         0             0           0             0
+
+07:39:52    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:52    lo0             0          0        0           0
+07:39:52    gif0            0          0        0           0
+07:39:52    stf0            0          0        0           0
+07:39:52    en0             0          0        0           0
+07:39:52    en1             0          0        0           0
+07:39:52    vmnet1          0          0        0           0
+07:39:52    vmnet8          0          0        0           0
+
+07:39:53  %usr  %nice   %sys   %idle
+07:39:53   10      0      9     80
+
+07:39:53    pgout/s
+07:39:53        0.0   
+
+07:39:53     pgin/s        pflt/s        vflt/s
+07:39:53        0.0           1.0         375.0
+
+07:39:53   device    r+w/s    blks/s
+07:39:53   disk0        0          0
+07:39:53   disk1        0          0
+07:39:53   disk4       48        664
+
+07:39:53    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:53    lo0           20          2770          20          2770
+07:39:53    gif0           0             0           0             0
+07:39:53    stf0           0             0           0             0
+07:39:53    en0            0             0           0             0
+07:39:53    en1          385        377511         343         28558
+07:39:53    vmnet1         0             0           0             0
+07:39:53    vmnet8         0             0           0             0
+
+07:39:53    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:53    lo0             0          0        0           0
+07:39:53    gif0            0          0        0           0
+07:39:53    stf0            0          0        0           0
+07:39:53    en0             0          0        0           0
+07:39:53    en1             0          0        0           0
+07:39:53    vmnet1          0          0        0           0
+07:39:53    vmnet8          0          0        0           0
+
+07:39:54  %usr  %nice   %sys   %idle
+07:39:54   10      0     10     80
+
+07:39:54    pgout/s
+07:39:54        0.0   
+
+07:39:54     pgin/s        pflt/s        vflt/s
+07:39:54        0.0           2.0         250.0
+
+07:39:54   device    r+w/s    blks/s
+07:39:54   disk0        0          0
+07:39:54   disk1        0          0
+07:39:54   disk4       50        800
+
+07:39:54    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:54    lo0            0             0           0             0
+07:39:54    gif0           0             0           0             0
+07:39:54    stf0           0             0           0             0
+07:39:54    en0            0             0           0             0
+07:39:54    en1          435        455267         334         28636
+07:39:54    vmnet1         0             0           0             0
+07:39:54    vmnet8         0             0           0             0
+
+07:39:54    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:54    lo0             0          0        0           0
+07:39:54    gif0            0          0        0           0
+07:39:54    stf0            0          0        0           0
+07:39:54    en0             0          0        0           0
+07:39:54    en1             0          0        0           0
+07:39:54    vmnet1          0          0        0           0
+07:39:54    vmnet8          0          0        0           0
+
+07:39:55  %usr  %nice   %sys   %idle
+07:39:55   10      0     11     79
+
+07:39:55    pgout/s
+07:39:55        0.0   
+
+07:39:55     pgin/s        pflt/s        vflt/s
+07:39:55        0.0           1.0         361.0
+
+07:39:55   device    r+w/s    blks/s
+07:39:55   disk0       10        145
+07:39:55   disk1        0          0
+07:39:55   disk4       45        720
+
+07:39:55    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:55    lo0           20          2754          20          2754
+07:39:55    gif0           0             0           0             0
+07:39:55    stf0           0             0           0             0
+07:39:55    en0            0             0           0             0
+07:39:55    en1          409        415102         356         29531
+07:39:55    vmnet1         0             0           0             0
+07:39:55    vmnet8         0             0           0             0
+
+07:39:55    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:55    lo0             0          0        0           0
+07:39:55    gif0            0          0        0           0
+07:39:55    stf0            0          0        0           0
+07:39:55    en0             0          0        0           0
+07:39:55    en1             0          0        0           0
+07:39:55    vmnet1          0          0        0           0
+07:39:55    vmnet8          0          0        0           0
+
+07:39:56  %usr  %nice   %sys   %idle
+07:39:56    9      0      9     82
+
+07:39:56    pgout/s
+07:39:56        0.0   
+
+07:39:56     pgin/s        pflt/s        vflt/s
+07:39:56        0.0           0.0         489.0
+
+07:39:56   device    r+w/s    blks/s
+07:39:56   disk0       68       2099
+07:39:56   disk1        0          0
+07:39:56   disk4       39        880
+
+07:39:56    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:56    lo0           20          2743          20          2743
+07:39:56    gif0           0             0           0             0
+07:39:56    stf0           0             0           0             0
+07:39:56    en0            0             0           0             0
+07:39:56    en1          327        161242         477        249703
+07:39:56    vmnet1         0             0           0             0
+07:39:56    vmnet8         0             0           0             0
+
+07:39:56    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:56    lo0             0          0        0           0
+07:39:56    gif0            0          0        0           0
+07:39:56    stf0            0          0        0           0
+07:39:56    en0             0          0        0           0
+07:39:56    en1             0          0        0           0
+07:39:56    vmnet1          0          0        0           0
+07:39:56    vmnet8          0          0        0           0
+
+07:39:57  %usr  %nice   %sys   %idle
+07:39:57    9      0     10     81
+
+07:39:57    pgout/s
+07:39:57        0.0   
+
+07:39:57     pgin/s        pflt/s        vflt/s
+07:39:57        0.0           0.0         317.0
+
+07:39:57   device    r+w/s    blks/s
+07:39:57   disk0        0          0
+07:39:57   disk1        0          0
+07:39:57   disk4       37        592
+
+07:39:57    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:57    lo0           20          2758          20          2758
+07:39:57    gif0           0             0           0             0
+07:39:57    stf0           0             0           0             0
+07:39:57    en0            0             0           0             0
+07:39:57    en1          415        340443         444        142094
+07:39:57    vmnet1         0             0           0             0
+07:39:57    vmnet8         0             0           0             0
+
+07:39:57    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:57    lo0             0          0        0           0
+07:39:57    gif0            0          0        0           0
+07:39:57    stf0            0          0        0           0
+07:39:57    en0             0          0        0           0
+07:39:57    en1             0          0        0           0
+07:39:57    vmnet1          0          0        0           0
+07:39:57    vmnet8          0          0        0           0
+
+07:39:58  %usr  %nice   %sys   %idle
+07:39:58    8      0      8     84
+
+07:39:58    pgout/s
+07:39:58        0.0   
+
+07:39:58     pgin/s        pflt/s        vflt/s
+07:39:58        0.0           0.0         257.0
+
+07:39:58   device    r+w/s    blks/s
+07:39:58   disk0        0          0
+07:39:58   disk1        0          0
+07:39:58   disk4       39        624
+
+07:39:58    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:58    lo0            0             0           0             0
+07:39:58    gif0           0             0           0             0
+07:39:58    stf0           0             0           0             0
+07:39:58    en0            0             0           0             0
+07:39:58    en1          374        354438         344         28651
+07:39:58    vmnet1         0             0           0             0
+07:39:58    vmnet8         0             0           0             0
+
+07:39:58    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:58    lo0             0          0        0           0
+07:39:58    gif0            0          0        0           0
+07:39:58    stf0            0          0        0           0
+07:39:58    en0             0          0        0           0
+07:39:58    en1             0          0        0           0
+07:39:58    vmnet1          0          0        0           0
+07:39:58    vmnet8          0          0        0           0
+
+07:39:59  %usr  %nice   %sys   %idle
+07:39:59    9      0      8     83
+
+07:39:59    pgout/s
+07:39:59        0.0   
+
+07:39:59     pgin/s        pflt/s        vflt/s
+07:39:59        0.0           0.0         278.0
+
+07:39:59   device    r+w/s    blks/s
+07:39:59   disk0        0          0
+07:39:59   disk1        0          0
+07:39:59   disk4       36        576
+
+07:39:59    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:39:59    lo0           20          2753          20          2753
+07:39:59    gif0           0             0           0             0
+07:39:59    stf0           0             0           0             0
+07:39:59    en0            0             0           0             0
+07:39:59    en1          328        324723         285         23656
+07:39:59    vmnet1         0             0           0             0
+07:39:59    vmnet8         0             0           0             0
+
+07:39:59    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:39:59    lo0             0          0        0           0
+07:39:59    gif0            0          0        0           0
+07:39:59    stf0            0          0        0           0
+07:39:59    en0             0          0        0           0
+07:39:59    en1             0          0        0           0
+07:39:59    vmnet1          0          0        0           0
+07:39:59    vmnet8          0          0        0           0
+
+07:40:00  %usr  %nice   %sys   %idle
+07:40:00    9      0      9     82
+
+07:40:00    pgout/s
+07:40:00        0.0   
+
+07:40:00     pgin/s        pflt/s        vflt/s
+07:40:00        0.0           3.0         343.0
+
+07:40:00   device    r+w/s    blks/s
+07:40:00   disk0        0          0
+07:40:00   disk1        0          0
+07:40:00   disk4       43        688
+
+07:40:00    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:00    lo0           20          2745          20          2745
+07:40:00    gif0           0             0           0             0
+07:40:00    stf0           0             0           0             0
+07:40:00    en0            0             0           0             0
+07:40:00    en1          384        386839         332         27548
+07:40:00    vmnet1         0             0           0             0
+07:40:00    vmnet8         0             0           0             0
+
+07:40:00    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:00    lo0             0          0        0           0
+07:40:00    gif0            0          0        0           0
+07:40:00    stf0            0          0        0           0
+07:40:00    en0             0          0        0           0
+07:40:00    en1             0          0        0           0
+07:40:00    vmnet1          0          0        0           0
+07:40:00    vmnet8          0          0        0           0
+
+07:40:01  %usr  %nice   %sys   %idle
+07:40:01    9      0      9     82
+
+07:40:01    pgout/s
+07:40:01        0.0   
+
+07:40:01     pgin/s        pflt/s        vflt/s
+07:40:01        0.0           0.0         312.0
+
+07:40:01   device    r+w/s    blks/s
+07:40:01   disk0        0          0
+07:40:01   disk1        0          0
+07:40:01   disk4       40        640
+
+07:40:01    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:01    lo0           20          2764          20          2764
+07:40:01    gif0           0             0           0             0
+07:40:01    stf0           0             0           0             0
+07:40:01    en0            0             0           0             0
+07:40:01    en1          361        360527         320         26615
+07:40:01    vmnet1         0             0           0             0
+07:40:01    vmnet8         0             0           0             0
+
+07:40:01    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:01    lo0             0          0        0           0
+07:40:01    gif0            0          0        0           0
+07:40:01    stf0            0          0        0           0
+07:40:01    en0             0          0        0           0
+07:40:01    en1             0          0        0           0
+07:40:01    vmnet1          0          0        0           0
+07:40:01    vmnet8          0          0        0           0
+
+07:40:02  %usr  %nice   %sys   %idle
+07:40:02    9      0      9     82
+
+07:40:02    pgout/s
+07:40:02        0.0   
+
+07:40:02     pgin/s        pflt/s        vflt/s
+07:40:02        0.0           0.0         330.0
+
+07:40:02   device    r+w/s    blks/s
+07:40:02   disk0        0          0
+07:40:02   disk1        0          0
+07:40:02   disk4       39        624
+
+07:40:02    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:02    lo0           20          2748          20          2748
+07:40:02    gif0           0             0           0             0
+07:40:02    stf0           0             0           0             0
+07:40:02    en0            0             0           0             0
+07:40:02    en1          366        353596         340         28280
+07:40:02    vmnet1         0             0           0             0
+07:40:02    vmnet8         0             0           0             0
+
+07:40:02    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:02    lo0             0          0        0           0
+07:40:02    gif0            0          0        0           0
+07:40:02    stf0            0          0        0           0
+07:40:02    en0             0          0        0           0
+07:40:02    en1             0          0        0           0
+07:40:02    vmnet1          0          0        0           0
+07:40:02    vmnet8          0          0        0           0
+
+07:40:03  %usr  %nice   %sys   %idle
+07:40:03    8      0      8     84
+
+07:40:03    pgout/s
+07:40:03        0.0   
+
+07:40:03     pgin/s        pflt/s        vflt/s
+07:40:03        0.0           0.0         195.0
+
+07:40:03   device    r+w/s    blks/s
+07:40:03   disk0        0          0
+07:40:03   disk1        0          0
+07:40:03   disk4       31        496
+
+07:40:03    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:03    lo0            0             0           0             0
+07:40:03    gif0           0             0           0             0
+07:40:03    stf0           0             0           0             0
+07:40:03    en0            0             0           0             0
+07:40:03    en1          296        281309         268         22265
+07:40:03    vmnet1         0             0           0             0
+07:40:03    vmnet8         0             0           0             0
+
+07:40:03    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:03    lo0             0          0        0           0
+07:40:03    gif0            0          0        0           0
+07:40:03    stf0            0          0        0           0
+07:40:03    en0             0          0        0           0
+07:40:03    en1             0          0        0           0
+07:40:03    vmnet1          0          0        0           0
+07:40:03    vmnet8          0          0        0           0
+
+07:40:04  %usr  %nice   %sys   %idle
+07:40:04   10      0      8     82
+
+07:40:04    pgout/s
+07:40:04        0.0   
+
+07:40:04     pgin/s        pflt/s        vflt/s
+07:40:04        0.0           0.0         326.0
+
+07:40:04   device    r+w/s    blks/s
+07:40:04   disk0        0          0
+07:40:04   disk1        0          0
+07:40:04   disk4       23        368
+
+07:40:04    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:04    lo0           20          2766          20          2766
+07:40:04    gif0           0             0           0             0
+07:40:04    stf0           0             0           0             0
+07:40:04    en0            0             0           0             0
+07:40:04    en1          227        209387         200         16656
+07:40:04    vmnet1         0             0           0             0
+07:40:04    vmnet8         0             0           0             0
+
+07:40:04    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:04    lo0             0          0        0           0
+07:40:04    gif0            0          0        0           0
+07:40:04    stf0            0          0        0           0
+07:40:04    en0             0          0        0           0
+07:40:04    en1             0          0        0           0
+07:40:04    vmnet1          0          0        0           0
+07:40:04    vmnet8          0          0        0           0
+
+07:40:05  %usr  %nice   %sys   %idle
+07:40:05    8      0      9     82
+
+07:40:05    pgout/s
+07:40:05        0.0   
+
+07:40:05     pgin/s        pflt/s        vflt/s
+07:40:05        0.0           0.0         318.0
+
+07:40:05   device    r+w/s    blks/s
+07:40:05   disk0        0          0
+07:40:05   disk1        0          0
+07:40:05   disk4       40        640
+
+07:40:05    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:05    lo0           20          2747          20          2747
+07:40:05    gif0           0             0           0             0
+07:40:05    stf0           0             0           0             0
+07:40:05    en0            0             0           0             0
+07:40:05    en1          350        359098         299         24877
+07:40:05    vmnet1         0             0           0             0
+07:40:05    vmnet8         0             0           0             0
+
+07:40:05    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:05    lo0             0          0        0           0
+07:40:05    gif0            0          0        0           0
+07:40:05    stf0            0          0        0           0
+07:40:05    en0             0          0        0           0
+07:40:05    en1             0          0        0           0
+07:40:05    vmnet1          0          0        0           0
+07:40:05    vmnet8          0          0        0           0
+
+07:40:06  %usr  %nice   %sys   %idle
+07:40:06   10      0      8     82
+
+07:40:06    pgout/s
+07:40:06        0.0   
+
+07:40:06     pgin/s        pflt/s        vflt/s
+07:40:06        0.0           0.0         389.0
+
+07:40:06   device    r+w/s    blks/s
+07:40:06   disk0        0          0
+07:40:06   disk1        0          0
+07:40:06   disk4       38        608
+
+07:40:06    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:06    lo0           20          2771          20          2771
+07:40:06    gif0           0             0           0             0
+07:40:06    stf0           0             0           0             0
+07:40:06    en0            0             0           0             0
+07:40:06    en1          350        343366         309         25737
+07:40:06    vmnet1         0             0           0             0
+07:40:06    vmnet8         0             0           0             0
+
+07:40:06    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:06    lo0             0          0        0           0
+07:40:06    gif0            0          0        0           0
+07:40:06    stf0            0          0        0           0
+07:40:06    en0             0          0        0           0
+07:40:06    en1             0          0        0           0
+07:40:06    vmnet1          0          0        0           0
+07:40:06    vmnet8          0          0        0           0
+
+07:40:07  %usr  %nice   %sys   %idle
+07:40:07    8      0      9     83
+
+07:40:07    pgout/s
+07:40:07        0.0   
+
+07:40:07     pgin/s        pflt/s        vflt/s
+07:40:07        0.0           0.0         201.0
+
+07:40:07   device    r+w/s    blks/s
+07:40:07   disk0        0          0
+07:40:07   disk1        0          0
+07:40:07   disk4       46        736
+
+07:40:07    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:07    lo0            0             0           0             0
+07:40:07    gif0           0             0           0             0
+07:40:07    stf0           0             0           0             0
+07:40:07    en0            0             0           0             0
+07:40:07    en1          398        412471         337         28022
+07:40:07    vmnet1         0             0           0             0
+07:40:07    vmnet8         0             0           0             0
+
+07:40:07    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:07    lo0             0          0        0           0
+07:40:07    gif0            0          0        0           0
+07:40:07    stf0            0          0        0           0
+07:40:07    en0             0          0        0           0
+07:40:07    en1             0          0        0           0
+07:40:07    vmnet1          0          0        0           0
+07:40:07    vmnet8          0          0        0           0
+
+07:40:08  %usr  %nice   %sys   %idle
+07:40:08    9      0      9     81
+
+07:40:08    pgout/s
+07:40:08        0.0   
+
+07:40:08     pgin/s        pflt/s        vflt/s
+07:40:08        0.0           0.0         324.0
+
+07:40:08   device    r+w/s    blks/s
+07:40:08   disk0        0          0
+07:40:08   disk1        0          0
+07:40:08   disk4       45        720
+
+07:40:08    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:08    lo0           20          2779          20          2779
+07:40:08    gif0           0             0           0             0
+07:40:08    stf0           0             0           0             0
+07:40:08    en0            0             0           0             0
+07:40:08    en1          412        406381         375         31164
+07:40:08    vmnet1         0             0           0             0
+07:40:08    vmnet8         0             0           0             0
+
+07:40:08    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:08    lo0             0          0        0           0
+07:40:08    gif0            0          0        0           0
+07:40:08    stf0            0          0        0           0
+07:40:08    en0             0          0        0           0
+07:40:08    en1             0          0        0           0
+07:40:08    vmnet1          0          0        0           0
+07:40:08    vmnet8          0          0        0           0
+
+07:40:09  %usr  %nice   %sys   %idle
+07:40:09   10      0      9     80
+
+07:40:09    pgout/s
+07:40:09        0.0   
+
+07:40:09     pgin/s        pflt/s        vflt/s
+07:40:09        0.0           0.0         360.0
+
+07:40:09   device    r+w/s    blks/s
+07:40:09   disk0        0          0
+07:40:09   disk1        0          0
+07:40:09   disk4       42        672
+
+07:40:09    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:09    lo0           20          2770          20          2770
+07:40:09    gif0           0             0           0             0
+07:40:09    stf0           0             0           0             0
+07:40:09    en0            0             0           0             0
+07:40:09    en1          384        379080         334         27787
+07:40:09    vmnet1         0             0           0             0
+07:40:09    vmnet8         0             0           0             0
+
+07:40:09    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:09    lo0             0          0        0           0
+07:40:09    gif0            0          0        0           0
+07:40:09    stf0            0          0        0           0
+07:40:09    en0             0          0        0           0
+07:40:09    en1             0          0        0           0
+07:40:09    vmnet1          0          0        0           0
+07:40:09    vmnet8          0          0        0           0
+
+07:40:10  %usr  %nice   %sys   %idle
+07:40:10   11      0     10     79
+
+07:40:10    pgout/s
+07:40:10        0.0   
+
+07:40:10     pgin/s        pflt/s        vflt/s
+07:40:10        0.0         164.0        1673.0
+
+07:40:10   device    r+w/s    blks/s
+07:40:10   disk0        1        432
+07:40:10   disk1        0          0
+07:40:10   disk4       42        672
+
+07:40:10    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:10    lo0           20          2767          20          2767
+07:40:10    gif0           0             0           0             0
+07:40:10    stf0           0             0           0             0
+07:40:10    en0            0             0           0             0
+07:40:10    en1          397        388639         354         29421
+07:40:10    vmnet1         0             0           0             0
+07:40:10    vmnet8         0             0           0             0
+
+07:40:10    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:10    lo0             0          0        0           0
+07:40:10    gif0            0          0        0           0
+07:40:10    stf0            0          0        0           0
+07:40:10    en0             0          0        0           0
+07:40:10    en1             0          0        0           0
+07:40:10    vmnet1          0          0        0           0
+07:40:10    vmnet8          0          0        0           0
+
+07:40:11  %usr  %nice   %sys   %idle
+07:40:11    9      0     10     81
+
+07:40:11    pgout/s
+07:40:11        0.0   
+
+07:40:11     pgin/s        pflt/s        vflt/s
+07:40:11        0.0           4.0         352.0
+
+07:40:11   device    r+w/s    blks/s
+07:40:11   disk0        0          0
+07:40:11   disk1        0          0
+07:40:11   disk4       46        736
+
+07:40:11    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:11    lo0           20          2740          20          2740
+07:40:11    gif0           0             0           0             0
+07:40:11    stf0           0             0           0             0
+07:40:11    en0            0             0           0             0
+07:40:11    en1          394        403910         337         28035
+07:40:11    vmnet1         0             0           0             0
+07:40:11    vmnet8         0             0           0             0
+
+07:40:11    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:11    lo0             0          0        0           0
+07:40:11    gif0            0          0        0           0
+07:40:11    stf0            0          0        0           0
+07:40:11    en0             0          0        0           0
+07:40:11    en1             0          0        0           0
+07:40:11    vmnet1          0          0        0           0
+07:40:11    vmnet8          0          0        0           0
+
+07:40:12  %usr  %nice   %sys   %idle
+07:40:12   10      0      8     82
+
+07:40:12    pgout/s
+07:40:12        0.0   
+
+07:40:12     pgin/s        pflt/s        vflt/s
+07:40:12        0.0           0.0         258.0
+
+07:40:12   device    r+w/s    blks/s
+07:40:12   disk0        0          0
+07:40:12   disk1        0          0
+07:40:12   disk4       39        624
+
+07:40:12    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:12    lo0            0             0           0             0
+07:40:12    gif0           0             0           0             0
+07:40:12    stf0           0             0           0             0
+07:40:12    en0            0             0           0             0
+07:40:12    en1          358        352252         323         26812
+07:40:12    vmnet1         0             0           0             0
+07:40:12    vmnet8         0             0           0             0
+
+07:40:12    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:12    lo0             0          0        0           0
+07:40:12    gif0            0          0        0           0
+07:40:12    stf0            0          0        0           0
+07:40:12    en0             0          0        0           0
+07:40:12    en1             0          0        0           0
+07:40:12    vmnet1          0          0        0           0
+07:40:12    vmnet8          0          0        0           0
+
+07:40:13  %usr  %nice   %sys   %idle
+07:40:13    9      0      9     81
+
+07:40:13    pgout/s
+07:40:13        0.0   
+
+07:40:13     pgin/s        pflt/s        vflt/s
+07:40:13        0.0         164.0         965.0
+
+07:40:13   device    r+w/s    blks/s
+07:40:13   disk0        1         48
+07:40:13   disk1        0          0
+07:40:13   disk4       38        608
+
+07:40:13    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:13    lo0           20          2762          20          2762
+07:40:13    gif0           0             0           0             0
+07:40:13    stf0           0             0           0             0
+07:40:13    en0            0             0           0             0
+07:40:13    en1          333        343884         276         22921
+07:40:13    vmnet1         0             0           0             0
+07:40:13    vmnet8         0             0           0             0
+
+07:40:13    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:13    lo0             0          0        0           0
+07:40:13    gif0            0          0        0           0
+07:40:13    stf0            0          0        0           0
+07:40:13    en0             0          0        0           0
+07:40:13    en1             0          0        0           0
+07:40:13    vmnet1          0          0        0           0
+07:40:13    vmnet8          0          0        0           0
+
+07:40:14  %usr  %nice   %sys   %idle
+07:40:14   10      0      9     81
+
+07:40:14    pgout/s
+07:40:14        0.0   
+
+07:40:14     pgin/s        pflt/s        vflt/s
+07:40:14        0.0           2.0         416.0
+
+07:40:14   device    r+w/s    blks/s
+07:40:14   disk0        1          1
+07:40:14   disk1        0          0
+07:40:14   disk4       37        576
+
+07:40:14    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:14    lo0           20          2756          20          2756
+07:40:14    gif0           0             0           0             0
+07:40:14    stf0           0             0           0             0
+07:40:14    en0            0             0           0             0
+07:40:14    en1          329        330259         290         24130
+07:40:14    vmnet1         0             0           0             0
+07:40:14    vmnet8         0             0           0             0
+
+07:40:14    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:14    lo0             0          0        0           0
+07:40:14    gif0            0          0        0           0
+07:40:14    stf0            0          0        0           0
+07:40:14    en0             0          0        0           0
+07:40:14    en1             0          0        0           0
+07:40:14    vmnet1          0          0        0           0
+07:40:14    vmnet8          0          0        0           0
+
+07:40:15  %usr  %nice   %sys   %idle
+07:40:15   10      0      9     80
+
+07:40:15    pgout/s
+07:40:15        0.0   
+
+07:40:15     pgin/s        pflt/s        vflt/s
+07:40:15        0.0           0.0         436.0
+
+07:40:15   device    r+w/s    blks/s
+07:40:15   disk0        0          0
+07:40:15   disk1        0          0
+07:40:15   disk4       47        752
+
+07:40:15    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:15    lo0           24          3301          24          3301
+07:40:15    gif0           0             0           0             0
+07:40:15    stf0           0             0           0             0
+07:40:15    en0            0             0           0             0
+07:40:15    en1          375        409247         293         24496
+07:40:15    vmnet1         0             0           0             0
+07:40:15    vmnet8         0             0           0             0
+
+07:40:15    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:15    lo0             0          0        0           0
+07:40:15    gif0            0          0        0           0
+07:40:15    stf0            0          0        0           0
+07:40:15    en0             0          0        0           0
+07:40:15    en1             0          0        0           0
+07:40:15    vmnet1          0          0        0           0
+07:40:15    vmnet8          0          0        0           0
+
+07:40:16  %usr  %nice   %sys   %idle
+07:40:16   13      0     10     78
+
+07:40:16    pgout/s
+07:40:16        0.0   
+
+07:40:16     pgin/s        pflt/s        vflt/s
+07:40:16        0.0           0.0         554.0
+
+07:40:16   device    r+w/s    blks/s
+07:40:16   disk0        0          0
+07:40:16   disk1        0          0
+07:40:16   disk4       44        680
+
+07:40:16    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:16    lo0            0             0           0             0
+07:40:16    gif0           0             0           0             0
+07:40:16    stf0           0             0           0             0
+07:40:16    en0            0             0           0             0
+07:40:16    en1          340        377135         252         20943
+07:40:16    vmnet1         0             0           0             0
+07:40:16    vmnet8         0             0           0             0
+
+07:40:16    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:16    lo0             0          0        0           0
+07:40:16    gif0            0          0        0           0
+07:40:16    stf0            0          0        0           0
+07:40:16    en0             0          0        0           0
+07:40:16    en1             0          0        0           0
+07:40:16    vmnet1          0          0        0           0
+07:40:16    vmnet8          0          0        0           0
+
+07:40:17  %usr  %nice   %sys   %idle
+07:40:17    9      0      7     83
+
+07:40:17    pgout/s
+07:40:17        0.0   
+
+07:40:17     pgin/s        pflt/s        vflt/s
+07:40:17        0.0           0.0         289.0
+
+07:40:17   device    r+w/s    blks/s
+07:40:17   disk0        0          0
+07:40:17   disk1        0          0
+07:40:17   disk4       32        512
+
+07:40:17    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:17    lo0           20          2752          20          2752
+07:40:17    gif0           0             0           0             0
+07:40:17    stf0           0             0           0             0
+07:40:17    en0            0             0           0             0
+07:40:17    en1          303        290415         282         23404
+07:40:17    vmnet1         0             0           0             0
+07:40:17    vmnet8         0             0           0             0
+
+07:40:17    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:17    lo0             0          0        0           0
+07:40:17    gif0            0          0        0           0
+07:40:17    stf0            0          0        0           0
+07:40:17    en0             0          0        0           0
+07:40:17    en1             0          0        0           0
+07:40:17    vmnet1          0          0        0           0
+07:40:17    vmnet8          0          0        0           0
+
+07:40:18  %usr  %nice   %sys   %idle
+07:40:18    9      0      8     83
+
+07:40:18    pgout/s
+07:40:18        0.0   
+
+07:40:18     pgin/s        pflt/s        vflt/s
+07:40:18        0.0           2.0         276.0
+
+07:40:18   device    r+w/s    blks/s
+07:40:18   disk0        0          0
+07:40:18   disk1        0          0
+07:40:18   disk4       46        736
+
+07:40:18    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:18    lo0           20          2764          20          2764
+07:40:18    gif0           0             0           0             0
+07:40:18    stf0           0             0           0             0
+07:40:18    en0            0             0           0             0
+07:40:18    en1          399        412578         337         28007
+07:40:18    vmnet1         0             0           0             0
+07:40:18    vmnet8         0             0           0             0
+
+07:40:18    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:18    lo0             0          0        0           0
+07:40:18    gif0            0          0        0           0
+07:40:18    stf0            0          0        0           0
+07:40:18    en0             0          0        0           0
+07:40:18    en1             0          0        0           0
+07:40:18    vmnet1          0          0        0           0
+07:40:18    vmnet8          0          0        0           0
+
+07:40:19  %usr  %nice   %sys   %idle
+07:40:19    9      0      9     82
+
+07:40:19    pgout/s
+07:40:19        0.0   
+
+07:40:19     pgin/s        pflt/s        vflt/s
+07:40:19        0.0           2.0         264.0
+
+07:40:19   device    r+w/s    blks/s
+07:40:19   disk0        1          8
+07:40:19   disk1        0          0
+07:40:19   disk4       51        752
+
+07:40:19    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:19    lo0           20          2746          20          2746
+07:40:19    gif0           0             0           0             0
+07:40:19    stf0           0             0           0             0
+07:40:19    en0            0             0           0             0
+07:40:19    en1          410        421328         346         28762
+07:40:19    vmnet1         0             0           0             0
+07:40:19    vmnet8         0             0           0             0
+
+07:40:19    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:19    lo0             0          0        0           0
+07:40:19    gif0            0          0        0           0
+07:40:19    stf0            0          0        0           0
+07:40:19    en0             0          0        0           0
+07:40:19    en1             0          0        0           0
+07:40:19    vmnet1          0          0        0           0
+07:40:19    vmnet8          0          0        0           0
+
+07:40:20  %usr  %nice   %sys   %idle
+07:40:20    8      0     11     81
+
+07:40:20    pgout/s
+07:40:20        0.0   
+
+07:40:20     pgin/s        pflt/s        vflt/s
+07:40:20        0.0         100.0        1753.0
+
+07:40:20   device    r+w/s    blks/s
+07:40:20   disk0        0          0
+07:40:20   disk1        0          0
+07:40:20   disk4      169       1528
+
+07:40:20    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:20    lo0            0             0           0             0
+07:40:20    gif0           0             0           0             0
+07:40:20    stf0           0             0           0             0
+07:40:20    en0            0             0           0             0
+07:40:20    en1          653        837680         487         40672
+07:40:20    vmnet1         0             0           0             0
+07:40:20    vmnet8         0             0           0             0
+
+07:40:20    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:20    lo0             0          0        0           0
+07:40:20    gif0            0          0        0           0
+07:40:20    stf0            0          0        0           0
+07:40:20    en0             0          0        0           0
+07:40:20    en1             0          0        0           0
+07:40:20    vmnet1          0          0        0           0
+07:40:20    vmnet8          0          0        0           0
+
+07:40:21  %usr  %nice   %sys   %idle
+07:40:21    8      0     13     80
+
+07:40:21    pgout/s
+07:40:21        0.0   
+
+07:40:21     pgin/s        pflt/s        vflt/s
+07:40:21        0.0           5.0         245.0
+
+07:40:21   device    r+w/s    blks/s
+07:40:21   disk0        0          0
+07:40:21   disk1        0          0
+07:40:21   disk4      300       2400
+
+07:40:21    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:21    lo0           20          2752          20          2752
+07:40:21    gif0           0             0           0             0
+07:40:21    stf0           0             0           0             0
+07:40:21    en0            0             0           0             0
+07:40:21    en1          906       1289823         611         51280
+07:40:21    vmnet1         0             0           0             0
+07:40:21    vmnet8         0             0           0             0
+
+07:40:21    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:21    lo0             0          0        0           0
+07:40:21    gif0            0          0        0           0
+07:40:21    stf0            0          0        0           0
+07:40:21    en0             0          0        0           0
+07:40:21    en1             0          0        0           0
+07:40:21    vmnet1          0          0        0           0
+07:40:21    vmnet8          0          0        0           0
+
+07:40:22  %usr  %nice   %sys   %idle
+07:40:22    8      0     13     78
+
+07:40:22    pgout/s
+07:40:22        0.0   
+
+07:40:22     pgin/s        pflt/s        vflt/s
+07:40:22        0.0           0.0         224.0
+
+07:40:22   device    r+w/s    blks/s
+07:40:22   disk0        0          0
+07:40:22   disk1        0          0
+07:40:22   disk4      332       2656
+
+07:40:22    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:22    lo0           20          2738          20          2738
+07:40:22    gif0           0             0           0             0
+07:40:22    stf0           0             0           0             0
+07:40:22    en0            0             0           0             0
+07:40:22    en1         1000       1434288         668         56040
+07:40:22    vmnet1         0             0           0             0
+07:40:22    vmnet8         0             0           0             0
+
+07:40:22    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:22    lo0             0          0        0           0
+07:40:22    gif0            0          0        0           0
+07:40:22    stf0            0          0        0           0
+07:40:22    en0             0          0        0           0
+07:40:22    en1             0          0        0           0
+07:40:22    vmnet1          0          0        0           0
+07:40:22    vmnet8          0          0        0           0
+
+07:40:23  %usr  %nice   %sys   %idle
+07:40:23    7      0     14     78
+
+07:40:23    pgout/s
+07:40:23        0.0   
+
+07:40:23     pgin/s        pflt/s        vflt/s
+07:40:23        0.0           0.0         211.0
+
+07:40:23   device    r+w/s    blks/s
+07:40:23   disk0        0          0
+07:40:23   disk1        0          0
+07:40:23   disk4      327       2616
+
+07:40:23    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:23    lo0           20          2746          20          2746
+07:40:23    gif0           0             0           0             0
+07:40:23    stf0           0             0           0             0
+07:40:23    en0            0             0           0             0
+07:40:23    en1          981       1406682         659         55266
+07:40:23    vmnet1         0             0           0             0
+07:40:23    vmnet8         0             0           0             0
+
+07:40:23    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:23    lo0             0          0        0           0
+07:40:23    gif0            0          0        0           0
+07:40:23    stf0            0          0        0           0
+07:40:23    en0             0          0        0           0
+07:40:23    en1             0          0        0           0
+07:40:23    vmnet1          0          0        0           0
+07:40:23    vmnet8          0          0        0           0
+
+07:40:24  %usr  %nice   %sys   %idle
+07:40:24    8      0     13     79
+
+07:40:24    pgout/s
+07:40:24        0.0   
+
+07:40:24     pgin/s        pflt/s        vflt/s
+07:40:24        0.0           0.0         238.0
+
+07:40:24   device    r+w/s    blks/s
+07:40:24   disk0        1          8
+07:40:24   disk1        0          0
+07:40:24   disk4      306       2448
+
+07:40:24    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:24    lo0           21          2808          21          2808
+07:40:24    gif0           0             0           0             0
+07:40:24    stf0           0             0           0             0
+07:40:24    en0            0             0           0             0
+07:40:24    en1          932       1325694         619         51870
+07:40:24    vmnet1         0             0           0             0
+07:40:24    vmnet8         0             0           0             0
+
+07:40:24    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:24    lo0             0          0        0           0
+07:40:24    gif0            0          0        0           0
+07:40:24    stf0            0          0        0           0
+07:40:24    en0             0          0        0           0
+07:40:24    en1             0          0        0           0
+07:40:24    vmnet1          0          0        0           0
+07:40:24    vmnet8          0          0        0           0
+
+07:40:25  %usr  %nice   %sys   %idle
+07:40:25    8      0     13     79
+
+07:40:25    pgout/s
+07:40:25        0.0   
+
+07:40:25     pgin/s        pflt/s        vflt/s
+07:40:25        0.0           0.0          89.0
+
+07:40:25   device    r+w/s    blks/s
+07:40:25   disk0        0          0
+07:40:25   disk1        0          0
+07:40:25   disk4      316       2528
+
+07:40:25    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:25    lo0            0             0           0             0
+07:40:25    gif0           0             0           0             0
+07:40:25    stf0           0             0           0             0
+07:40:25    en0            0             0           0             0
+07:40:25    en1          960       1365766         638         53484
+07:40:25    vmnet1         0             0           0             0
+07:40:25    vmnet8         0             0           0             0
+
+07:40:25    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:25    lo0             0          0        0           0
+07:40:25    gif0            0          0        0           0
+07:40:25    stf0            0          0        0           0
+07:40:25    en0             0          0        0           0
+07:40:25    en1             0          0        0           0
+07:40:25    vmnet1          0          0        0           0
+07:40:25    vmnet8          0          0        0           0
+
+07:40:26  %usr  %nice   %sys   %idle
+07:40:26    7      0     15     77
+
+07:40:26    pgout/s
+07:40:26        0.0   
+
+07:40:26     pgin/s        pflt/s        vflt/s
+07:40:26        0.0           2.0         210.0
+
+07:40:26   device    r+w/s    blks/s
+07:40:26   disk0        6        121
+07:40:26   disk1        0          0
+07:40:26   disk4      317       2536
+
+07:40:26    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:26    lo0           20          2753          20          2753
+07:40:26    gif0           0             0           0             0
+07:40:26    stf0           0             0           0             0
+07:40:26    en0            0             0           0             0
+07:40:26    en1          952       1365096         637         53454
+07:40:26    vmnet1         0             0           0             0
+07:40:26    vmnet8         0             0           0             0
+
+07:40:26    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:26    lo0             0          0        0           0
+07:40:26    gif0            0          0        0           0
+07:40:26    stf0            0          0        0           0
+07:40:26    en0             0          0        0           0
+07:40:26    en1             0          0        0           0
+07:40:26    vmnet1          0          0        0           0
+07:40:26    vmnet8          0          0        0           0
+
+07:40:27  %usr  %nice   %sys   %idle
+07:40:27    7      0     12     80
+
+07:40:27    pgout/s
+07:40:27        0.0   
+
+07:40:27     pgin/s        pflt/s        vflt/s
+07:40:27        0.0           0.0         213.0
+
+07:40:27   device    r+w/s    blks/s
+07:40:27   disk0       20        579
+07:40:27   disk1        0          0
+07:40:27   disk4      269       2152
+
+07:40:27    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:27    lo0           20          2723          20          2723
+07:40:27    gif0           0             0           0             0
+07:40:27    stf0           0             0           0             0
+07:40:27    en0            0             0           0             0
+07:40:27    en1          828       1160011         575         48008
+07:40:27    vmnet1         0             0           0             0
+07:40:27    vmnet8         0             0           0             0
+
+07:40:27    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:27    lo0             0          0        0           0
+07:40:27    gif0            0          0        0           0
+07:40:27    stf0            0          0        0           0
+07:40:27    en0             0          0        0           0
+07:40:27    en1             0          0        0           0
+07:40:27    vmnet1          0          0        0           0
+07:40:27    vmnet8          0          0        0           0
+
+07:40:28  %usr  %nice   %sys   %idle
+07:40:28    9      0     11     80
+
+07:40:28    pgout/s
+07:40:28        0.0   
+
+07:40:28     pgin/s        pflt/s        vflt/s
+07:40:28        0.0           2.0         495.0
+
+07:40:28   device    r+w/s    blks/s
+07:40:28   disk0        0          0
+07:40:28   disk1        0          0
+07:40:28   disk4      137       3256
+
+07:40:28    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:28    lo0           20          2762          20          2762
+07:40:28    gif0           0             0           0             0
+07:40:28    stf0           0             0           0             0
+07:40:28    en0            0             0           0             0
+07:40:28    en1          540        281014        1113       1165082
+07:40:28    vmnet1         0             0           0             0
+07:40:28    vmnet8         0             0           0             0
+
+07:40:28    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:28    lo0             0          0        0           0
+07:40:28    gif0            0          0        0           0
+07:40:28    stf0            0          0        0           0
+07:40:28    en0             0          0        0           0
+07:40:28    en1             0          0        0           0
+07:40:28    vmnet1          0          0        0           0
+07:40:28    vmnet8          0          0        0           0
+
+07:40:29  %usr  %nice   %sys   %idle
+07:40:29    8      0      8     84
+
+07:40:29    pgout/s
+07:40:29        0.0   
+
+07:40:29     pgin/s        pflt/s        vflt/s
+07:40:29        0.0           0.0          86.0
+
+07:40:29   device    r+w/s    blks/s
+07:40:29   disk0        0          0
+07:40:29   disk1        0          0
+07:40:29   disk4       32        512
+
+07:40:29    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:29    lo0            0             0           0             0
+07:40:29    gif0           0             0           0             0
+07:40:29    stf0           0             0           0             0
+07:40:29    en0            0             0           0             0
+07:40:29    en1          282         26161         568        419273
+07:40:29    vmnet1         0             0           0             0
+07:40:29    vmnet8         0             0           0             0
+
+07:40:29    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:29    lo0             0          0        0           0
+07:40:29    gif0            0          0        0           0
+07:40:29    stf0            0          0        0           0
+07:40:29    en0             0          0        0           0
+07:40:29    en1             0          0        0           0
+07:40:29    vmnet1          0          0        0           0
+07:40:29    vmnet8          0          0        0           0
+
+07:40:30  %usr  %nice   %sys   %idle
+07:40:30   11      0      9     80
+
+07:40:30    pgout/s
+07:40:30        0.0   
+
+07:40:30     pgin/s        pflt/s        vflt/s
+07:40:30        0.0           5.0         300.0
+
+07:40:30   device    r+w/s    blks/s
+07:40:30   disk0        0          0
+07:40:30   disk1        0          0
+07:40:30   disk4       37        560
+
+07:40:30    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:30    lo0           20          2775          20          2775
+07:40:30    gif0           0             0           0             0
+07:40:30    stf0           0             0           0             0
+07:40:30    en0            0             0           0             0
+07:40:30    en1          283         43731         558        353789
+07:40:30    vmnet1         0             0           0             0
+07:40:30    vmnet8         0             0           0             0
+
+07:40:30    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:30    lo0             0          0        0           0
+07:40:30    gif0            0          0        0           0
+07:40:30    stf0            0          0        0           0
+07:40:30    en0             0          0        0           0
+07:40:30    en1             0          0        0           0
+07:40:30    vmnet1          0          0        0           0
+07:40:30    vmnet8          0          0        0           0
+
+07:40:31  %usr  %nice   %sys   %idle
+07:40:31    8      0      8     84
+
+07:40:31    pgout/s
+07:40:31        0.0   
+
+07:40:31     pgin/s        pflt/s        vflt/s
+07:40:31        0.0           1.0         220.0
+
+07:40:31   device    r+w/s    blks/s
+07:40:31   disk0        0          0
+07:40:31   disk1        0          0
+07:40:31   disk4       18        456
+
+07:40:31    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:31    lo0           20          2781          20          2781
+07:40:31    gif0           0             0           0             0
+07:40:31    stf0           0             0           0             0
+07:40:31    en0            0             0           0             0
+07:40:31    en1          214         48368         450        328384
+07:40:31    vmnet1         0             0           0             0
+07:40:31    vmnet8         0             0           0             0
+
+07:40:31    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:31    lo0             0          0        0           0
+07:40:31    gif0            0          0        0           0
+07:40:31    stf0            0          0        0           0
+07:40:31    en0             0          0        0           0
+07:40:31    en1             0          0        0           0
+07:40:31    vmnet1          0          0        0           0
+07:40:31    vmnet8          0          0        0           0
+
+07:40:32  %usr  %nice   %sys   %idle
+07:40:32   10      0      7     83
+
+07:40:32    pgout/s
+07:40:32        0.0   
+
+07:40:32     pgin/s        pflt/s        vflt/s
+07:40:32        2.0           0.0         258.0
+
+07:40:32   device    r+w/s    blks/s
+07:40:32   disk0        0          0
+07:40:32   disk1        0          0
+07:40:32   disk4       17        408
+
+07:40:32    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:32    lo0           20          2758          20          2758
+07:40:32    gif0           0             0           0             0
+07:40:32    stf0           0             0           0             0
+07:40:32    en0            0             0           0             0
+07:40:32    en1          223        227851         230        100019
+07:40:32    vmnet1         0             0           0             0
+07:40:32    vmnet8         0             0           0             0
+
+07:40:32    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:32    lo0             0          0        0           0
+07:40:32    gif0            0          0        0           0
+07:40:32    stf0            0          0        0           0
+07:40:32    en0             0          0        0           0
+07:40:32    en1             0          0        0           0
+07:40:32    vmnet1          0          0        0           0
+07:40:32    vmnet8          0          0        0           0
+
+07:40:33  %usr  %nice   %sys   %idle
+07:40:33   10      0     12     78
+
+07:40:33    pgout/s
+07:40:33        0.0   
+
+07:40:33     pgin/s        pflt/s        vflt/s
+07:40:33        0.0           0.0         248.0
+
+07:40:33   device    r+w/s    blks/s
+07:40:33   disk0        0          0
+07:40:33   disk1        0          0
+07:40:33   disk4      229       1928
+
+07:40:33    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:33    lo0           20          2763          20          2763
+07:40:33    gif0           0             0           0             0
+07:40:33    stf0           0             0           0             0
+07:40:33    en0            0             0           0             0
+07:40:33    en1          773       1047735         558         62905
+07:40:33    vmnet1         0             0           0             0
+07:40:33    vmnet8         0             0           0             0
+
+07:40:33    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:33    lo0             0          0        0           0
+07:40:33    gif0            0          0        0           0
+07:40:33    stf0            0          0        0           0
+07:40:33    en0             0          0        0           0
+07:40:33    en1             0          0        0           0
+07:40:33    vmnet1          0          0        0           0
+07:40:33    vmnet8          0          0        0           0
+
+07:40:34  %usr  %nice   %sys   %idle
+07:40:34    8      0     13     78
+
+07:40:34    pgout/s
+07:40:34        0.0   
+
+07:40:34     pgin/s        pflt/s        vflt/s
+07:40:34        0.0           0.0         102.0
+
+07:40:34   device    r+w/s    blks/s
+07:40:34   disk0        0          0
+07:40:34   disk1        0          0
+07:40:34   disk4      336       2688
+
+07:40:34    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:34    lo0            0             0           0             0
+07:40:34    gif0           0             0           0             0
+07:40:34    stf0           0             0           0             0
+07:40:34    en0            0             0           0             0
+07:40:34    en1         1008       1445472         675         56646
+07:40:34    vmnet1         0             0           0             0
+07:40:34    vmnet8         0             0           0             0
+
+07:40:34    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:34    lo0             0          0        0           0
+07:40:34    gif0            0          0        0           0
+07:40:34    stf0            0          0        0           0
+07:40:34    en0             0          0        0           0
+07:40:34    en1             0          0        0           0
+07:40:34    vmnet1          0          0        0           0
+07:40:34    vmnet8          0          0        0           0
+
+07:40:35  %usr  %nice   %sys   %idle
+07:40:35    8      0     14     78
+
+07:40:35    pgout/s
+07:40:35        0.0   
+
+07:40:35     pgin/s        pflt/s        vflt/s
+07:40:35        0.0           0.0         234.0
+
+07:40:35   device    r+w/s    blks/s
+07:40:35   disk0        0          0
+07:40:35   disk1        0          0
+07:40:35   disk4      335       2680
+
+07:40:35    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:35    lo0           20          2752          20          2752
+07:40:35    gif0           0             0           0             0
+07:40:35    stf0           0             0           0             0
+07:40:35    en0            0             0           0             0
+07:40:35    en1         1008       1444306         673         56500
+07:40:35    vmnet1         0             0           0             0
+07:40:35    vmnet8         0             0           0             0
+
+07:40:35    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:35    lo0             0          0        0           0
+07:40:35    gif0            0          0        0           0
+07:40:35    stf0            0          0        0           0
+07:40:35    en0             0          0        0           0
+07:40:35    en1             0          0        0           0
+07:40:35    vmnet1          0          0        0           0
+07:40:35    vmnet8          0          0        0           0
+
+07:40:36  %usr  %nice   %sys   %idle
+07:40:36    9      0     12     78
+
+07:40:36    pgout/s
+07:40:36        0.0   
+
+07:40:36     pgin/s        pflt/s        vflt/s
+07:40:36        0.0           0.0         214.0
+
+07:40:36   device    r+w/s    blks/s
+07:40:36   disk0        0          0
+07:40:36   disk1        0          0
+07:40:36   disk4      316       2528
+
+07:40:36    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:36    lo0           20          2760          20          2760
+07:40:36    gif0           0             0           0             0
+07:40:36    stf0           0             0           0             0
+07:40:36    en0            0             0           0             0
+07:40:36    en1          952       1365328         638         53484
+07:40:36    vmnet1         0             0           0             0
+07:40:36    vmnet8         0             0           0             0
+
+07:40:36    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:36    lo0             0          0        0           0
+07:40:36    gif0            0          0        0           0
+07:40:36    stf0            0          0        0           0
+07:40:36    en0             0          0        0           0
+07:40:36    en1             0          0        0           0
+07:40:36    vmnet1          0          0        0           0
+07:40:36    vmnet8          0          0        0           0
+
+07:40:37  %usr  %nice   %sys   %idle
+07:40:37    9      0     12     78
+
+07:40:37    pgout/s
+07:40:37        0.0   
+
+07:40:37     pgin/s        pflt/s        vflt/s
+07:40:37        0.0           0.0         239.0
+
+07:40:37   device    r+w/s    blks/s
+07:40:37   disk0        0          0
+07:40:37   disk1        0          0
+07:40:37   disk4      267       2168
+
+07:40:37    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:37    lo0           20          2755          20          2755
+07:40:37    gif0           0             0           0             0
+07:40:37    stf0           0             0           0             0
+07:40:37    en0            0             0           0             0
+07:40:37    en1          825       1166666         557         46669
+07:40:37    vmnet1         0             0           0             0
+07:40:37    vmnet8         0             0           0             0
+
+07:40:37    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:37    lo0             0          0        0           0
+07:40:37    gif0            0          0        0           0
+07:40:37    stf0            0          0        0           0
+07:40:37    en0             0          0        0           0
+07:40:37    en1             0          0        0           0
+07:40:37    vmnet1          0          0        0           0
+07:40:37    vmnet8          0          0        0           0
+
+07:40:38  %usr  %nice   %sys   %idle
+07:40:38   11      0      9     81
+
+07:40:38    pgout/s
+07:40:38        0.0   
+
+07:40:38     pgin/s        pflt/s        vflt/s
+07:40:38        0.0           0.0         162.0
+
+07:40:38   device    r+w/s    blks/s
+07:40:38   disk0        0          0
+07:40:38   disk1        0          0
+07:40:38   disk4       63        808
+
+07:40:38    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:38    lo0            0             0           0             0
+07:40:38    gif0           0             0           0             0
+07:40:38    stf0           0             0           0             0
+07:40:38    en0            0             0           0             0
+07:40:38    en1          413        449742         342         28455
+07:40:38    vmnet1         0             0           0             0
+07:40:38    vmnet8         0             0           0             0
+
+07:40:38    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:38    lo0             0          0        0           0
+07:40:38    gif0            0          0        0           0
+07:40:38    stf0            0          0        0           0
+07:40:38    en0             0          0        0           0
+07:40:38    en1             0          0        0           0
+07:40:38    vmnet1          0          0        0           0
+07:40:38    vmnet8          0          0        0           0
+
+07:40:39  %usr  %nice   %sys   %idle
+07:40:39    8      0     15     77
+
+07:40:39    pgout/s
+07:40:39        0.0   
+
+07:40:39     pgin/s        pflt/s        vflt/s
+07:40:39        0.0           0.0         225.0
+
+07:40:39   device    r+w/s    blks/s
+07:40:39   disk0        0          0
+07:40:39   disk1        0          0
+07:40:39   disk4      337       2696
+
+07:40:39    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:39    lo0           20          2752          20          2752
+07:40:39    gif0           0             0           0             0
+07:40:39    stf0           0             0           0             0
+07:40:39    en0            0             0           0             0
+07:40:39    en1         1015       1453109         684         57380
+07:40:39    vmnet1         0             0           0             0
+07:40:39    vmnet8         0             0           0             0
+
+07:40:39    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:39    lo0             0          0        0           0
+07:40:39    gif0            0          0        0           0
+07:40:39    stf0            0          0        0           0
+07:40:39    en0             0          0        0           0
+07:40:39    en1             0          0        0           0
+07:40:39    vmnet1          0          0        0           0
+07:40:39    vmnet8          0          0        0           0
+
+07:40:40  %usr  %nice   %sys   %idle
+07:40:40    9      0     14     77
+
+07:40:40    pgout/s
+07:40:40        0.0   
+
+07:40:40     pgin/s        pflt/s        vflt/s
+07:40:40        0.0           0.0         215.0
+
+07:40:40   device    r+w/s    blks/s
+07:40:40   disk0        0          0
+07:40:40   disk1        0          0
+07:40:40   disk4      313       2504
+
+07:40:40    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:40    lo0           20          2759          20          2759
+07:40:40    gif0           0             0           0             0
+07:40:40    stf0           0             0           0             0
+07:40:40    en0            0             0           0             0
+07:40:40    en1          948       1353061         637         53466
+07:40:40    vmnet1         0             0           0             0
+07:40:40    vmnet8         0             0           0             0
+
+07:40:40    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:40    lo0             0          0        0           0
+07:40:40    gif0            0          0        0           0
+07:40:40    stf0            0          0        0           0
+07:40:40    en0             0          0        0           0
+07:40:40    en1             0          0        0           0
+07:40:40    vmnet1          0          0        0           0
+07:40:40    vmnet8          0          0        0           0
+
+07:40:41  %usr  %nice   %sys   %idle
+07:40:41    9      0     21     70
+
+07:40:41    pgout/s
+07:40:41        0.0   
+
+07:40:41     pgin/s        pflt/s        vflt/s
+07:40:41        0.0           1.0         520.0
+
+07:40:41   device    r+w/s    blks/s
+07:40:41   disk0        0          0
+07:40:41   disk1        0          0
+07:40:41   disk4      138       29848
+
+07:40:41    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:41    lo0           20          2786          20          2786
+07:40:41    gif0           0             0           0             0
+07:40:41    stf0           0             0           0             0
+07:40:41    en0            0             0           0             0
+07:40:41    en1          340        288724         489        303725
+07:40:41    vmnet1         0             0           0             0
+07:40:41    vmnet8         0             0           0             0
+
+07:40:41    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:41    lo0             0          0        0           0
+07:40:41    gif0            0          0        0           0
+07:40:41    stf0            0          0        0           0
+07:40:41    en0             0          0        0           0
+07:40:41    en1             0          0        0           0
+07:40:41    vmnet1          0          0        0           0
+07:40:41    vmnet8          0          0        0           0
+
+07:40:42  %usr  %nice   %sys   %idle
+07:40:42    8      0     11     81
+
+07:40:42    pgout/s
+07:40:42        0.0   
+
+07:40:42     pgin/s        pflt/s        vflt/s
+07:40:42        0.0           0.0         104.0
+
+07:40:42   device    r+w/s    blks/s
+07:40:42   disk0        0          0
+07:40:42   disk1        0          0
+07:40:42   disk4        2         32
+
+07:40:42    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:42    lo0            0             0           0             0
+07:40:42    gif0           0             0           0             0
+07:40:42    stf0           0             0           0             0
+07:40:42    en0            0             0           0             0
+07:40:42    en1          257         35155         574        827691
+07:40:42    vmnet1         0             0           0             0
+07:40:42    vmnet8         0             0           0             0
+
+07:40:42    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:42    lo0             0          0        0           0
+07:40:42    gif0            0          0        0           0
+07:40:42    stf0            0          0        0           0
+07:40:42    en0             0          0        0           0
+07:40:42    en1             0          0        0           0
+07:40:42    vmnet1          0          0        0           0
+07:40:42    vmnet8          0          0        0           0
+
+07:40:43  %usr  %nice   %sys   %idle
+07:40:43   10      0     13     77
+
+07:40:43    pgout/s
+07:40:43        0.0   
+
+07:40:43     pgin/s        pflt/s        vflt/s
+07:40:43        0.0           2.0         360.0
+
+07:40:43   device    r+w/s    blks/s
+07:40:43   disk0        0          0
+07:40:43   disk1        0          0
+07:40:43   disk4        1         16
+
+07:40:43    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:43    lo0           21          2866          21          2866
+07:40:43    gif0           0             0           0             0
+07:40:43    stf0           0             0           0             0
+07:40:43    en0            0             0           0             0
+07:40:43    en1          734         60593        1812       2654386
+07:40:43    vmnet1         0             0           0             0
+07:40:43    vmnet8         0             0           0             0
+
+07:40:43    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:43    lo0             0          0        0           0
+07:40:43    gif0            0          0        0           0
+07:40:43    stf0            0          0        0           0
+07:40:43    en0             0          0        0           0
+07:40:43    en1             0          0        0           0
+07:40:43    vmnet1          0          0        0           0
+07:40:43    vmnet8          0          0        0           0
+
+07:40:44  %usr  %nice   %sys   %idle
+07:40:44   10      0     12     78
+
+07:40:44    pgout/s
+07:40:44        0.0   
+
+07:40:44     pgin/s        pflt/s        vflt/s
+07:40:44        0.0           0.0         361.0
+
+07:40:44   device    r+w/s    blks/s
+07:40:44   disk0        0          0
+07:40:44   disk1        0          0
+07:40:44   disk4        5         80
+
+07:40:44    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:44    lo0           20          2767          20          2767
+07:40:44    gif0           0             0           0             0
+07:40:44    stf0           0             0           0             0
+07:40:44    en0            0             0           0             0
+07:40:44    en1          533         78733        1343       1923245
+07:40:44    vmnet1         0             0           0             0
+07:40:44    vmnet8         0             0           0             0
+
+07:40:44    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:44    lo0             0          0        0           0
+07:40:44    gif0            0          0        0           0
+07:40:44    stf0            0          0        0           0
+07:40:44    en0             0          0        0           0
+07:40:44    en1             0          0        0           0
+07:40:44    vmnet1          0          0        0           0
+07:40:44    vmnet8          0          0        0           0
+
+07:40:45  %usr  %nice   %sys   %idle
+07:40:45    9      0     11     80
+
+07:40:45    pgout/s
+07:40:45        0.0   
+
+07:40:45     pgin/s        pflt/s        vflt/s
+07:40:45        0.0           0.0         422.0
+
+07:40:45   device    r+w/s    blks/s
+07:40:45   disk0        0          0
+07:40:45   disk1        0          0
+07:40:45   disk4        3         48
+
+07:40:45    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:45    lo0           24          3320          24          3320
+07:40:45    gif0           0             0           0             0
+07:40:45    stf0           0             0           0             0
+07:40:45    en0            0             0           0             0
+07:40:45    en1          468         56922        1495       2156021
+07:40:45    vmnet1         0             0           0             0
+07:40:45    vmnet8         0             0           0             0
+
+07:40:45    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:45    lo0             0          0        0           0
+07:40:45    gif0            0          0        0           0
+07:40:45    stf0            0          0        0           0
+07:40:45    en0             0          0        0           0
+07:40:45    en1             0          0        0           0
+07:40:45    vmnet1          0          0        0           0
+07:40:45    vmnet8          0          0        0           0
+
+07:40:46  %usr  %nice   %sys   %idle
+07:40:46    9      0      6     86
+
+07:40:46    pgout/s
+07:40:46        0.0   
+
+07:40:46     pgin/s        pflt/s        vflt/s
+07:40:46        0.0           0.0         308.0
+
+07:40:46   device    r+w/s    blks/s
+07:40:46   disk0        0          0
+07:40:46   disk1        0          0
+07:40:46   disk4        0          0
+
+07:40:46    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:46    lo0           20          2758          20          2758
+07:40:46    gif0           0             0           0             0
+07:40:46    stf0           0             0           0             0
+07:40:46    en0            0             0           0             0
+07:40:46    en1            2           340           0             0
+07:40:46    vmnet1         0             0           0             0
+07:40:46    vmnet8         0             0           0             0
+
+07:40:46    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:46    lo0             0          0        0           0
+07:40:46    gif0            0          0        0           0
+07:40:46    stf0            0          0        0           0
+07:40:46    en0             0          0        0           0
+07:40:46    en1             0          0        0           0
+07:40:46    vmnet1          0          0        0           0
+07:40:46    vmnet8          0          0        0           0
+
+07:40:47  %usr  %nice   %sys   %idle
+07:40:47   10      0     13     77
+
+07:40:47    pgout/s
+07:40:47        0.0   
+
+07:40:47     pgin/s        pflt/s        vflt/s
+07:40:47        0.0           0.0         219.0
+
+07:40:47   device    r+w/s    blks/s
+07:40:47   disk0        0          0
+07:40:47   disk1        0          0
+07:40:47   disk4        3         48
+
+07:40:47    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:47    lo0            6           659           6           659
+07:40:47    gif0           0             0           0             0
+07:40:47    stf0           0             0           0             0
+07:40:47    en0            0             0           0             0
+07:40:47    en1          491         58803        1172       1615920
+07:40:47    vmnet1         0             0           0             0
+07:40:47    vmnet8         0             0           0             0
+
+07:40:47    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:47    lo0             0          0        0           0
+07:40:47    gif0            0          0        0           0
+07:40:47    stf0            0          0        0           0
+07:40:47    en0             0          0        0           0
+07:40:47    en1             0          0        0           0
+07:40:47    vmnet1          0          0        0           0
+07:40:47    vmnet8          0          0        0           0
+
+07:40:48  %usr  %nice   %sys   %idle
+07:40:48    9      0     12     79
+
+07:40:48    pgout/s
+07:40:48        0.0   
+
+07:40:48     pgin/s        pflt/s        vflt/s
+07:40:48        0.0           0.0         309.0
+
+07:40:48   device    r+w/s    blks/s
+07:40:48   disk0        0          0
+07:40:48   disk1        0          0
+07:40:48   disk4        1         16
+
+07:40:48    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:48    lo0           20          2781          20          2781
+07:40:48    gif0           0             0           0             0
+07:40:48    stf0           0             0           0             0
+07:40:48    en0            0             0           0             0
+07:40:48    en1          653         53414        1795       2685710
+07:40:48    vmnet1         0             0           0             0
+07:40:48    vmnet8         0             0           0             0
+
+07:40:48    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:48    lo0             0          0        0           0
+07:40:48    gif0            0          0        0           0
+07:40:48    stf0            0          0        0           0
+07:40:48    en0             0          0        0           0
+07:40:48    en1             0          0        0           0
+07:40:48    vmnet1          0          0        0           0
+07:40:48    vmnet8          0          0        0           0
+
+07:40:49  %usr  %nice   %sys   %idle
+07:40:49    9      0     13     77
+
+07:40:49    pgout/s
+07:40:49        0.0   
+
+07:40:49     pgin/s        pflt/s        vflt/s
+07:40:49        0.0           0.0         304.0
+
+07:40:49   device    r+w/s    blks/s
+07:40:49   disk0        0          0
+07:40:49   disk1        0          0
+07:40:49   disk4        0          0
+
+07:40:49    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:49    lo0           20          2788          20          2788
+07:40:49    gif0           0             0           0             0
+07:40:49    stf0           0             0           0             0
+07:40:49    en0            0             0           0             0
+07:40:49    en1          891         59938        1976       2954606
+07:40:49    vmnet1         0             0           0             0
+07:40:49    vmnet8         0             0           0             0
+
+07:40:49    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:49    lo0             0          0        0           0
+07:40:49    gif0            0          0        0           0
+07:40:49    stf0            0          0        0           0
+07:40:49    en0             0          0        0           0
+07:40:49    en1             0          0        0           0
+07:40:49    vmnet1          0          0        0           0
+07:40:49    vmnet8          0          0        0           0
+
+07:40:50  %usr  %nice   %sys   %idle
+07:40:50    9      0      8     83
+
+07:40:50    pgout/s
+07:40:50        0.0   
+
+07:40:50     pgin/s        pflt/s        vflt/s
+07:40:50        0.0           3.0         314.0
+
+07:40:50   device    r+w/s    blks/s
+07:40:50   disk0        0          0
+07:40:50   disk1        0          0
+07:40:50   disk4        2         32
+
+07:40:50    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:50    lo0           20          2767          20          2767
+07:40:50    gif0           0             0           0             0
+07:40:50    stf0           0             0           0             0
+07:40:50    en0            0             0           0             0
+07:40:50    en1          210         31399         502        697433
+07:40:50    vmnet1         0             0           0             0
+07:40:50    vmnet8         0             0           0             0
+
+07:40:50    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:50    lo0             0          0        0           0
+07:40:50    gif0            0          0        0           0
+07:40:50    stf0            0          0        0           0
+07:40:50    en0             0          0        0           0
+07:40:50    en1             0          0        0           0
+07:40:50    vmnet1          0          0        0           0
+07:40:50    vmnet8          0          0        0           0
+
+07:40:51  %usr  %nice   %sys   %idle
+07:40:51   10      0      8     81
+
+07:40:51    pgout/s
+07:40:51        0.0   
+
+07:40:51     pgin/s        pflt/s        vflt/s
+07:40:51        0.0           0.0         229.0
+
+07:40:51   device    r+w/s    blks/s
+07:40:51   disk0        0          0
+07:40:51   disk1        0          0
+07:40:51   disk4       27        432
+
+07:40:51    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:51    lo0            0             0           0             0
+07:40:51    gif0           0             0           0             0
+07:40:51    stf0           0             0           0             0
+07:40:51    en0            0             0           0             0
+07:40:51    en1          255        246059         220         18209
+07:40:51    vmnet1         0             0           0             0
+07:40:51    vmnet8         0             0           0             0
+
+07:40:51    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:51    lo0             0          0        0           0
+07:40:51    gif0            0          0        0           0
+07:40:51    stf0            0          0        0           0
+07:40:51    en0             0          0        0           0
+07:40:51    en1             0          0        0           0
+07:40:51    vmnet1          0          0        0           0
+07:40:51    vmnet8          0          0        0           0
+
+07:40:52  %usr  %nice   %sys   %idle
+07:40:52   12      0     11     77
+
+07:40:52    pgout/s
+07:40:52        0.0   
+
+07:40:52     pgin/s        pflt/s        vflt/s
+07:40:52        0.0           0.0         527.0
+
+07:40:52   device    r+w/s    blks/s
+07:40:52   disk0        1          8
+07:40:52   disk1        0          0
+07:40:52   disk4       49       1384
+
+07:40:52    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+07:40:52    lo0           20          2769          20          2769
+07:40:52    gif0           0             0           0             0
+07:40:52    stf0           0             0           0             0
+07:40:52    en0            0             0           0             0
+07:40:52    en1          310        302629         272         22658
+07:40:52    vmnet1         0             0           0             0
+07:40:52    vmnet8         0             0           0             0
+
+07:40:52    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+07:40:52    lo0             0          0        0           0
+07:40:52    gif0            0          0        0           0
+07:40:52    stf0            0          0        0           0
+07:40:52    en0             0          0        0           0
+07:40:52    en1             0          0        0           0
+07:40:52    vmnet1          0          0        0           0
+07:40:52    vmnet8          0          0        0           0
+
+Average:  %usr  %nice   %sys   %idle
+Average:      8      0      9     82   
+
+Average:    pgout/s
+Average:        0.0
+
+Average:     pgin/s        pflt/s        vflt/s
+Average:        0.1          70.8         694.6
+
+Average:   device    r+w/s    blks/s
+           disk0    IODeviceTree:/PCI0@0/SATA@B/PRT0@0/PMP@0/@0:0
+Average:   disk0         2        41
+           disk1    IOService:/IOResources/IOHDIXController/IOHDIXHDDriveOutKernel@0/IODiskImageBlockStorageDeviceOutKernel/IOBlockStorageDriver/Apple スパースバンドル・ディスクイメージ Media
+Average:   disk1         0         0
+           disk4    IOService:/IOResources/IOHDIXController/IOHDIXHDDriveOutKernel@7c/IODiskImageBlockStorageDeviceOutKernel/IOBlockStorageDriver/Apple スパースバンドル・ディスクイメージ Media
+Average:   disk4        89      1339
+
+Average:    IFACE    Ipkts/s      Ibytes/s     Opkts/s      Obytes/s
+Average:   lo0           15          2162          15          2162
+Average:   gif0           0             0           0             0
+Average:   stf0           0             0           0             0
+Average:   en0            0             0           0             0
+Average:   en1          369        381196         380        205150
+Average:   vmnet1         0             0           0             0
+Average:   vmnet8         0             0           0             0
+
+Average:    IFACE     Ierrs/s     Oerrs/s    Coll/s      Drop/s
+Average:   lo0             0          0        0           0
+Average:   gif0            0          0        0           0
+Average:   stf0            0          0        0           0
+Average:   en0             0          0        0           0
+Average:   en1             0          0        0           0
+Average:   vmnet1          0          0        0           0
+Average:   vmnet8          0          0        0           0
