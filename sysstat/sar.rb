@@ -100,31 +100,6 @@ module Sysstat
             }
         end
 
-        def dump
-            print "=== dump ===\n";
-            print "kernel_version=", @kernel_version, "\n"
-            print "hostname=", @hostname, "\n"
-            print "date_str=", @date_str, "\n"
-            print "\n"
-
-            data.keys.sort.each { |metric|
-                print "<#{metric}>\n"
-                instances = data[metric].keys
-                index_of_all = instances.index("all")
-                instances.delete_at(index_of_all) if index_of_all
-                instances.sort!{|a,b| a.to_i <=> b.to_i}
-                instances.unshift("all") if index_of_all
-                instances.each { |instance|
-                    print "  <#{instance}>\n"
-                    timedata = data[metric][instance]
-                    timedata.keys.sort.each { |time|
-                        print "    <#{time}>"
-                        print "    ", timedata[time].inspect, "\n"
-                    }
-                }
-            }
-        end
-
         def sort_instances(metric)
             instances = data[metric].keys
             index_of_all = instances.index("all")
@@ -140,6 +115,25 @@ module Sysstat
             instance = data[metric].keys[0]
             times = data[metric][instance].keys
             return times.sort
+        end
+
+        def dump
+            print "=== dump ===\n";
+            print "kernel_version=", @kernel_version, "\n"
+            print "hostname=", @hostname, "\n"
+            print "date_str=", @date_str, "\n"
+            print "\n"
+            data.keys.sort.each { |metric|
+                print "<#{metric}>\n"
+                sort_instances(metric).each { |instance|
+                    print "  <#{instance}>\n"
+                    timedata = data[metric][instance]
+                    timedata.keys.sort.each { |time|
+                        print "    <#{time}>"
+                        print "    ", timedata[time].inspect, "\n"
+                    }
+                }
+            }
         end
 
         def print_csv_header
