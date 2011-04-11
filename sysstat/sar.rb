@@ -144,8 +144,6 @@ module Sysstat
             print "time, "
 #            labels.keys.sort.each { |metric|
             data.keys.sort.each { |metric|
-                    next if metric == "cpu_intr"
-                    next if metric == "cpu_prct"
                 sort_instances(metric).each { |instance|
                     labels[metric].each { |column|
                         if instance == "none"
@@ -166,8 +164,6 @@ module Sysstat
                 next if time == "Average:"
                 print "#{time}, "
                 data.keys.sort.each { |metric|
-                    next if metric == "cpu_intr"
-                    next if metric == "cpu_prct"
                     sort_instances(metric).each { |instance|
                         timedata = data[metric][instance]
 #                        begin
