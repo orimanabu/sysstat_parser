@@ -63,14 +63,10 @@ module Sysstat
         end
 
         def match(line)
-            @metrics.values.each {|item|
-                print "#{item.name}: "
-                if item.match(line)
-                    print "o\n"
-                    ret = item.parse(line)
-                    return ret
+            @metrics.values.each {|metric|
+                if metric.match(line)
+                    return metric.parse(line)
                 end
-                print "x\n"
             }
             return nil
         end
