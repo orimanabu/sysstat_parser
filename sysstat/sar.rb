@@ -170,7 +170,11 @@ module Sysstat
                     next if metric == "cpu_prct"
                     sort_instances(metric).each { |instance|
                         timedata = data[metric][instance]
-                        print timedata[time].join(", ")
+#                        begin
+                            print timedata[time].join(", ")
+#                        rescue
+#                            print "### time=#{time}, metric=#{metric}, instance=#{instance} ###\n"
+#                        end
                         print ", "
                     }
                 }
