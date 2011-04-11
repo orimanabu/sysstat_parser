@@ -1,0 +1,49 @@
+This is sysstat parsers written in ruby.
+
+Supported sysstat commands:
+  - sar
+
+To be supported sysstat commands:
+  - vmstat
+  - iostat
+
+How to use:
+  require 'sysstat/sar'
+
+  # create an instance
+  sar = Sysstat::LinuxSar.new
+
+  # parse output of "sar -f sardata"
+  sar.parse(filename)
+
+  # you can filter unneeded metrics
+  sar.exclude_filter = /intr_xall|net_e?dev\.(lo|sit|usb)/
+
+  # print in CSV format
+  sar.print_csv_header
+  sar.print_csv_data
+
+Metrics of sar
+  name		sar option	description
+  ----		----------	-----------
+  proc		-b		process creation activity
+  cswch		-w		system switching activity
+  cpu		-u		CPU utilization
+  intr_xall	-I XALL		statistics for a given interrupt
+  intr_sum	-I SUM		statistics for a given interrupt
+  swap		-W		swapping statistics
+  tps		-b		I/O and transfer rate statistics
+  memory	-R		memory statistics
+  net_dev	-n DEV		network statistics
+  net_edev	-n EDEV		network statistics
+  net_nfs	-n NFS		network statistics
+  net_nfsd	-n NFSD		network statistics
+  net_sock	-n SOCK		network statistics
+  paging	-B		paging statistics
+  memswap	-r		memory and swap space utilization statistics
+  inode		-v		status of inode, file and other kernel tables
+  runq		-q		queue length and load averages
+  blkdev	-d		activity for each block device
+  pid		-x pid|SELF|ALL	statistics for a given process
+  ppid		-X pid|SELF|ALL	statistics for the child processes of the process
+  tty		-y		TTY device activity
