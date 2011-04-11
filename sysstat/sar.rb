@@ -19,9 +19,10 @@ module Sysstat
     class SarMetric
         attr_reader :name
         @@time_regexp = "\\d{2}:\\d{2}:\\d{2}|Average:"
-        def initialize(label_regexp, name, skip, *flag)
+        def initialize(label_regexp, name, description, skip, *flag)
             @label_regexp = label_regexp
             @name = name
+            @description = description
             @skip = skip
             @flag = flag.shift
         end
@@ -184,94 +185,117 @@ module Sysstat
             super(
                 Sysstat::SarMetric.new(
                     'proc/s',
-                    'proc_s',
+                    'proc',
+                    '(-c) process creation activity',
                     0
                 ),
                 Sysstat::SarMetric.new(
                     'cswch/s',
-                    'cswch_s',
+                    'cswch',
+                    '(-w) system switching activity',
                     0
                 ),
                 Sysstat::SarMetric.new(
                     'CPU     %user',
-                    'cpu_prct',
+                    'cpu',
+                    '(-u) CPU utilization',
                     0,
                     'have_instance'
                 ),
                 Sysstat::SarMetric.new(
                     'CPU  i0',
-                    'cpu_intr',
+                    'intr_xall',
+                    '(-I XALL) statistics for a given interrup',
                     0,
                     'have_instance'
                 ),
                 Sysstat::SarMetric.new(
                     'INTR',
-                    'intr_s',
+                    'intr_sum',
+                    '(-I SUM) statistics for a given interrup',
                     1
                 ),
                 Sysstat::SarMetric.new(
                     'pswpin/s',
-                    'pswp_s',
+                    'swap',
+                    '(-W) swapping statistics',
                     0
                 ),
                 Sysstat::SarMetric.new(
                     'tps',
                     'tps',
+                    '(-b) I/O and transfer rate statistics',
                     0
                 ),
                 Sysstat::SarMetric.new(
                     'frmpg/s',
-                    'frmpg_s',
+                    'memory',
+                    '(-R) memory statistics',
                     0
                 ),
                 Sysstat::SarMetric.new(
                     'IFACE   rxpck/s',
-                    'iface',
+                    'net_dev',
+                    '(-n DEV) network statistics',
                     0,
                     'have_instance'
                 ),
                 Sysstat::SarMetric.new(
                     'IFACE   rxerr/s',
-                    'iface_err',
+                    'net_edev',
+                    '(-n EDEV) network statistics',
                     0,
                     'have_instance'
                 ),
                 Sysstat::SarMetric.new(
                     'call/s',
-                    'rpc',
+                    'net_nfs',
+                    '(-n NFS) network statistics',
                     0
                 ),
                 Sysstat::SarMetric.new(
                     'scall/s',
-                    'rpc2',
+                    'net_nfsd',
+                    '(-n NFSD) network statistics',
+                    0
+                ),
+                Sysstat::SarMetric.new(
+                    'totsck',
+                    'net_socket',
+                    '(-n SOCK) network statistics',
                     0
                 ),
                 Sysstat::SarMetric.new(
                     'pgpgin',
                     'paging',
+                    '(-B) paging statistics',
                     0
                 ),
                 Sysstat::SarMetric.new(
                     'kbmemfree',
-                    'memory',
+                    'memswap',
+                    '(-r) memory and swap space utilization statistics',
                     0
                 ),
                 Sysstat::SarMetric.new(
                     'dentunusd',
                     'inode',
-                    0
-                ),
-                Sysstat::SarMetric.new(
-                    'totsck',
-                    'socket',
+                    '(-v) status of inode, file and other kernel tables',
                     0
                 ),
                 Sysstat::SarMetric.new(
                     'runq-sz',
                     'runq',
+                    '(-q) queue length and load averages',
                     0
                 )
             )
         end
     end
 end
+
+# not yet implemented options:
+# (-d) activity  for each block device
+# (-x pid|SELF|ALL) statistics for a given process
+# (-X pid|SELF|ALL) statistics for the child processes of the process
+# (-y) TTY device activity
