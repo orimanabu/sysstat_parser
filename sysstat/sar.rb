@@ -111,16 +111,16 @@ module Sysstat
             print "date_str=", @date_str, "\n"
             print "\n"
 
-            self.data.each { |met, obj|
-                print "<#{met}>\n"
-                instances = obj.keys
+            self.data.keys.sort.each { |metric|
+                print "<#{metric}>\n"
+                instances = data[metric].keys
                 index_of_all = instances.index("all")
                 instances.delete_at(index_of_all) if index_of_all
                 instances.sort!{|a,b| a.to_i <=> b.to_i}
                 instances.unshift("all") if index_of_all
                 instances.each { |instance|
                     print "  <#{instance}>\n"
-                    timedata = obj[instance]
+                    timedata = data[metric][instance]
                     timedata.keys.sort.each { |time|
                         print "    <#{time}>"
                         print "    ", timedata[time].inspect, "\n"
