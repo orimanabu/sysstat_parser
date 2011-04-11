@@ -107,7 +107,7 @@ module Sysstat
             print "date_str=", @date_str, "\n"
             print "\n"
 
-            self.data.keys.sort.each { |metric|
+            data.keys.sort.each { |metric|
                 print "<#{metric}>\n"
                 instances = data[metric].keys
                 index_of_all = instances.index("all")
@@ -129,7 +129,7 @@ module Sysstat
 #            print "=== csv header ===\n";
             print "time, "
 #            self.labels.keys.sort.each { |metric|
-            self.data.keys.sort.each { |metric|
+            data.keys.sort.each { |metric|
                     next if metric == "cpu_intr"
                     next if metric == "cpu_prct"
                 instances = data[metric].keys
@@ -150,8 +150,8 @@ module Sysstat
 #            print "=== times ===\n";
             metric = data.keys[0]
             instance = data[metric].keys[0]
-            times = data[metric][instance].keys.sort
-            return times
+            times = data[metric][instance].keys
+            return times.sort
         end
 
         def print_csv_data
