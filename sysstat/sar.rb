@@ -125,25 +125,13 @@ module Sysstat
             }
         end
 
-        def print_csv_header
-#            print "=== csv header ===\n";
-            print "time, "
-#            self.labels.keys.sort.each { |metric|
-            data.keys.sort.each { |metric|
-                    next if metric == "cpu_intr"
-                    next if metric == "cpu_prct"
-                instances = data[metric].keys
-                index_of_all = instances.index("all")
-                instances.delete_at(index_of_all) if index_of_all
-                instances.sort!{|a,b| a.to_i <=> b.to_i}
-                instances.unshift("all") if index_of_all
-                instances.each { |instance|
-                    self.labels[metric].each { |column|
-                        print "#{metric}:#{instance}:#{column}, "
-                    }
-                }
-            }
-            print "\n"
+        def sort_instances(metric)
+            instances = data[metric].keys
+            index_of_all = instances.index("all")
+            instances.delete_at(index_of_all) if index_of_all
+            instances.sort!{|a,b| a.to_i <=> b.to_i}
+            instances.unshift("all") if index_of_all
+            return instances
         end
 
         def get_times
@@ -154,21 +142,31 @@ module Sysstat
             return times.sort
         end
 
+        def print_csv_header
+#            print "=== csv header ===\n";
+            print "time, "
+#            self.labels.keys.sort.each { |metric|
+            data.keys.sort.each { |metric|
+                    next if metric == "cpu_intr"
+                    next if metric == "cpu_prct"
+                sort_instances(metric).each { |instance|
+                    self.labels[metric].each { |column|
+                        print "#{metric}:#{instance}:#{column}, "
+                    }
+                }
+            }
+            print "\n"
+        end
+
         def print_csv_data
 #            print "=== csv data ===\n";
             get_times.each { |time|
                 next if time == "Average:"
                 print "#{time}, "
-
                 data.keys.sort.each { |metric|
                     next if metric == "cpu_intr"
                     next if metric == "cpu_prct"
-                    instances = data[metric].keys
-                    index_of_all = instances.index("all")
-                    instances.delete_at(index_of_all) if index_of_all
-                    instances.sort!{|a,b| a.to_i <=> b.to_i}
-                    instances.unshift("all") if index_of_all
-                    instances.each { |instance|
+                    sort_instances(metric).each { |instance|
                         timedata = data[metric][instance]
                         print timedata[time].join(", ")
                         print ", "
