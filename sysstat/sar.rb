@@ -49,8 +49,10 @@ module Sysstat
     end
 
     class Sar
+        attr_writer :exclude_filter
         attr_reader :data, :metrics, :labels, :kernel_version, :hostname, :date_str
         def initialize(*metrics)
+            @exclude_filter = nil
             @data = Hash.new
             @metrics = Hash.new
             metrics.each { |m|
@@ -140,12 +142,19 @@ module Sysstat
             }
         end
 
+        def match_exclude_filter(metric, instance)
+            return nil unless @exclude_filter
+            re = Regexp.new(@exclude_filter)
+            re =~ "#{metric}.#{instance}"
+        end
+
         def print_csv_header
 #            print "=== csv header ===\n";
             print "time, "
 #            labels.keys.sort.each { |metric|
             data.keys.sort.each { |metric|
                 sort_instances(metric).each { |instance|
+                    next if match_exclude_filter(metric, instance)
                     labels[metric].each { |column|
                         if instance == "none"
                             label = "#{metric}:#{column}"
@@ -166,6 +175,7 @@ module Sysstat
                 print "#{time}, "
                 data.keys.sort.each { |metric|
                     sort_instances(metric).each { |instance|
+                        next if match_exclude_filter(metric, instance)
                         timedata = data[metric][instance]
 #                        begin
                             print timedata[time].join(", ")
