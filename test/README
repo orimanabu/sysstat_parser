@@ -1,0 +1,4 @@
+* MacOSX 10.6.7
+sar -A -o sar_macosx10.6.7_macbook.bin 1 100
+vm_stat 1 | tee vm_stat_macosx10.6.7_macbook.txt
+iostat -w 1 -c 100 | tee iostat_macosx10.6.7_macbook.txt
