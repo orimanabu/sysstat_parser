@@ -29,7 +29,7 @@ Metrics of sar
   proc		-b		process creation activity
   cswch		-w		system switching activity
   cpu		-u		CPU utilization
-  intr_cpu	-I      statistics for a given interrupt
+  intr_cpu	-I		statistics for a given interrupt
   intr_xall	-I XALL	statistics for a given interrupt
   swap		-W		swapping statistics
   tps		-b		I/O and transfer rate statistics
