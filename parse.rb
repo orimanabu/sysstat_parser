@@ -6,3 +6,4 @@ require 'sysstat/sar'
 sar = Sysstat::LinuxSar.new
 sar.parse(ARGV.shift)
 sar.dump
+sar.print_csv_header

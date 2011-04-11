@@ -50,13 +50,14 @@ module Sysstat
     end
 
     class Sar
-        attr_reader :data, :metrics, :kernel_version, :hostname, :date_str
+        attr_reader :data, :metrics, :labels, :kernel_version, :hostname, :date_str
         def initialize(*metrics)
             @data = Hash.new
             @metrics = Hash.new
             metrics.each { |m|
                 @metrics[m.name] = m
             }
+            @labels = Hash.new
         end
 
         def metric(name)
@@ -93,6 +94,7 @@ module Sysstat
                         print "\t=== block (#{sd.name}) start ===\n"
                         @data[sd.name] = Hash.new
                         current_metric = sd.name
+                        @labels[sd.name] = sd.data
                     else
                         sd = self.metric(current_metric).parse(line)
 #                        print "### instance: #{instance}\n"
@@ -127,6 +129,16 @@ module Sysstat
                     }
                 }
             }
+        end
+
+        def print_csv_header
+            print "=== csv header ===\n";
+            self.labels.keys.sort.each { |metric|
+                self.labels[metric].each { |column|
+                    print "#{metric}:#{column}, "
+                }
+            }
+            print "\n"
         end
     end
 
