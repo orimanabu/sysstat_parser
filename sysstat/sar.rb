@@ -84,13 +84,13 @@ module Sysstat
                     @hostname = $2
                     @date_str = $3
                 else
-                    if sd = self.match(line)
+                    if sd = match(line)
 #                        print "\t=== block (#{sd.name}) start ===\n"
                         @data[sd.name] = Hash.new
                         current_metric = sd.name
                         @labels[sd.name] = sd.data
                     else
-                        sd = self.metric(current_metric).parse(line)
+                        sd = metric(current_metric).parse(line)
 #                        print "### instance: #{instance}\n"
                         @data[current_metric][sd.instance] = Hash.new unless @data[current_metric][sd.instance]
                         @data[current_metric][sd.instance][sd.time] = sd.data
@@ -142,12 +142,12 @@ module Sysstat
         def print_csv_header
 #            print "=== csv header ===\n";
             print "time, "
-#            self.labels.keys.sort.each { |metric|
+#            labels.keys.sort.each { |metric|
             data.keys.sort.each { |metric|
                     next if metric == "cpu_intr"
                     next if metric == "cpu_prct"
                 sort_instances(metric).each { |instance|
-                    self.labels[metric].each { |column|
+                    labels[metric].each { |column|
                         print "#{metric}:#{instance}:#{column}, "
                     }
                 }
