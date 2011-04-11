@@ -40,11 +40,9 @@ module Sysstat
             array = line.split(/\s+/)[@skip .. -1]
             if @flag
                 if @flag == "have_instance"
-                    print "### parse: have_instance: #{array[0]}\n"
                     return SarData.new(@name, time, array.shift, array)
                 end
             end
-            print "### parse: no_instance: #{array[0]}\n"
             return SarData.new(@name, time, nil, array)
         end
     end
@@ -84,14 +82,14 @@ module Sysstat
             file.each { |line|
                 line.chomp!
                 next if /^$/ =~ line
-                print "#{nline}:\t#{line}\n";
+#                print "#{nline}:\t#{line}\n";
                 if /^Linux\s+(\S+)\s+\((\S+)\)\s+(.*)/ =~ line
                     @kernel_version = $1
                     @hostname = $2
                     @date_str = $3
                 else
                     if sd = self.match(line)
-                        print "\t=== block (#{sd.name}) start ===\n"
+#                        print "\t=== block (#{sd.name}) start ===\n"
                         @data[sd.name] = Hash.new
                         current_metric = sd.name
                         @labels[sd.name] = sd.data
