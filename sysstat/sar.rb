@@ -130,10 +130,10 @@ module Sysstat
                 print "<#{metric}>\n"
                 sort_instances(metric).each { |instance|
                     print "  <#{instance}>\n"
+                    print "    <HH:MM:SS>\t#{labels[metric].inspect}\n"
                     timedata = data[metric][instance]
                     timedata.keys.sort.each { |time|
-                        print "    <#{time}>"
-                        print "    ", timedata[time].inspect, "\n"
+                        print "    <#{time}>\t#{timedata[time].inspect}\n"
                     }
                 }
             }
