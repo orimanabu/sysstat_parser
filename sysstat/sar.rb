@@ -150,7 +150,7 @@ module Sysstat
                         if instance == "none"
                             label = "#{metric}:#{column}"
                         else
-                            label = "#{metric}:#{instance}:#{column}"
+                            label = "#{metric}.#{instance}:#{column}"
                         end
                         print "#{label}, "
                     }
