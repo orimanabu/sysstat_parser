@@ -10,7 +10,7 @@ module Sysstat
             if instance
                 @instance = instance
             else
-                @instance = "all"
+                @instance = "none"
             end
             @data = data
         end
@@ -103,9 +103,12 @@ module Sysstat
         def sort_instances(metric)
             instances = data[metric].keys
             index_of_all = instances.index("all")
+            index_of_none = instances.index("none")
             instances.delete_at(index_of_all) if index_of_all
+            instances.delete_at(index_of_none) if index_of_none
             instances.sort!{|a,b| a.to_i <=> b.to_i}
             instances.unshift("all") if index_of_all
+            instances.unshift("none") if index_of_none
             return instances
         end
 
