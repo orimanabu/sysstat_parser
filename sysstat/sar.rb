@@ -219,7 +219,7 @@ module Sysstat
                 Sysstat::SarMetric.new(
                     'CPU  i0',
                     'intr_cpu',
-                    'statistics for a given interrupt',
+                    '(-I SUM -P ALL) statistics for a given interrupt',
                     0,
                     'have_instance'
                 ),
