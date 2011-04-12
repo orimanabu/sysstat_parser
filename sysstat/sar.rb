@@ -81,6 +81,8 @@ module Sysstat
             file.each { |line|
                 line.chomp!
                 next if /^$/ =~ line
+                next if /^Average:/ =~ line
+                next if @ignore_regexp and @@ignore_regexp =~ line
 #                print "#{nline}:\t#{line}\n";
                 if /^Linux\s+(\S+)\s+\((\S+)\)\s+(.*)/ =~ line
                     @kernel_version = $1
@@ -339,6 +341,7 @@ module Sysstat
     end
 
     class MacOSXSar < Sar
+        @ignore_regexp = /^New Disk:/
         def initialize
             super(
                 Sysstat::SarMetric.new(
