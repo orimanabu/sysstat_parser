@@ -101,7 +101,7 @@ module Sysstat
                 line.chomp!
                 next if /^$/ =~ line
                 next if /^Average:/ =~ line
-                next if @ignore_regexp and @@ignore_regexp =~ line
+                next if @ignore_regexp and @ignore_regexp =~ line
                 Sysstat.debug_print DEBUG_PARSE, "#{nline}:\t#{line}\n";
                 if /^Linux\s+(\S+)\s+\((\S+)\)\s+(.*)/ =~ line
                     @kernel_version = $1
