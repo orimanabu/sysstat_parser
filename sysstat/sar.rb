@@ -112,25 +112,13 @@ module Sysstat
                 else
                     if sd = match(line)
                         Sysstat.debug_print(DEBUG_PARSE, "\t=== block (#{sd.name}) start ===\n")
-#                        @data[sd.name] = Hash.new unless @data[sd.name]
-                        if @data[sd.name]
-                            Sysstat.debug_print(DEBUG_PARSE, "old data: #{sd.name}\n")
-                        else
-                            @data[sd.name] = Hash.new
-                            Sysstat.debug_print(DEBUG_PARSE, "new data: #{sd.name}\n")
-                        end
+                        @data[sd.name] = Hash.new unless @data[sd.name]
                         current_metric = sd.name
                         @labels[sd.name] = sd.data
                     else
                         sd = metric(current_metric).parse(line)
                         Sysstat.debug_print(DEBUG_PARSE, "### data: #{sd.inspect}\n")
-#                        @data[current_metric][sd.instance] = Hash.new unless @data[current_metric][sd.instance]
-                        if @data[current_metric][sd.instance]
-                            Sysstat.debug_print(DEBUG_PARSE, "old instance: #{current_metric}, #{sd.instance}\n")
-                        else
-                            @data[current_metric][sd.instance] = Hash.new
-                            Sysstat.debug_print(DEBUG_PARSE, "new instance: #{current_metric}, #{sd.instance}\n")
-                        end
+                        @data[current_metric][sd.instance] = Hash.new unless @data[current_metric][sd.instance]
                         @data[current_metric][sd.instance][sd.time] = sd.data
                     end
                 end
