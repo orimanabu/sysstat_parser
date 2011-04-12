@@ -2,6 +2,25 @@
 # vi: set ts=4 sw=4 et sts=4:
 
 module Sysstat
+    DEBUG_NONE  = 0x0
+    DEBUG_PARSE = 0x1
+    DEBUG_CSV   = 0x2
+    DEBUG_ALL   = 0xFF
+    @debug_level = DEBUG_NONE
+
+    def Sysstat.debug(*arg)
+        if arg
+            @debug_level = arg.shift
+        end
+        return @debug_level
+    end
+
+    def Sysstat.debug_print(level, message)
+        if (@debug_level & level) != 0
+            STDERR.print "<#{level}>", message
+        end
+    end
+
     class SarData
         attr_reader :name, :time, :instance, :data
         def initialize(name, time, instance, data)
@@ -83,7 +102,7 @@ module Sysstat
                 next if /^$/ =~ line
                 next if /^Average:/ =~ line
                 next if @ignore_regexp and @@ignore_regexp =~ line
-#                print "#{nline}:\t#{line}\n";
+                Sysstat.debug_print DEBUG_PARSE, "#{nline}:\t#{line}\n";
                 if /^Linux\s+(\S+)\s+\((\S+)\)\s+(.*)/ =~ line
                     @kernel_version = $1
                     @hostname = $2
@@ -182,11 +201,11 @@ module Sysstat
                     sort_instances(metric).each { |instance|
                         next if match_exclude_filter(metric, instance)
                         timedata = data[metric][instance]
-#                        begin
+                        begin
                             print timedata[time].join(", ")
-#                        rescue
-#                            print "### time=#{time}, metric=#{metric}, instance=#{instance} ###\n"
-#                        end
+                        rescue
+                            Sysstat.debug_print(DEBUG_CSV, "### time=#{time}, metric=#{metric}, instance=#{instance} ###\n")
+                        end
                         print ", "
                     }
                 }
