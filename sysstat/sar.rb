@@ -231,14 +231,14 @@ module Sysstat
                     0
                 ),
                 Sysstat::SarMetric.new(
-                    'CPU     %user',
+                    'CPU\s+%user',
                     'cpu',
                     '(-u) CPU utilization',
                     0,
                     'have_instance'
                 ),
                 Sysstat::SarMetric.new(
-                    'CPU  i0',
+                    'CPU\s+i0',
                     'intr_cpu',
                     '(-I SUM -P ALL) statistics for a given interrupt',
                     0,
@@ -270,14 +270,14 @@ module Sysstat
                     0
                 ),
                 Sysstat::SarMetric.new(
-                    'IFACE   rxpck/s',
+                    'IFACE\s+rxpck/s',
                     'net_dev',
                     '(-n DEV) network statistics',
                     0,
                     'have_instance'
                 ),
                 Sysstat::SarMetric.new(
-                    'IFACE   rxerr/s',
+                    'IFACE\s+rxerr/s',
                     'net_edev',
                     '(-n EDEV) network statistics',
                     0,
@@ -389,14 +389,14 @@ module Sysstat
                     'have_instance'
                 ),
                 Sysstat::SarMetric.new(
-                    'IFACE    Ipkts/s',
+                    'IFACE\s+Ipkts/s',
                     'net_dev',
                     'XXX',
                     0,
                     'have_instance'
                 ),
                 Sysstat::SarMetric.new(
-                    'IFACE    Ierrs/s',
+                    'IFACE\s+Ierrs/s',
                     'net_edev',
                     'XXX',
                     0,
