@@ -21,6 +21,7 @@ END
 opts.parse!(ARGV)
 
 sar = Sysstat::LinuxSar.new
+#sar = Sysstat::MacOSXSar.new
 sar.parse(ARGV.shift)
 #sar.dump
 sar.exclude_filter = /#{options['exclude_filter']}/ if options['exclude_filter']

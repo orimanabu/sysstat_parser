@@ -337,4 +337,50 @@ module Sysstat
             )
         end
     end
+
+    class MacOSXSar < Sar
+        def initialize
+            super(
+                Sysstat::SarMetric.new(
+                    '%usr',
+                    'cpu',
+                    'XXX',
+                    0
+                ),
+                Sysstat::SarMetric.new(
+                    'pgout/s',
+                    'pageout',
+                    'XXX',
+                    0
+                ),
+                Sysstat::SarMetric.new(
+                    'pgin/s',
+                    'pagein',
+                    'XXX',
+                    0
+                ),
+                Sysstat::SarMetric.new(
+                    'device',
+                    'disk',
+                    'XXX',
+                    0,
+                    'have_instance'
+                ),
+                Sysstat::SarMetric.new(
+                    'IFACE    Ipkts/s',
+                    'net_dev',
+                    'XXX',
+                    0,
+                    'have_instance'
+                ),
+                Sysstat::SarMetric.new(
+                    'IFACE    Ierrs/s',
+                    'net_edev',
+                    'XXX',
+                    0,
+                    'have_instance'
+                )
+            )
+        end
+    end
 end
