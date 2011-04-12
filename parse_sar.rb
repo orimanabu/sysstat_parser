@@ -5,7 +5,11 @@ require 'optparse'
 require 'sysstat/sar'
 
 options = Hash.new
+options['os'] = "linux"
 opts = OptionParser.new
+opts.on("--os OS") { |os|
+    options['os'] = os.downcase
+}
 opts.on("--exclude REGEXP") { |regexp|
     options['exclude_filter'] = regexp
 }
@@ -22,8 +26,10 @@ opts.on("--debug LEVEL") { |level|
 }
 opts.on("--help") {
     print <<END
-Usage: parse_sar [--exclude REGEXP | --debug LEVEL] SAR_OUTPUT
+Usage: parse_sar [--os OS | --exclude REGEXP | --debug LEVEL] SAR_OUTPUT
          parse SAR_OUTPUT and print in CSV format.
+         OS is an operating system on which SAR_OUTPUT created.
+           "linux" or "macosx" is supported.
          SAR_OUTPUT is output of "sar -f SARDATA".
          You can exclude metrics using REGEXP.
 END
@@ -31,8 +37,16 @@ END
 }
 opts.parse!(ARGV)
 
-sar = Sysstat::LinuxSar.new
-#sar = Sysstat::MacOSXSar.new
+sar = nil
+case options['os']
+when "linux"
+    sar = Sysstat::LinuxSar.new
+when "macosx"
+    sar = Sysstat::MacOSXSar.new
+else
+    abort "invalid OS: #{options['os']}\n"
+end
+
 Sysstat.debug(options['debug']) if options['debug']
 sar.parse(ARGV.shift)
 #sar.dump
