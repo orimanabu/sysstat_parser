@@ -95,6 +95,7 @@ module Sysstat
         end
 
         def parse(path)
+            Sysstat.debug_print(DEBUG_PARSE, "=== parse ===\n")
             file = File.open(path)
             nline = 0
             current_metric = nil
@@ -103,21 +104,33 @@ module Sysstat
                 next if /^$/ =~ line
                 next if /^Average:/ =~ line
                 next if @ignore_regexp and @ignore_regexp =~ line
-                Sysstat.debug_print DEBUG_PARSE, "#{nline}:\t#{line}\n";
+                Sysstat.debug_print(DEBUG_PARSE, "#{nline}:\t#{line}\n")
                 if /^Linux\s+(\S+)\s+\((\S+)\)\s+(.*)/ =~ line
                     @kernel_version = $1
                     @hostname = $2
                     @date_str = $3
                 else
                     if sd = match(line)
-#                        print "\t=== block (#{sd.name}) start ===\n"
-                        @data[sd.name] = Hash.new unless @data[sd.name]
+                        Sysstat.debug_print(DEBUG_PARSE, "\t=== block (#{sd.name}) start ===\n")
+#                        @data[sd.name] = Hash.new unless @data[sd.name]
+                        if @data[sd.name]
+                            Sysstat.debug_print(DEBUG_PARSE, "old data: #{sd.name}\n")
+                        else
+                            @data[sd.name] = Hash.new
+                            Sysstat.debug_print(DEBUG_PARSE, "new data: #{sd.name}\n")
+                        end
                         current_metric = sd.name
                         @labels[sd.name] = sd.data
                     else
                         sd = metric(current_metric).parse(line)
-#                        print "### instance: #{instance}\n"
-                        @data[current_metric][sd.instance] = Hash.new unless @data[current_metric][sd.instance]
+                        Sysstat.debug_print(DEBUG_PARSE, "### data: #{sd.inspect}\n")
+#                        @data[current_metric][sd.instance] = Hash.new unless @data[current_metric][sd.instance]
+                        if @data[current_metric][sd.instance]
+                            Sysstat.debug_print(DEBUG_PARSE, "old instance: #{current_metric}, #{sd.instance}\n")
+                        else
+                            @data[current_metric][sd.instance] = Hash.new
+                            Sysstat.debug_print(DEBUG_PARSE, "new instance: #{current_metric}, #{sd.instance}\n")
+                        end
                         @data[current_metric][sd.instance][sd.time] = sd.data
                     end
                 end
@@ -141,7 +154,6 @@ module Sysstat
         end
 
         def get_times
-#            print "=== times ===\n";
             metric = data.keys[0]
             instance = data[metric].keys[0]
             times = data[metric][instance].keys
@@ -174,10 +186,15 @@ module Sysstat
         end
 
         def print_csv_header
-#            print "=== csv header ===\n";
+            Sysstat.debug_print(DEBUG_PARSE, "=== csv header ===\n")
             print "time, "
+            ncolumn = 0
+            Sysstat.debug_print(DEBUG_CSV, "[label] number of metrics: #{data.keys.length}\n")
 #            labels.keys.sort.each { |metric|
             data.keys.sort.each { |metric|
+                Sysstat.debug_print(DEBUG_CSV, "[label] number of instances: #{data[metric].keys.length}\n")
+                Sysstat.debug_print(DEBUG_CSV, "[label] #{data[metric].keys.sort.inspect}\n")
+                ncolumn = ncolumn + data[metric].keys.length
                 sort_instances(metric).each { |instance|
                     next if match_exclude_filter(metric, instance)
                     labels[metric].each { |column|
@@ -190,26 +207,33 @@ module Sysstat
                     }
                 }
             }
+            Sysstat.debug_print(DEBUG_CSV, "[label] number of columns: #{ncolumn}\n")
             print "\n"
         end
 
         def print_csv_data
-#            print "=== csv data ===\n";
+            Sysstat.debug_print(DEBUG_PARSE, "=== csv data ===\n")
             get_times.each { |time|
                 next if time == "Average:"
                 print "#{time}, "
+                ncolumn = 0
+                Sysstat.debug_print(DEBUG_CSV, "[data] number of metrics: #{data.keys.length}\n")
                 data.keys.sort.each { |metric|
+                    Sysstat.debug_print(DEBUG_CSV, "[data] number of instances: #{data[metric].keys.length}\n")
+                    Sysstat.debug_print(DEBUG_CSV, "[data] #{data[metric].keys.inspect}\n")
+                    ncolumn = ncolumn + data[metric].keys.length
                     sort_instances(metric).each { |instance|
-                        next if match_exclude_filter(metric, instance)
                         timedata = data[metric][instance]
-                        begin
+                        next if match_exclude_filter(metric, instance)
+                        if timedata[time]
                             print timedata[time].join(", ")
-                        rescue
-                            Sysstat.debug_print(DEBUG_CSV, "### time=#{time}, metric=#{metric}, instance=#{instance} ###\n")
+                        else
+                            print labels[metric].map{}.join(", ")
                         end
                         print ", "
                     }
                 }
+                Sysstat.debug_print(DEBUG_CSV, "[data] number of columns: #{ncolumn}\n")
                 print "\n"
             }
         end
