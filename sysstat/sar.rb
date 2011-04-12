@@ -17,7 +17,8 @@ module Sysstat
 
     def Sysstat.debug_print(level, message)
         if (@debug_level & level) != 0
-            STDERR.print "<#{level}>", message
+            STDOUT.print "<#{level}>", message
+#            STDERR.print "<#{level}>", message
         end
     end
 
