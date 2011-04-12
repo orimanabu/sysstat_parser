@@ -2,3 +2,14 @@
 sar -A -o sar_macosx10.6.7_macbook.bin 1 100
 vm_stat 1 | tee vm_stat_macosx10.6.7_macbook.txt
 iostat -w 1 -c 100 | tee iostat_macosx10.6.7_macbook.txt
+
+* RHEL5.5
+LANG=C sar -A -x ALL -X ALL -y -d 5 50 -o sample_extra2.sar
+LANG=C sar -A -f sample_extra2.sar > sample_extra2.txt
+vmstat 1 | tee vmstat_rhel5.5_small.txt
+LANG=C iostat -tdx 1 20 2>&1 | tee iostat_rhel5.5_small.txt
+iostat -tdx 1 20 2>&1 | tee iostat_rhel5.5_small_ja.txt
+
+* RHEL6.0
+vmstat -t 1 | tee vmstat_rhel6.0_small.txt
+
