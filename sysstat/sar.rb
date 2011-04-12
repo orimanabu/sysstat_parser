@@ -361,8 +361,21 @@ module Sysstat
     end
 
     class MacOSXSar < Sar
-        @ignore_regexp = /^New Disk:/
         def initialize
+## ignore "New Disk" lines and some "Average" lines
+# New Disk: [disk0] IODeviceTree:/PCI0@0/SATA@B/PRT0@0/PMP@0/@0:0   # <== ignore this line
+# New Disk: [disk1] IOService:/IOResources/IOHDIXController/IOHDIXHDDriveOutKernel@0/IODiskImageBlockStorageDeviceOutKernel/IOBlockStorageDriver/Apple スパースバンドル・ディスクイメージ Media   # <== ignore this line
+#
+# (snip)
+#
+# Average:   device    r+w/s    blks/s
+#            disk0    IODeviceTree:/PCI0@0/SATA@B/PRT0@0/PMP@0/@0:0
+# Average:   disk0         2        41
+#            disk1    IOService:/IOResources/IOHDIXController/IOHDIXHDDriveOutKernel@0/IODiskImageBlockStorageDeviceOutKernel/IOBlockStorageDriver/Apple スパースバンドル・ディスクイメージ Media   # <== ignore this line
+# Average:   disk1         0         0
+#            disk4    IOService:/IOResources/IOHDIXController/IOHDIXHDDriveOutKernel@7c/IODiskImageBlockStorageDeviceOutKernel/IOBlockStorageDriver/Apple スパースバンドル・ディスクイメージ Media   # <== ignore this line
+# Average:   disk4        89      1339
+            @ignore_regexp = /(^New Disk:|disk\d+\s+IO(Device|Service))/
             super(
                 Sysstat::SarMetric.new(
                     '%usr',
