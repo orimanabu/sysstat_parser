@@ -10,6 +10,9 @@ opts = OptionParser.new
 opts.on("--os OS") { |os|
     options['os'] = os.downcase
 }
+opts.on("--exclude REGEXP") { |regexp|
+    options['exclude_filter'] = regexp
+}
 opts.on("--debug LEVEL") { |level|
     if level == "csv"
         options['debug'] = Sysstat::DEBUG_CSV
@@ -23,10 +26,11 @@ opts.on("--debug LEVEL") { |level|
 }
 opts.on("--help") {
     print <<END
-Usage: iostat2csv [--os OS |  --debug LEVEL] IOSTAT_OUTPUT
+Usage: iostat2csv [--os OS | --exclude REGEXP | --debug LEVEL] IOSTAT_OUTPUT
          parse VMSTAT_OUTPUT and print in CSV format.
          OS is an operating system on which IOSTAT_OUTPUT created.
            "linux" or "macosx" is supported.
+         You can exclude devices using REGEXP.
 END
     exit
 }
@@ -44,5 +48,6 @@ end
 
 Sysstat.debug(options['debug']) if options['debug']
 iostat.parse(ARGV.shift)
+iostat.exclude_filter = /#{options['exclude_filter']}/ if options['exclude_filter']
 #iostat.dump
 iostat.print_csv

@@ -5,8 +5,10 @@ require 'sysstat/sysstat'
 
 module Sysstat
     class Iostat
+        attr_writer :exclude_filter
         attr_reader :data, :labels, :devs
         def initialize(arg)
+            @exclude_filter = nil
             @ignore_regexp = arg['ignore_regexp']
             @header_regexp = arg['header_regexp']
             @time_regexp = arg['time_regexp']
@@ -86,6 +88,8 @@ module Sysstat
             # labels
             print ", "
             devs.keys.sort.each { |dev|
+                re = Regexp.new(@exclude_filter)
+                next if re =~ dev
                 print labels.map{|x| "#{dev}.#{x}"}.join(", ")
                 print ", "
             }
@@ -94,6 +98,8 @@ module Sysstat
             data.keys.sort.each { |key|
                 print "#{key}, "
                 devs.keys.sort.each { |dev|
+                    re = Regexp.new(@exclude_filter)
+                    next if re =~ dev
                     array = data[key][dev]
                     print array.join(", ")
                     print ", "
