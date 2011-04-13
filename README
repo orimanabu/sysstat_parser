@@ -10,7 +10,7 @@ Usage: sar2csv.rb [--exclude REGEXP] SAR_OUTPUT
          You can exclude metrics using REGEXP.
 
 ** vmstat2csv.rb
-Usage: vmstat2csv [--os OS |  --debug LEVEL] VMSTAT_OUTPUT
+Usage: vmstat2csv [--os OS | --debug LEVEL] VMSTAT_OUTPUT
          parse VMSTAT_OUTPUT and print in CSV format.
          OS is an operating system on which VMSTAT_OUTPUT created.
            "linux" or "macosx" is supported.

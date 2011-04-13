@@ -23,7 +23,7 @@ opts.on("--debug LEVEL") { |level|
 }
 opts.on("--help") {
     print <<END
-Usage: vmstat2csv [--os OS |  --debug LEVEL] VMSTAT_OUTPUT
+Usage: vmstat2csv [--os OS | --debug LEVEL] VMSTAT_OUTPUT
          parse VMSTAT_OUTPUT and print in CSV format.
          OS is an operating system on which VMSTAT_OUTPUT created.
            "linux" or "macosx" is supported.
