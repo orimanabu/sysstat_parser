@@ -37,11 +37,9 @@ module Sysstat
             Sysstat.debug_print(DEBUG_ALL, "### init_labels: <#{line}>\n")
             line.gsub!(/^\s*/, "")
             array = line.split(/\s+/)
-            p array
             array.each { |x|
                 @labels.push(@header2label[x])
             }
-            p @labels
             @labels_initialized = true
         end
 
@@ -98,7 +96,6 @@ module Sysstat
 #                    key = "#{date} #{time}"
                     key = "#{time}"
                 end
-                p linedata
 
                 data[key] = linedata
 
