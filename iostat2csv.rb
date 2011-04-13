@@ -26,7 +26,7 @@ opts.on("--debug LEVEL") { |level|
 }
 opts.on("--help") {
     print <<END
-Usage: iostat2csv [--os OS | --exclude REGEXP | --debug LEVEL] IOSTAT_OUTPUT
+Usage: iostat2csv.rb [--os OS | --exclude REGEXP | --debug LEVEL] IOSTAT_OUTPUT
          parse VMSTAT_OUTPUT and print in CSV format.
          OS is an operating system on which IOSTAT_OUTPUT created.
            "linux" or "macosx" is supported.
