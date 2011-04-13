@@ -13,6 +13,9 @@ opts.on("--os OS") { |os|
 opts.on("--exclude REGEXP") { |regexp|
     options['exclude_filter'] = regexp
 }
+opts.on("--header-only") { |v|
+    options['header_only'] = v
+}
 opts.on("--debug LEVEL") { |level|
     if level == "csv"
         options['debug'] = Sysstat::DEBUG_CSV
@@ -26,7 +29,7 @@ opts.on("--debug LEVEL") { |level|
 }
 opts.on("--help") {
     print <<END
-Usage: sar2csv [--os OS | --exclude REGEXP | --debug LEVEL] SAR_OUTPUT
+Usage: sar2csv [--os OS | --exclude REGEXP | --debug LEVEL | --header-only] SAR_OUTPUT
          parse SAR_OUTPUT and print in CSV format.
          OS is an operating system on which SAR_OUTPUT created.
            "linux" or "macosx" is supported.
@@ -52,4 +55,5 @@ sar.parse(ARGV.shift)
 #sar.dump
 sar.exclude_filter = /#{options['exclude_filter']}/ if options['exclude_filter']
 sar.print_csv_header
+exit if options['header_only']
 sar.print_csv_data
