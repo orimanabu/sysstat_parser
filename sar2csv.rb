@@ -26,7 +26,7 @@ opts.on("--debug LEVEL") { |level|
 }
 opts.on("--help") {
     print <<END
-Usage: parse_sar [--os OS | --exclude REGEXP | --debug LEVEL] SAR_OUTPUT
+Usage: sar2csv [--os OS | --exclude REGEXP | --debug LEVEL] SAR_OUTPUT
          parse SAR_OUTPUT and print in CSV format.
          OS is an operating system on which SAR_OUTPUT created.
            "linux" or "macosx" is supported.
