@@ -83,13 +83,17 @@ module Sysstat
             }
         end
 
+        def match_exclude_filter(dev)
+            return unless @exclude_filter
+            re = Regexp.new(@exclude_filter)
+        end
+
         def print_csv
             Sysstat.debug_print(DEBUG_ALL, "### print_csv ###\n")
             # labels
             print ", "
             devs.keys.sort.each { |dev|
-                re = Regexp.new(@exclude_filter)
-                next if re =~ dev
+                next if match_exclude_filter(dev)
                 print labels.map{|x| "#{dev}.#{x}"}.join(", ")
                 print ", "
             }
@@ -98,8 +102,7 @@ module Sysstat
             data.keys.sort.each { |key|
                 print "#{key}, "
                 devs.keys.sort.each { |dev|
-                    re = Regexp.new(@exclude_filter)
-                    next if re =~ dev
+                    next if match_exclude_filter(dev)
                     array = data[key][dev]
                     print array.join(", ")
                     print ", "
