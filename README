@@ -1,11 +1,13 @@
 Sysstat parsers written in ruby.
 
 * Commands
-** parse_sar.rb
-Usage: ./parse_sar.rb [--exclude REGEXP] SAR_OUTPUT
+** sar2csv.rb
+Usage: ./sar2csv.rb [--exclude REGEXP] SAR_OUTPUT
          parse SAR_OUTPUT and print in CSV format.
+         OS is an operating system on which SAR_OUTPUT created.
+           "linux" or "macosx" is supported.
          SAR_OUTPUT is output of "sar -f SARDATA".
-         you can exclude metrics using REGEXP.
+         You can exclude metrics using REGEXP.
 
 * Modules
 ** Supported sysstat commands:
