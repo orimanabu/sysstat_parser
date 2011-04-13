@@ -4,7 +4,6 @@
 require 'sysstat/sysstat'
 
 module Sysstat
-    include Sysstat
     class SarData
         attr_reader :name, :time, :instance, :data
         def initialize(name, time, instance, data)
