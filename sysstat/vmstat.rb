@@ -59,7 +59,7 @@ module Sysstat
                     end
                     next
                 end
-                print "#{nline}:\t#{line}\n";
+                Sysstat.debug_print(DEBUG_PARSE, "#{nline}:\t#{line}\n")
 
 ## RHEL4
 # procs -----------memory---------- ---swap-- -----io---- --system-- ----cpu----
@@ -108,6 +108,18 @@ module Sysstat
             Sysstat.debug_print(DEBUG_ALL, "### dump ###\n")
             data.keys.sort.each { |key|
                 print "#{key} - #{data[key].inspect}\n"
+            }
+        end
+
+        def print_csv
+            Sysstat.debug_print(DEBUG_ALL, "### print_csv ###\n")
+            print ", "
+            print labels.join(", ")
+            print "\n"
+            data.keys.sort.each { |key|
+                print "#{key}, "
+                print data[key].join(", ")
+                print "\n"
             }
         end
     end

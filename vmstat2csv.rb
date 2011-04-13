@@ -35,4 +35,5 @@ opts.parse!(ARGV)
 vmstat = Sysstat::Vmstat.new
 Sysstat.debug(options['debug']) if options['debug']
 vmstat.parse(ARGV.shift)
-vmstat.dump
+#vmstat.dump
+vmstat.print_csv
