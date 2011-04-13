@@ -24,11 +24,14 @@ Usage: iostat2csv [--os OS | --exclude REGEXP | --debug LEVEL] IOSTAT_OUTPUT
 
 * Modules
 ** Supported sysstat commands:
+*** RHEL4, 5, 6
   - sar
-
-** To be supported sysstat commands:
   - vmstat
   - iostat
+
+*** MacOSX 10.6
+  - sar
+  - vmstat
 
 ** Sysstat::Sar
 *** How to use:
