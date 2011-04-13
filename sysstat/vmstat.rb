@@ -5,11 +5,9 @@ require 'sysstat/sysstat'
 
 module Sysstat
     class Vmstat
-        attr_writer :exclude_filter
-        attr_reader :data, :metrics, :labels, :kernel_version, :hostname, :date_str
+        attr_reader :data, :labels
         def initialize
             @data = Hash.new
-            @metrics = Hash.new
             @header2label = {
                 'r' => 'procs.r',
                 'b' => 'procs.b',
@@ -38,7 +36,7 @@ module Sysstat
             line.gsub!(/^\s*/, "")
             array = line.split(/\s+/)
             array.each { |x|
-                @labels.push(@header2label[x])
+                labels.push(@header2label[x])
             }
             @labels_initialized = true
         end
@@ -88,7 +86,6 @@ module Sysstat
                 if linedata.length == labels.length
                     key = nlinedata
                 elsif linedata.length == labels.length + 3
-#                    date, time, tz = linedata[-3 .. -1]
                     tz = linedata.pop
                     time = linedata.pop
                     date = linedata.pop
