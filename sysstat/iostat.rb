@@ -23,9 +23,9 @@ module Sysstat
             line.gsub!(/^\s*/, "")
             array = line.split(/\s+/)
             array.shift
-            array.each { |x|
+            array.each do |x|
                 labels.push(x)
-            }
+            end
             @labels_initialized = true
         end
 
@@ -36,7 +36,7 @@ module Sysstat
             nentry = nil
             current_entry = nil
             time = nil
-            file.each { |line|
+            file.each do |line|
                 line.chomp!
                 Sysstat.debug_print(DEBUG_PARSE, "#{nline}:\t#{line}\n")
                 next if /^$/ =~ line
@@ -68,7 +68,7 @@ module Sysstat
                     data[key][dev] = array
                 end
                 nline = nline + 1
-            }
+            end
         end
 
         def dump
@@ -76,11 +76,11 @@ module Sysstat
             print "### labels:\n"
             print labels.inspect, "\n"
             print "### data:\n"
-            data.keys.sort.each { |key|
-                data[key].keys.sort.each { |dev|
+            data.keys.sort.each do |key|
+                data[key].keys.sort.each do |dev|
                     print "#{key} - #{dev} - #{data[key][dev].inspect}\n"
-                }
-            }
+                end
+            end
         end
 
         def match_exclude_filter(dev)
@@ -92,23 +92,38 @@ module Sysstat
             Sysstat.debug_print(DEBUG_ALL, "### print_csv ###\n")
             # labels
             print ", "
-            devs.keys.sort.each { |dev|
+            devs.keys.sort.each do |dev|
                 next if match_exclude_filter(dev)
                 print labels.map{|x| "#{dev}.#{x}"}.join(", ")
                 print ", "
-            }
+            end
             print "\n"
             # data
-            data.keys.sort.each { |key|
+            data.keys.sort.each do |key|
                 print "#{key}, "
-                devs.keys.sort.each { |dev|
+                devs.keys.sort.each do |dev|
                     next if match_exclude_filter(dev)
                     array = data[key][dev]
                     print array.join(", ")
                     print ", "
-                }
+                end
                 print "\n"
-            }
+            end
+        end
+    end
+
+    class IostatFactory
+        def IostatFactory.create(os)
+            obj = nil
+            case os.downcase
+            when 'linux'
+                obj = LinuxIostat.new
+            when 'macosx'
+                obj = MacOSXIostat.new
+            else
+                raise "Unknown OS: #{os}\n"
+            end
+            return obj
         end
     end
 

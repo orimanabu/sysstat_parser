@@ -17,9 +17,9 @@ module Sysstat
             Sysstat.debug_print(DEBUG_ALL, "### init_labels ###\n")
             line.gsub!(/^\s*/, "")
             array = line.split(/\s+/)
-            array.each { |x|
+            array.each do |x|
                 labels.push(x)
-            }
+            end
             @labels_initialized = true
         end
 
@@ -28,7 +28,7 @@ module Sysstat
             file = File.open(path)
             nline = 0
             current_metric = nil
-            file.each { |line|
+            file.each do |line|
                 line.chomp!
                 next if /^$/ =~ line
                 next if @ignore_regexp =~ line
@@ -42,14 +42,14 @@ module Sysstat
                 line.gsub!(/^\s*/, "")
                 data[nline] = line.split(/\s+/)
                 nline = nline + 1
-            }
+            end
         end
 
         def dump
             Sysstat.debug_print(DEBUG_ALL, "### dump ###\n")
-            data.keys.sort.each { |key|
+            data.keys.sort.each do |key|
                 print "#{key} - #{data[key].inspect}\n"
-            }
+            end
         end
 
         def print_csv
@@ -57,11 +57,26 @@ module Sysstat
             print ", "
             print labels.join(", ")
             print "\n"
-            data.keys.sort.each { |key|
+            data.keys.sort.each do |key|
                 print "#{key}, "
                 print data[key].join(", ")
                 print "\n"
-            }
+            end
+        end
+    end
+
+    class VmstatFactory
+        def VmstatFactory.create(os)
+            obj = nil
+            case os.downcase
+            when 'linux'
+                obj = LinuxVmstat.new
+            when 'macosx'
+                obj = MacOSXVmstat.new
+            else
+                raise "Unknown OS: #{os}\n"
+            end
+            return obj
         end
     end
 
@@ -96,9 +111,9 @@ module Sysstat
             Sysstat.debug_print(DEBUG_ALL, "### init_labels ###\n")
             line.gsub!(/^\s*/, "")
             array = line.split(/\s+/)
-            array.each { |x|
+            array.each do |x|
                 labels.push(@header2label[x])
-            }
+            end
             @labels_initialized = true
         end
     end

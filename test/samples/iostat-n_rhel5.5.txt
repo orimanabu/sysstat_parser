@@ -1,0 +1,132 @@
+Linux 2.6.18-194.el5 (vm-rhel55-183.iscoc.ibm.com) 	2011年04月18日
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           1.18    0.02    0.25    0.20    0.00   98.36
+
+Device:            tps   Blk_read/s   Blk_wrtn/s   Blk_read   Blk_wrtn
+sda               1.23         4.12        20.54    1315919    6564262
+sda1              0.00         0.01         0.00       2252         22
+sda2              1.23         4.11        20.54    1313363    6564240
+dm-0              2.75         4.11        20.54    1312186    6564240
+dm-1              0.00         0.00         0.00        896          0
+
+Device:                  rBlk_nor/s   wBlk_nor/s   rBlk_dir/s   wBlk_dir/s   rBlk_svr/s   wBlk_svr/s    rops/s    wops/s
+10.7.0.1:/var/ftp/pub/RHEL/X86-64/S55         0.00         0.00         0.00         0.00         0.00         0.00      0.03      0.03
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           9.18    0.00   16.33    0.00    0.00   74.49
+
+Device:            tps   Blk_read/s   Blk_wrtn/s   Blk_read   Blk_wrtn
+sda               0.00         0.00         0.00          0          0
+sda1              0.00         0.00         0.00          0          0
+sda2              0.00         0.00         0.00          0          0
+dm-0              0.00         0.00         0.00          0          0
+dm-1              0.00         0.00         0.00          0          0
+
+Device:                  rBlk_nor/s   wBlk_nor/s   rBlk_dir/s   wBlk_dir/s   rBlk_svr/s   wBlk_svr/s    rops/s    wops/s
+10.7.0.1:/var/ftp/pub/RHEL/X86-64/S55         0.00         0.00         0.00         0.00         0.00         0.00   1624.49   1624.49
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+          33.66    0.00   40.59    0.00    0.00   25.74
+
+Device:            tps   Blk_read/s   Blk_wrtn/s   Blk_read   Blk_wrtn
+sda               0.00         0.00         0.00          0          0
+sda1              0.00         0.00         0.00          0          0
+sda2              0.00         0.00         0.00          0          0
+dm-0              0.00         0.00         0.00          0          0
+dm-1              0.00         0.00         0.00          0          0
+
+Device:                  rBlk_nor/s   wBlk_nor/s   rBlk_dir/s   wBlk_dir/s   rBlk_svr/s   wBlk_svr/s    rops/s    wops/s
+10.7.0.1:/var/ftp/pub/RHEL/X86-64/S55         0.00         0.00         0.00         0.00         0.00         0.00    613.86    614.85
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+          27.00    0.00   37.00    0.00    0.00   36.00
+
+Device:            tps   Blk_read/s   Blk_wrtn/s   Blk_read   Blk_wrtn
+sda               0.00         0.00         0.00          0          0
+sda1              0.00         0.00         0.00          0          0
+sda2              0.00         0.00         0.00          0          0
+dm-0              0.00         0.00         0.00          0          0
+dm-1              0.00         0.00         0.00          0          0
+
+Device:                  rBlk_nor/s   wBlk_nor/s   rBlk_dir/s   wBlk_dir/s   rBlk_svr/s   wBlk_svr/s    rops/s    wops/s
+10.7.0.1:/var/ftp/pub/RHEL/X86-64/S55         0.00         0.00         0.00         0.00         0.00         0.00    716.00    716.00
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+          42.86    0.00   50.00    0.00    0.00    7.14
+
+Device:            tps   Blk_read/s   Blk_wrtn/s   Blk_read   Blk_wrtn
+sda               5.10         0.00        65.31          0         64
+sda1              0.00         0.00         0.00          0          0
+sda2              5.10         0.00        65.31          0         64
+dm-0              8.16         0.00        65.31          0         64
+dm-1              0.00         0.00         0.00          0          0
+
+Device:                  rBlk_nor/s   wBlk_nor/s   rBlk_dir/s   wBlk_dir/s   rBlk_svr/s   wBlk_svr/s    rops/s    wops/s
+10.7.0.1:/var/ftp/pub/RHEL/X86-64/S55         0.00         0.00         0.00         0.00         0.00         0.00    219.39    219.39
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+          44.44    0.00   53.54    0.00    0.00    2.02
+
+Device:            tps   Blk_read/s   Blk_wrtn/s   Blk_read   Blk_wrtn
+sda               2.02         0.00        32.32          0         32
+sda1              0.00         0.00         0.00          0          0
+sda2              2.02         0.00        32.32          0         32
+dm-0             37.37         0.00       298.99          0        296
+dm-1              0.00         0.00         0.00          0          0
+
+Device:                  rBlk_nor/s   wBlk_nor/s   rBlk_dir/s   wBlk_dir/s   rBlk_svr/s   wBlk_svr/s    rops/s    wops/s
+10.7.0.1:/var/ftp/pub/RHEL/X86-64/S55         0.00         0.00         0.00         0.00         0.00         0.00    109.09    109.09
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+          39.60    0.00   56.44    0.00    0.00    3.96
+
+Device:            tps   Blk_read/s   Blk_wrtn/s   Blk_read   Blk_wrtn
+sda               1.98         0.00       269.31          0        272
+sda1              0.00         0.00         0.00          0          0
+sda2              1.98         0.00       269.31          0        272
+dm-0              0.99         0.00         7.92          0          8
+dm-1              0.00         0.00         0.00          0          0
+
+Device:                  rBlk_nor/s   wBlk_nor/s   rBlk_dir/s   wBlk_dir/s   rBlk_svr/s   wBlk_svr/s    rops/s    wops/s
+10.7.0.1:/var/ftp/pub/RHEL/X86-64/S55         0.00         0.00         0.00         0.00         0.00         0.00    135.64    133.66
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           1.00    0.00    6.00    0.00    0.00   93.00
+
+Device:            tps   Blk_read/s   Blk_wrtn/s   Blk_read   Blk_wrtn
+sda               0.00         0.00         0.00          0          0
+sda1              0.00         0.00         0.00          0          0
+sda2              0.00         0.00         0.00          0          0
+dm-0              0.00         0.00         0.00          0          0
+dm-1              0.00         0.00         0.00          0          0
+
+Device:                  rBlk_nor/s   wBlk_nor/s   rBlk_dir/s   wBlk_dir/s   rBlk_svr/s   wBlk_svr/s    rops/s    wops/s
+10.7.0.1:/var/ftp/pub/RHEL/X86-64/S55         0.00         0.00         0.00         0.00         0.00         0.00   1297.00   1298.00
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+          10.00    0.00   14.00    0.00    0.00   76.00
+
+Device:            tps   Blk_read/s   Blk_wrtn/s   Blk_read   Blk_wrtn
+sda               0.00         0.00         0.00          0          0
+sda1              0.00         0.00         0.00          0          0
+sda2              0.00         0.00         0.00          0          0
+dm-0              0.00         0.00         0.00          0          0
+dm-1              0.00         0.00         0.00          0          0
+
+Device:                  rBlk_nor/s   wBlk_nor/s   rBlk_dir/s   wBlk_dir/s   rBlk_svr/s   wBlk_svr/s    rops/s    wops/s
+10.7.0.1:/var/ftp/pub/RHEL/X86-64/S55         0.00         0.00         0.00         0.00         0.00         0.00    826.00    827.00
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+          43.00    0.00   55.00    0.00    0.00    2.00
+
+Device:            tps   Blk_read/s   Blk_wrtn/s   Blk_read   Blk_wrtn
+sda               0.00         0.00         0.00          0          0
+sda1              0.00         0.00         0.00          0          0
+sda2              0.00         0.00         0.00          0          0
+dm-0              0.00         0.00         0.00          0          0
+dm-1              0.00         0.00         0.00          0          0
+
+Device:                  rBlk_nor/s   wBlk_nor/s   rBlk_dir/s   wBlk_dir/s   rBlk_svr/s   wBlk_svr/s    rops/s    wops/s
+10.7.0.1:/var/ftp/pub/RHEL/X86-64/S55         0.00         0.00         0.00         0.00         0.00         0.00    131.00    131.00
+

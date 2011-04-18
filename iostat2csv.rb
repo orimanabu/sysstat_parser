@@ -7,13 +7,13 @@ require 'sysstat/iostat'
 options = Hash.new
 options['os'] = "linux"
 opts = OptionParser.new
-opts.on("--os OS") { |os|
+opts.on("--os OS") do |os|
     options['os'] = os.downcase
-}
-opts.on("--exclude REGEXP") { |regexp|
+end
+opts.on("--exclude REGEXP") do |regexp|
     options['exclude_filter'] = regexp
-}
-opts.on("--debug LEVEL") { |level|
+end
+opts.on("--debug LEVEL") do |level|
     if level == "csv"
         options['debug'] = Sysstat::DEBUG_CSV
     elsif level == "parse"
@@ -23,8 +23,8 @@ opts.on("--debug LEVEL") { |level|
     else
         optoins['debug'] = Sysstat::DEBUG_NONE
     end
-}
-opts.on("--help") {
+end
+opts.on("--help") do
     print <<END
 Usage: iostat2csv.rb [--os OS | --exclude REGEXP | --debug LEVEL] IOSTAT_OUTPUT
          parse VMSTAT_OUTPUT and print in CSV format.
@@ -33,19 +33,10 @@ Usage: iostat2csv.rb [--os OS | --exclude REGEXP | --debug LEVEL] IOSTAT_OUTPUT
          You can exclude devices using REGEXP.
 END
     exit
-}
+end
 opts.parse!(ARGV)
 
-iostat = nil
-case options['os']
-when "linux"
-    iostat = Sysstat::LinuxIostat.new
-#when "macosx"
-#    iostat = Sysstat::MacOSXIostat.new
-else
-    abort "invalid OS: #{options['os']}\n"
-end
-
+iostat = Sysstat::IostatFactory.create(options['os'])
 Sysstat.debug(options['debug']) if options['debug']
 iostat.parse(ARGV.shift)
 iostat.exclude_filter = /#{options['exclude_filter']}/ if options['exclude_filter']
