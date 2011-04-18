@@ -32,16 +32,7 @@ END
 }
 opts.parse!(ARGV)
 
-vmstat = nil
-case options['os']
-when "linux"
-    vmstat = Sysstat::LinuxVmstat.new
-when "macosx"
-    vmstat = Sysstat::MacOSXVmstat.new
-else
-    abort "invalid OS: #{options['os']}\n"
-end
-
+vmstat = Sysstat::VmstatFactory.create(options['os'])
 Sysstat.debug(options['debug']) if options['debug']
 vmstat.parse(ARGV.shift)
 #vmstat.dump

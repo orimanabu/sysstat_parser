@@ -65,6 +65,21 @@ module Sysstat
         end
     end
 
+    class VmstatFactory
+        def VmstatFactory.create(os)
+            obj = nil
+            case os.downcase
+            when 'linux'
+                obj = LinuxVmstat.new
+            when 'macosx'
+                obj = MacOSXVmstat.new
+            else
+                raise "Unknown OS: #{os}\n"
+            end
+            return obj
+        end
+    end
+
     class LinuxVmstat < Vmstat
         def initialize
             super({
