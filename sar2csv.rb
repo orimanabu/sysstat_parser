@@ -40,16 +40,7 @@ END
 }
 opts.parse!(ARGV)
 
-sar = nil
-case options['os']
-when "linux"
-    sar = Sysstat::LinuxSar.new
-when "macosx"
-    sar = Sysstat::MacOSXSar.new
-else
-    abort "invalid OS: #{options['os']}\n"
-end
-
+sar = Sysstat::SarFactory.create(options['os'])
 Sysstat.debug(options['debug']) if options['debug']
 sar.parse(ARGV.shift)
 #sar.dump

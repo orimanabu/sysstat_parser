@@ -209,6 +209,21 @@ module Sysstat
         end
     end
 
+    class SarFactory
+        def SarFactory.create(os)
+            obj = nil
+            case os.downcase
+            when 'linux'
+                obj = LinuxSar.new
+            when 'macosx'
+                obj = MacOSXSar.new
+            else
+                raise "Unknown OS: #{os}\n"
+            end
+            return obj
+        end
+    end
+
     class LinuxSar < Sar
         def initialize
             super(
