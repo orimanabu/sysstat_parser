@@ -36,16 +36,7 @@ END
 }
 opts.parse!(ARGV)
 
-iostat = nil
-case options['os']
-when "linux"
-    iostat = Sysstat::LinuxIostat.new
-#when "macosx"
-#    iostat = Sysstat::MacOSXIostat.new
-else
-    abort "invalid OS: #{options['os']}\n"
-end
-
+iostat = Sysstat::IostatFactory.create(options['os'])
 Sysstat.debug(options['debug']) if options['debug']
 iostat.parse(ARGV.shift)
 iostat.exclude_filter = /#{options['exclude_filter']}/ if options['exclude_filter']

@@ -112,6 +112,21 @@ module Sysstat
         end
     end
 
+    class IostatFactory
+        def IostatFactory.create(os)
+            obj = nil
+            case os.downcase
+            when 'linux'
+                obj = LinuxIostat.new
+            when 'macosx'
+                obj = MacOSXIostat.new
+            else
+                raise "Unknown OS: #{os}\n"
+            end
+            return obj
+        end
+    end
+
     class LinuxIostat < Iostat
         def initialize
             super({
