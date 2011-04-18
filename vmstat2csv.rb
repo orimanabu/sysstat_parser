@@ -7,10 +7,10 @@ require 'sysstat/vmstat'
 options = Hash.new
 options['os'] = "linux"
 opts = OptionParser.new
-opts.on("--os OS") { |os|
+opts.on("--os OS") do |os|
     options['os'] = os.downcase
-}
-opts.on("--debug LEVEL") { |level|
+end
+opts.on("--debug LEVEL") do |level|
     if level == "csv"
         options['debug'] = Sysstat::DEBUG_CSV
     elsif level == "parse"
@@ -20,8 +20,8 @@ opts.on("--debug LEVEL") { |level|
     else
         optoins['debug'] = Sysstat::DEBUG_NONE
     end
-}
-opts.on("--help") {
+end
+opts.on("--help") do
     print <<END
 Usage: vmstat2csv.rb [--os OS | --debug LEVEL] VMSTAT_OUTPUT
          parse VMSTAT_OUTPUT and print in CSV format.
@@ -29,7 +29,7 @@ Usage: vmstat2csv.rb [--os OS | --debug LEVEL] VMSTAT_OUTPUT
            "linux" or "macosx" is supported.
 END
     exit
-}
+end
 opts.parse!(ARGV)
 
 vmstat = Sysstat::VmstatFactory.create(options['os'])

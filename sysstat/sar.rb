@@ -57,9 +57,9 @@ module Sysstat
             @exclude_filter = nil
             @data = Hash.new
             @metrics = Hash.new
-            metrics.each { |m|
+            metrics.each do |m|
                 @metrics[m.name] = m
-            }
+            end
             @labels = Hash.new
         end
 
@@ -68,11 +68,11 @@ module Sysstat
         end
 
         def match(line)
-            @metrics.values.each {|metric|
+            @metrics.values.each do |metric|
                 if metric.match(line)
                     return metric.parse(line)
                 end
-            }
+            end
             return nil
         end
 
@@ -81,7 +81,7 @@ module Sysstat
             file = File.open(path)
             nline = 0
             current_metric = nil
-            file.each { |line|
+            file.each do |line|
                 line.chomp!
                 next if /^$/ =~ line
                 next if /^Average:/ =~ line
@@ -105,7 +105,7 @@ module Sysstat
                     end
                 end
                 nline = nline + 1
-            }
+            end
         end
 
         def sort_instances(metric)
@@ -116,7 +116,7 @@ module Sysstat
             instances.delete_at(index_of_all) if index_of_all
             instances.delete_at(index_of_sum) if index_of_sum
             instances.delete_at(index_of_none) if index_of_none
-            instances.sort!{|a,b| a.to_i <=> b.to_i}
+            instances.sort! { |a,b| a.to_i <=> b.to_i }
             instances.unshift("all") if index_of_all
             instances.unshift("sum") if index_of_sum
             instances.unshift("none") if index_of_none
@@ -136,17 +136,17 @@ module Sysstat
             print "hostname=", @hostname, "\n"
             print "date_str=", @date_str, "\n"
             print "\n"
-            data.keys.sort.each { |metric|
+            data.keys.sort.each do |metric|
                 print "<#{metric}>\n"
-                sort_instances(metric).each { |instance|
+                sort_instances(metric).each do |instance|
                     print "  <#{instance}>\n"
                     print "    <HH:MM:SS>\t#{labels[metric].inspect}\n"
                     timedata = data[metric][instance]
-                    timedata.keys.sort.each { |time|
+                    timedata.keys.sort.each do |time|
                         print "    <#{time}>\t#{timedata[time].inspect}\n"
-                    }
-                }
-            }
+                    end
+                end
+            end
         end
 
         def match_exclude_filter(metric, instance)
@@ -160,39 +160,39 @@ module Sysstat
             print "time, "
             ncolumn = 0
             Sysstat.debug_print(DEBUG_CSV, "[label] number of metrics: #{data.keys.length}\n")
-#            labels.keys.sort.each { |metric|
-            data.keys.sort.each { |metric|
+#            labels.keys.sort.each do |metric|
+            data.keys.sort.each do |metric|
                 Sysstat.debug_print(DEBUG_CSV, "[label] number of instances: #{data[metric].keys.length}\n")
                 Sysstat.debug_print(DEBUG_CSV, "[label] #{data[metric].keys.sort.inspect}\n")
                 ncolumn = ncolumn + data[metric].keys.length
-                sort_instances(metric).each { |instance|
+                sort_instances(metric).each do |instance|
                     next if match_exclude_filter(metric, instance)
-                    labels[metric].each { |column|
+                    labels[metric].each do |column|
                         if instance == "none"
                             label = "#{metric}:#{column}"
                         else
                             label = "#{metric}.#{instance}:#{column}"
                         end
                         print "#{label}, "
-                    }
-                }
-            }
+                    end
+                end
+            end
             Sysstat.debug_print(DEBUG_CSV, "[label] number of columns: #{ncolumn}\n")
             print "\n"
         end
 
         def print_csv_data
             Sysstat.debug_print(DEBUG_PARSE, "=== csv data ===\n")
-            get_times.each { |time|
+            get_times.each do |time|
                 next if time == "Average:"
                 print "#{time}, "
                 ncolumn = 0
                 Sysstat.debug_print(DEBUG_CSV, "[data] number of metrics: #{data.keys.length}\n")
-                data.keys.sort.each { |metric|
+                data.keys.sort.each do |metric|
                     Sysstat.debug_print(DEBUG_CSV, "[data] number of instances: #{data[metric].keys.length}\n")
                     Sysstat.debug_print(DEBUG_CSV, "[data] #{data[metric].keys.inspect}\n")
                     ncolumn = ncolumn + data[metric].keys.length
-                    sort_instances(metric).each { |instance|
+                    sort_instances(metric).each do |instance|
                         timedata = data[metric][instance]
                         next if match_exclude_filter(metric, instance)
                         if timedata[time]
@@ -201,11 +201,11 @@ module Sysstat
                             print labels[metric].map{}.join(", ")
                         end
                         print ", "
-                    }
-                }
+                    end
+                end
                 Sysstat.debug_print(DEBUG_CSV, "[data] number of columns: #{ncolumn}\n")
                 print "\n"
-            }
+            end
         end
     end
 
