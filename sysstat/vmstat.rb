@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-# vi: set ts=4 sw=4 et sts=4:
+# -*- coding: utf-8; ruby-indent-level: 4 -*- vi: set ts=4 sw=4 et sts=4:
 
 require 'sysstat/sysstat'
 module Sysstat
