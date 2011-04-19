@@ -72,8 +72,10 @@ module Sysstat
             case os.downcase
             when 'linux'
                 obj = LinuxVmstat.new
-            when 'macosx'
+            when /macosx|darwin/
                 obj = MacOSXVmstat.new
+            when /sunos/
+                obj = SunOSVmstat.new
             else
                 raise "Unknown OS: #{os}\n"
             end
@@ -127,6 +129,12 @@ module Sysstat
             })
         end
     end
+
+#    class SunOSVmstat < Vmstat
+#        def initialize
+#            super()
+#        end
+#    end
 end
 
 ## RHEL4

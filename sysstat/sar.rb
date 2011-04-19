@@ -237,8 +237,10 @@ module Sysstat
             case os.downcase
             when 'linux'
                 obj = LinuxSar.new
-            when 'macosx'
+            when /macosx|darwin/
                 obj = MacOSXSar.new
+            when /sunos/
+                obj = SunOSSar.new
             else
                 raise "Unknown OS: #{os}\n"
             end
@@ -450,4 +452,10 @@ module Sysstat
             )
         end
     end
+
+#    class SunOSSar < Sar
+#        def initialize
+#            super()
+#        end
+#    end
 end

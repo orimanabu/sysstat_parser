@@ -119,8 +119,10 @@ module Sysstat
             case os.downcase
             when 'linux'
                 obj = LinuxIostat.new
-            when 'macosx'
+            when /macosx|darwin/
                 obj = MacOSXIostat.new
+            when /sunos/
+                obj = SunOSIostat.new
             else
                 raise "Unknown OS: #{os}\n"
             end
@@ -144,6 +146,12 @@ module Sysstat
 #                'ignore_regexp' => /^Mach Virtual Memory Statistics:/,
 #                'header_regexp' => /\s*free active   spec inactive/
 #            })
+#        end
+#    end
+#
+#    class SunOSIostat < Iostat
+#        def initialize
+#            super()
 #        end
 #    end
 end
