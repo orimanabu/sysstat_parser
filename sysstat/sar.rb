@@ -200,6 +200,26 @@ module Sysstat
                         if timedata[time]
                             print timedata[time].join(", ")
                         else
+                            # if devices appear/disappear during sar mesurement, fill with blank columns.
+                            # e.g. disk2 dissappears at 07:39:33 and appears again at 07:39:34
+                            #    07:39:32   device    r+w/s    blks/s
+                            #    07:39:32   disk0        2         16
+                            #    07:39:32   disk1        0          0
+                            #    07:39:32   disk2        0          0
+                            #    
+                            #    07:39:33   device    r+w/s    blks/s
+                            #    07:39:33   disk0        1          8
+                            #    07:39:33   disk1        0          0
+                            #    
+                            #    07:39:34   device    r+w/s    blks/s
+                            #    07:39:34   disk0        0          0
+                            #    07:39:34   disk1        0          0
+                            #    07:39:34   disk2        0          0
+                            # then converted csv lines are like these
+                            #    time, disk.disk0:r+w/s, disk.disk0:blks/s, disk.disk1:r+w/s, disk.disk1:blks/s, disk.disk2:r+w/s, disk.disk2:blks/s,
+                            #    07:39:32, 2, 16, 0, 0, 0, 0,
+                            #    07:39:33, 1, 8, 0, 0, , ,
+                            #    07:39:34, 0, 0, 0, 0, 0, 0,
                             print labels[metric].map{}.join(", ")
                         end
                         print ", "
