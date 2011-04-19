@@ -5,7 +5,7 @@ require 'optparse'
 require 'sysstat/vmstat'
 
 options = Hash.new
-options['os'] = "linux"
+options['os'] = open('|uname -s') {|file| file.gets.chomp.downcase}
 opts = OptionParser.new
 opts.on("--os OS") { |os| options['os'] = os.downcase }
 opts.on("--debug LEVEL") do |level|
