@@ -2,21 +2,60 @@ Sysstat parsers written in ruby.
 
 * Commands
 ** sar2csv.rb
-Usage: sar2csv.rb [--exclude REGEXP] SAR_OUTPUT
+*** Usage: sar2csv.rb [--exclude REGEXP] SAR_OUTPUT
          parse SAR_OUTPUT and print in CSV format.
          OS is an operating system on which SAR_OUTPUT created.
            "linux" or "macosx" is supported.
          SAR_OUTPUT is output of "sar -f SARDATA".
          You can exclude metrics using REGEXP.
 
+*** Mappings between sar metrics and CSV columns:
+There are 3 patterns of sar outputs.
+  (1) metrics contains 1 counter, such as proc/s statistics.
+  (2) metrics contains some counters, such as memory statistics.
+  (3) metrics contains multiple instances where each has some counters, such as CPU usage, network statistics.
+CSV column names has conventions like:
+  (i) "metric.counter" for (1) and (2)
+      e.g. proc:proc/s, memory:frmpg/s
+  (ii) "metric.instance":counter" for (3)
+      e.g. cpu.0:%user, net_edev.eth0:rxdrop/s
+
+for example, sar output:
+  17:00:59       proc/s
+  17:01:09        11.89
+  17:01:19         0.00
+  17:01:29         0.00
+
+  17:00:59      frmpg/s   bufpg/s   campg/s
+  17:01:09        30.27      3.30     65.73
+  17:01:19        81.00      2.00      1.50
+  17:01:29        80.80      1.90      1.90
+  
+  17:00:59          CPU     %user     %nice   %system   %iowait    %steal     %idle
+  17:01:09          all      0.07      0.00      0.10      0.02      0.00     99.80
+  17:01:09            0      0.10      0.00      0.10      0.00      0.00     99.80
+  17:01:09            1      0.20      0.00      0.40      0.00      0.00     99.40
+  17:01:19          all      0.01      0.00      0.02      0.00      0.00     99.97
+  17:01:19            0      0.00      0.00      0.00      0.00      0.00    100.00
+  17:01:19            1      0.00      0.00      0.20      0.00      0.00     99.80
+  17:01:29          all      0.00      0.00      0.01      0.00      0.00     99.99
+  17:01:29            0      0.00      0.00      0.00      0.00      0.00    100.00
+  17:01:29            1      0.00      0.00      0.00      0.00      0.00    100.00
+
+converted CSV:
+  time, cpu.all:%user, cpu.all:%nice, cpu.all:%system, cpu.all:%iowait, cpu.all:%steal, cpu.all:%idle, cpu.0:%user, cpu.0:%nice, cpu.0:%system, cpu.0:%iowait, cpu.0:%steal, cpu.0:%idle, cpu.1:%user, cpu.1:%nice, cpu.1:%system, cpu.1:%iowait, cpu.1:%steal, cpu.1:%idle, memory:frmpg/s, memory:bufpg/s, memory:campg/s, proc:proc/s,
+  17:01:09, 0.07, 0.00, 0.10, 0.02, 0.00, 99.80, 0.10, 0.00, 0.10, 0.00, 0.00, 99.80, 0.20, 0.00, 0.40, 0.00, 0.00, 99.40, 30.27, 3.30, 65.73, 11.89,
+  17:01:19, 0.01, 0.00, 0.02, 0.00, 0.00, 99.97, 0.00, 0.00, 0.00, 0.00, 0.00, 100.00, 0.00, 0.00, 0.20, 0.00, 0.00, 99.80, 81.00, 2.00, 1.50, 0.00,
+  17:01:29, 0.00, 0.00, 0.01, 0.00, 0.00, 99.99, 0.00, 0.00, 0.00, 0.00, 0.00, 100.00, 0.00, 0.00, 0.00, 0.00, 0.00, 100.00, 80.80, 1.90, 1.90, 0.00,
+
 ** vmstat2csv.rb
-Usage: vmstat2csv.rb [--os OS | --debug LEVEL] VMSTAT_OUTPUT
+*** Usage: vmstat2csv.rb [--os OS | --debug LEVEL] VMSTAT_OUTPUT
          parse VMSTAT_OUTPUT and print in CSV format.
          OS is an operating system on which VMSTAT_OUTPUT created.
            "linux" or "macosx" is supported.
 
 ** iostat2csv.rb
-Usage: iostat2csv.rb [--os OS | --exclude REGEXP | --debug LEVEL] IOSTAT_OUTPUT
+*** Usage: iostat2csv.rb [--os OS | --exclude REGEXP | --debug LEVEL] IOSTAT_OUTPUT
          parse VMSTAT_OUTPUT and print in CSV format.
          OS is an operating system on which IOSTAT_OUTPUT created.
            "linux" or "macosx" is supported.
