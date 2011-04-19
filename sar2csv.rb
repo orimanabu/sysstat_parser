@@ -2,7 +2,6 @@
 # -*- coding: utf-8; ruby-indent-level: 4 -*- vi: set ts=4 sw=4 et sts=4:
 
 require 'optparse'
-require 'sysstat/sysstat'
 require 'sysstat/sar'
 
 options = Hash.new
