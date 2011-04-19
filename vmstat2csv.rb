@@ -33,7 +33,7 @@ end
 opts.parse!(ARGV)
 
 vmstat = Sysstat::VmstatFactory.create(options['os'])
-Sysstat.debug(options['debug']) if options['debug']
+vmstat.debug(options['debug'])
 vmstat.parse(ARGV.shift)
 #vmstat.dump
 vmstat.print_csv

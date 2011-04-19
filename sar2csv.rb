@@ -2,6 +2,7 @@
 # -*- coding: utf-8; ruby-indent-level: 4 -*- vi: set ts=4 sw=4 et sts=4:
 
 require 'optparse'
+require 'sysstat/sysstat'
 require 'sysstat/sar'
 
 options = Hash.new
@@ -41,7 +42,7 @@ end
 opts.parse!(ARGV)
 
 sar = Sysstat::SarFactory.create(options['os'])
-Sysstat.debug(options['debug']) if options['debug']
+sar.debug(options['debug'])
 sar.parse(ARGV.shift)
 #sar.dump
 sar.exclude_filter = /#{options['exclude_filter']}/ if options['exclude_filter']

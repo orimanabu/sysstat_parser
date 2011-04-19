@@ -51,8 +51,10 @@ module Sysstat
     end
 
     class Sar
+        include Sysstat
         attr_writer :exclude_filter
         attr_reader :data, :metrics, :labels, :kernel_version, :hostname, :date_str
+
         def initialize(*metrics)
             @exclude_filter = nil
             @data = Hash.new
@@ -77,7 +79,7 @@ module Sysstat
         end
 
         def parse(path)
-            Sysstat.debug_print(DEBUG_PARSE, "=== parse ===\n")
+            debug_print(DEBUG_PARSE, "=== parse ===\n")
             file = File.open(path)
             nline = 0
             current_metric = nil
@@ -86,20 +88,20 @@ module Sysstat
                 next if /^$/ =~ line
                 next if /^Average:/ =~ line
                 next if @ignore_regexp and @ignore_regexp =~ line
-                Sysstat.debug_print(DEBUG_PARSE, "#{nline}:\t#{line}\n")
+                debug_print(DEBUG_PARSE, "#{nline}:\t#{line}\n")
                 if /^Linux\s+(\S+)\s+\((\S+)\)\s+(.*)/ =~ line
                     @kernel_version = $1
                     @hostname = $2
                     @date_str = $3
                 else
                     if sd = match(line)
-                        Sysstat.debug_print(DEBUG_PARSE, "\t=== block (#{sd.name}) start ===\n")
+                        debug_print(DEBUG_PARSE, "\t=== block (#{sd.name}) start ===\n")
                         @data[sd.name] = Hash.new unless @data[sd.name]
                         current_metric = sd.name
                         @labels[sd.name] = sd.data
                     else
                         sd = metric(current_metric).parse(line)
-                        Sysstat.debug_print(DEBUG_PARSE, "### data: #{sd.inspect}\n")
+                        debug_print(DEBUG_PARSE, "### data: #{sd.inspect}\n")
                         @data[current_metric][sd.instance] = Hash.new unless @data[current_metric][sd.instance]
                         @data[current_metric][sd.instance][sd.time] = sd.data
                     end
@@ -156,14 +158,14 @@ module Sysstat
         end
 
         def print_csv_header
-            Sysstat.debug_print(DEBUG_PARSE, "=== csv header ===\n")
+            debug_print(DEBUG_PARSE, "=== csv header ===\n")
             print "time, "
             ncolumn = 0
-            Sysstat.debug_print(DEBUG_CSV, "[label] number of metrics: #{data.keys.length}\n")
+            debug_print(DEBUG_CSV, "[label] number of metrics: #{data.keys.length}\n")
 #            labels.keys.sort.each do |metric|
             data.keys.sort.each do |metric|
-                Sysstat.debug_print(DEBUG_CSV, "[label] number of instances: #{data[metric].keys.length}\n")
-                Sysstat.debug_print(DEBUG_CSV, "[label] #{data[metric].keys.sort.inspect}\n")
+                debug_print(DEBUG_CSV, "[label] number of instances: #{data[metric].keys.length}\n")
+                debug_print(DEBUG_CSV, "[label] #{data[metric].keys.sort.inspect}\n")
                 ncolumn = ncolumn + data[metric].keys.length
                 sort_instances(metric).each do |instance|
                     next if match_exclude_filter(metric, instance)
@@ -177,20 +179,20 @@ module Sysstat
                     end
                 end
             end
-            Sysstat.debug_print(DEBUG_CSV, "[label] number of columns: #{ncolumn}\n")
+            debug_print(DEBUG_CSV, "[label] number of columns: #{ncolumn}\n")
             print "\n"
         end
 
         def print_csv_data
-            Sysstat.debug_print(DEBUG_PARSE, "=== csv data ===\n")
+            debug_print(DEBUG_PARSE, "=== csv data ===\n")
             get_times.each do |time|
                 next if time == "Average:"
                 print "#{time}, "
                 ncolumn = 0
-                Sysstat.debug_print(DEBUG_CSV, "[data] number of metrics: #{data.keys.length}\n")
+                debug_print(DEBUG_CSV, "[data] number of metrics: #{data.keys.length}\n")
                 data.keys.sort.each do |metric|
-                    Sysstat.debug_print(DEBUG_CSV, "[data] number of instances: #{data[metric].keys.length}\n")
-                    Sysstat.debug_print(DEBUG_CSV, "[data] #{data[metric].keys.inspect}\n")
+                    debug_print(DEBUG_CSV, "[data] number of instances: #{data[metric].keys.length}\n")
+                    debug_print(DEBUG_CSV, "[data] #{data[metric].keys.inspect}\n")
                     ncolumn = ncolumn + data[metric].keys.length
                     sort_instances(metric).each do |instance|
                         timedata = data[metric][instance]
@@ -203,7 +205,7 @@ module Sysstat
                         print ", "
                     end
                 end
-                Sysstat.debug_print(DEBUG_CSV, "[data] number of columns: #{ncolumn}\n")
+                debug_print(DEBUG_CSV, "[data] number of columns: #{ncolumn}\n")
                 print "\n"
             end
         end
@@ -228,108 +230,108 @@ module Sysstat
         def initialize
             super(
                 # Statistics covered with '-A' option:
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'proc/s',
                     'proc',
                     '(-c) process creation activity',
                     0
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'cswch/s',
                     'cswch',
                     '(-w) system switching activity',
                     0
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'CPU\s+%user',
                     'cpu',
                     '(-u) CPU utilization',
                     0,
                     'have_instance'
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'CPU\s+i0',
                     'intr_cpu',
                     '(-I SUM -P ALL) statistics for a given interrupt',
                     0,
                     'have_instance'
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'INTR',
                     'intr_xall',
                     '(-I SUM|XALL) statistics for a given interrupt',
                     0,
                     'have_instance'
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'pswpin/s',
                     'swap',
                     '(-W) swapping statistics',
                     0
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'tps',
                     'tps',
                     '(-b) I/O and transfer rate statistics',
                     0
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'frmpg/s',
                     'memory',
                     '(-R) memory statistics',
                     0
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'IFACE\s+rxpck/s',
                     'net_dev',
                     '(-n DEV) network statistics',
                     0,
                     'have_instance'
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'IFACE\s+rxerr/s',
                     'net_edev',
                     '(-n EDEV) network statistics',
                     0,
                     'have_instance'
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'call/s',
                     'net_nfs',
                     '(-n NFS) network statistics',
                     0
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'scall/s',
                     'net_nfsd',
                     '(-n NFSD) network statistics',
                     0
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'totsck',
                     'net_sock',
                     '(-n SOCK) network statistics',
                     0
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'pgpgin',
                     'paging',
                     '(-B) paging statistics',
                     0
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'kbmemfree',
                     'memswap',
                     '(-r) memory and swap space utilization statistics',
                     0
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'dentunusd',
                     'inode',
                     '(-v) status of inode, file and other kernel tables',
                     0
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'runq-sz',
                     'runq',
                     '(-q) queue length and load averages',
@@ -337,28 +339,28 @@ module Sysstat
                 ),
                 # Statistics not covered with '-A' option:
                 # command: LANG=C sar -A -x ALL -X ALL -y -d 5 50 -o sample_extra2.sar
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'DEV',
                     'blkdev',
                     '(-d) activity  for each block device',
                     0,
                     'have_instance'
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'PID',
                     'pid',
                     '(-x pid|SELF|ALL) statistics for a given process',
                     0,
                     'have_instance'
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'PPID',
                     'ppid',
                     '(-X pid|SELF|ALL) statistics for the child processes of the process',
                     0,
                     'have_instance'
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'TTY',
                     'tty',
                     '(-y) TTY device activity',
@@ -386,39 +388,39 @@ module Sysstat
 # Average:   disk4        89      1339
             @ignore_regexp = /(^New Disk:|disk\d+\s+IO(Device|Service))/
             super(
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     '%usr',
                     'cpu',
                     'XXX',
                     0
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'pgout/s',
                     'pageout',
                     'XXX',
                     0
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'pgin/s',
                     'pagein',
                     'XXX',
                     0
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'device',
                     'disk',
                     'XXX',
                     0,
                     'have_instance'
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'IFACE\s+Ipkts/s',
                     'net_dev',
                     'XXX',
                     0,
                     'have_instance'
                 ),
-                Sysstat::SarMetric.new(
+                SarMetric.new(
                     'IFACE\s+Ierrs/s',
                     'net_edev',
                     'XXX',

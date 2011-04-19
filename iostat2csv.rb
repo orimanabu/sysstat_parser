@@ -37,7 +37,7 @@ end
 opts.parse!(ARGV)
 
 iostat = Sysstat::IostatFactory.create(options['os'])
-Sysstat.debug(options['debug']) if options['debug']
+iostat.debug(options['debug'])
 iostat.parse(ARGV.shift)
 iostat.exclude_filter = /#{options['exclude_filter']}/ if options['exclude_filter']
 #iostat.dump

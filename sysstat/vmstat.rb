@@ -4,6 +4,7 @@
 require 'sysstat/sysstat'
 module Sysstat
     class Vmstat
+        include Sysstat
         attr_reader :data, :labels
         def initialize(arg)
             @ignore_regexp = arg['ignore_regexp']
@@ -14,7 +15,7 @@ module Sysstat
         end
 
         def init_labels(line)
-            Sysstat.debug_print(DEBUG_ALL, "### init_labels ###\n")
+            debug_print(DEBUG_ALL, "### init_labels ###\n")
             line.gsub!(/^\s*/, "")
             array = line.split(/\s+/)
             array.each do |x|
@@ -24,7 +25,7 @@ module Sysstat
         end
 
         def parse(path)
-            Sysstat.debug_print(DEBUG_ALL, "### parse ###\n")
+            debug_print(DEBUG_ALL, "### parse ###\n")
             file = File.open(path)
             nline = 0
             current_metric = nil
@@ -38,7 +39,7 @@ module Sysstat
                     end
                     next
                 end
-                Sysstat.debug_print(DEBUG_PARSE, "#{nline}:\t#{line}\n")
+                debug_print(DEBUG_PARSE, "#{nline}:\t#{line}\n")
                 line.gsub!(/^\s*/, "")
                 data[nline] = line.split(/\s+/)
                 nline = nline + 1
@@ -46,14 +47,14 @@ module Sysstat
         end
 
         def dump
-            Sysstat.debug_print(DEBUG_ALL, "### dump ###\n")
+            debug_print(DEBUG_ALL, "### dump ###\n")
             data.keys.sort.each do |key|
                 print "#{key} - #{data[key].inspect}\n"
             end
         end
 
         def print_csv
-            Sysstat.debug_print(DEBUG_ALL, "### print_csv ###\n")
+            debug_print(DEBUG_ALL, "### print_csv ###\n")
             print ", "
             print labels.join(", ")
             print "\n"
@@ -108,7 +109,7 @@ module Sysstat
         end
 
         def init_labels(line)
-            Sysstat.debug_print(DEBUG_ALL, "### init_labels ###\n")
+            debug_print(DEBUG_ALL, "### init_labels ###\n")
             line.gsub!(/^\s*/, "")
             array = line.split(/\s+/)
             array.each do |x|

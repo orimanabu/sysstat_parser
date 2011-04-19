@@ -5,6 +5,7 @@ require 'sysstat/sysstat'
 
 module Sysstat
     class Iostat
+        include Sysstat
         attr_writer :exclude_filter
         attr_reader :data, :labels, :devs
         def initialize(arg)
@@ -19,7 +20,7 @@ module Sysstat
         end
 
         def init_labels(line)
-            Sysstat.debug_print(DEBUG_ALL, "### init_labels ###\n")
+            debug_print(DEBUG_ALL, "### init_labels ###\n")
             line.gsub!(/^\s*/, "")
             array = line.split(/\s+/)
             array.shift
@@ -30,7 +31,7 @@ module Sysstat
         end
 
         def parse(path)
-            Sysstat.debug_print(DEBUG_ALL, "### parse ###\n")
+            debug_print(DEBUG_ALL, "### parse ###\n")
             file = File.open(path)
             nline = 0
             nentry = nil
@@ -38,7 +39,7 @@ module Sysstat
             time = nil
             file.each do |line|
                 line.chomp!
-                Sysstat.debug_print(DEBUG_PARSE, "#{nline}:\t#{line}\n")
+                debug_print(DEBUG_PARSE, "#{nline}:\t#{line}\n")
                 next if /^$/ =~ line
                 next if @ignore_regexp =~ line
                 if @header_regexp =~ line
@@ -48,11 +49,11 @@ module Sysstat
                     if !@labels_initialized
                         init_labels(line)
                     end
-                    Sysstat.debug_print(DEBUG_PARSE, "header: current_entry=#{current_entry}, nentry=#{nentry}\n")
+                    debug_print(DEBUG_PARSE, "header: current_entry=#{current_entry}, nentry=#{nentry}\n")
                 elsif @time_regexp =~ line
                     time = Regexp.last_match(1)
                 elsif @header_regexp =~ line
-                    Sysstat.debug_print(DEBUG_PARSE, "header:\n")
+                    debug_print(DEBUG_PARSE, "header:\n")
                     if !@labels_initialized
                         init_labels(line)
                     end
@@ -64,7 +65,7 @@ module Sysstat
                     devs[dev] = 1 unless devs[dev]
                     key = time ? time : current_entry
                     data[key] = Hash.new unless data[key]
-                    Sysstat.debug_print(DEBUG_PARSE, "rest: [#{key}][#{dev}], rest=#{array.inspect}\n")
+                    debug_print(DEBUG_PARSE, "rest: [#{key}][#{dev}], rest=#{array.inspect}\n")
                     data[key][dev] = array
                 end
                 nline = nline + 1
@@ -72,7 +73,7 @@ module Sysstat
         end
 
         def dump
-            Sysstat.debug_print(DEBUG_ALL, "### dump ###\n")
+            debug_print(DEBUG_ALL, "### dump ###\n")
             print "### labels:\n"
             print labels.inspect, "\n"
             print "### data:\n"
@@ -89,7 +90,7 @@ module Sysstat
         end
 
         def print_csv
-            Sysstat.debug_print(DEBUG_ALL, "### print_csv ###\n")
+            debug_print(DEBUG_ALL, "### print_csv ###\n")
             # labels
             print ", "
             devs.keys.sort.each do |dev|

@@ -6,19 +6,24 @@ module Sysstat
     DEBUG_PARSE = 0x1
     DEBUG_CSV   = 0x2
     DEBUG_ALL   = 0xFF
-    @debug_level = DEBUG_NONE
 
-    def Sysstat.debug(*arg)
-        if arg
-            @debug_level = arg.shift
+    module Sysstat
+        @@debug_level = DEBUG_NONE
+
+        def debug(*arg)
+            if arg
+                option = arg.shift
+                option ? @@debug_level = option : DEBUG_NONE
+            end
+            return @@debug_level
         end
-        return @debug_level
-    end
 
-    def Sysstat.debug_print(level, message)
-        if (@debug_level & level) != 0
-            STDOUT.print "<#{level}>", message
-#            STDERR.print "<#{level}>", message
+        def debug_print(level, message)
+            if (@@debug_level & level) != 0
+                STDOUT.print "<#{level}>", message
+#                STDERR.sync
+#                STDERR.print "<#{level}>", message
+            end
         end
     end
 end
