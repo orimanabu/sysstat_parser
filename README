@@ -10,17 +10,18 @@ Sysstat parsers written in ruby.
          You can exclude metrics using REGEXP.
 
 *** Mappings between sar metrics and CSV columns:
-There are 3 patterns of sar outputs.
-  (1) metrics contains 1 counter, such as proc/s statistics.
-  (2) metrics contains some counters, such as memory statistics.
-  (3) metrics contains multiple instances where each has some counters, such as CPU usage, network statistics.
-CSV column names has conventions like:
+Sar output has 3 kinds of formats.
+  (1) metrics contains 1 counter, such as proc/s statistics (-c)
+  (2) metrics contains some counters, such as memory statistics (-R)
+  (3) metrics contains multiple instances where each has some counters, such as CPU usage (-P ALL), network statistics (-n DEV)
+
+CSV column names have their conventions:
   (i) "metric.counter" for (1) and (2)
       e.g. proc:proc/s, memory:frmpg/s
   (ii) "metric.instance":counter" for (3)
       e.g. cpu.0:%user, net_edev.eth0:rxdrop/s
 
-for example, sar output:
+For example, when the sar output is like this:
   17:00:59       proc/s
   17:01:09        11.89
   17:01:19         0.00
@@ -42,7 +43,7 @@ for example, sar output:
   17:01:29            0      0.00      0.00      0.00      0.00      0.00    100.00
   17:01:29            1      0.00      0.00      0.00      0.00      0.00    100.00
 
-converted CSV:
+then converted CSV lines are:
   time, cpu.all:%user, cpu.all:%nice, cpu.all:%system, cpu.all:%iowait, cpu.all:%steal, cpu.all:%idle, cpu.0:%user, cpu.0:%nice, cpu.0:%system, cpu.0:%iowait, cpu.0:%steal, cpu.0:%idle, cpu.1:%user, cpu.1:%nice, cpu.1:%system, cpu.1:%iowait, cpu.1:%steal, cpu.1:%idle, memory:frmpg/s, memory:bufpg/s, memory:campg/s, proc:proc/s,
   17:01:09, 0.07, 0.00, 0.10, 0.02, 0.00, 99.80, 0.10, 0.00, 0.10, 0.00, 0.00, 99.80, 0.20, 0.00, 0.40, 0.00, 0.00, 99.40, 30.27, 3.30, 65.73, 11.89,
   17:01:19, 0.01, 0.00, 0.02, 0.00, 0.00, 99.97, 0.00, 0.00, 0.00, 0.00, 0.00, 100.00, 0.00, 0.00, 0.20, 0.00, 0.00, 99.80, 81.00, 2.00, 1.50, 0.00,
