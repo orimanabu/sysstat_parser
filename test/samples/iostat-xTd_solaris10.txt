@@ -1,0 +1,140 @@
+Tue Apr 19 21:16:01 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0      52.6   21.9  633.1  144.4  0.0  0.4    5.8   0  18 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:02 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:03 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:04 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:05 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:06 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0       0.0    2.0    0.0    9.5  0.0  0.0   10.5   0   2 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:07 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:08 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:09 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0       0.0    1.0    0.0    8.5  0.0  0.0    9.6   0   1 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:10 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:11 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:12 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:13 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:14 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:15 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:16 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:17 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:18 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0     348.8    0.0  664.7    0.0  0.0  0.5    1.4   0  48 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:19 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0     540.1    0.0  806.1    0.0  0.0  0.4    0.7   0  35 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+Tue Apr 19 21:16:20 2011
+                 extended device statistics                 
+device    r/s    w/s   kr/s   kw/s wait actv  svc_t  %w  %b 
+fd0       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+sd0     632.2    0.0 1141.4    0.0  0.0  0.3    0.6   0  35 
+sd1       0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
+nfs1      0.0    0.0    0.0    0.0  0.0  0.0    0.0   0   0 
