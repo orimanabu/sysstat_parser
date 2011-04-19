@@ -11,14 +11,11 @@ opts.on("--os OS") do |os|
     options['os'] = os.downcase
 end
 opts.on("--debug LEVEL") do |level|
-    if level == "csv"
-        options['debug'] = Sysstat::DEBUG_CSV
-    elsif level == "parse"
-        options['debug'] = Sysstat::DEBUG_PARSE
-    elsif level == "all"
-        options['debug'] = Sysstat::DEBUG_ALL
-    else
-        optoins['debug'] = Sysstat::DEBUG_NONE
+    case level
+    when "csv";     options['debug'] = Sysstat::DEBUG_CSV
+    when "parse";   options['debug'] = Sysstat::DEBUG_PARSE
+    when "all";     options['debug'] = Sysstat::DEBUG_ALL
+    else;           optoins['debug'] = Sysstat::DEBUG_NONE
     end
 end
 opts.on("--help") do
