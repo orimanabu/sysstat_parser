@@ -7,9 +7,7 @@ require 'sysstat/vmstat'
 options = Hash.new
 options['os'] = "linux"
 opts = OptionParser.new
-opts.on("--os OS") do |os|
-    options['os'] = os.downcase
-end
+opts.on("--os OS") { |os| options['os'] = os.downcase }
 opts.on("--debug LEVEL") do |level|
     case level
     when "csv";     options['debug'] = Sysstat::DEBUG_CSV

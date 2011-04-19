@@ -7,15 +7,9 @@ require 'sysstat/sar'
 options = Hash.new
 options['os'] = "linux"
 opts = OptionParser.new
-opts.on("--os OS") do |os|
-    options['os'] = os.downcase
-end
-opts.on("--exclude REGEXP") do |regexp|
-    options['exclude_filter'] = regexp
-end
-opts.on("--header-only") do |v|
-    options['header_only'] = v
-end
+opts.on("--os OS") { |os| options['os'] = os.downcase }
+opts.on("--exclude REGEXP") { |regexp| options['exclude_filter'] = regexp }
+opts.on("--header-only") { |v| options['header_only'] = v }
 opts.on("--debug LEVEL") do |level|
     case level
     when "csv";     options['debug'] = Sysstat::DEBUG_CSV
