@@ -10,10 +10,10 @@ opts = OptionParser.new
 opts.on("--os OS") { |os| options['os'] = os.downcase }
 opts.on("--debug LEVEL") do |level|
     case level
-    when "csv";     options['debug'] = Sysstat::DEBUG_CSV
-    when "parse";   options['debug'] = Sysstat::DEBUG_PARSE
-    when "all";     options['debug'] = Sysstat::DEBUG_ALL
-    else;           optoins['debug'] = Sysstat::DEBUG_NONE
+    when "csv"      then options['debug'] = Sysstat::DEBUG_CSV
+    when "parse"    then options['debug'] = Sysstat::DEBUG_PARSE
+    when "all"      then options['debug'] = Sysstat::DEBUG_ALL
+    else                 optoins['debug'] = Sysstat::DEBUG_NONE
     end
 end
 opts.on("--help") do

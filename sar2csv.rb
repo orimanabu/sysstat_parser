@@ -12,10 +12,10 @@ opts.on("--exclude REGEXP") { |regexp| options['exclude_filter'] = regexp }
 opts.on("--header-only") { |v| options['header_only'] = v }
 opts.on("--debug LEVEL") do |level|
     case level
-    when "csv";     options['debug'] = Sysstat::DEBUG_CSV
-    when "parse";   options['debug'] = Sysstat::DEBUG_PARSE
-    when "all";     options['debug'] = Sysstat::DEBUG_ALL
-    else;           optoins['debug'] = Sysstat::DEBUG_NONE
+    when "csv"      then options['debug'] = Sysstat::DEBUG_CSV
+    when "parse"    then options['debug'] = Sysstat::DEBUG_PARSE
+    when "all"      then options['debug'] = Sysstat::DEBUG_ALL
+    else                 optoins['debug'] = Sysstat::DEBUG_NONE
     end
 end
 opts.on("--help") do
