@@ -89,7 +89,7 @@ module Sysstat
                 next if /^Average:/ =~ line
                 next if @ignore_regexp and @ignore_regexp =~ line
                 debug_print(DEBUG_PARSE, "#{nline}:\t#{line}\n")
-                if /^Linux\s+(\S+)\s+\((\S+)\)\s+(.*)/ =~ line
+                if @sysinfo_regexp and @sysinfo_regexp =~ line
                     @kernel_version = $1
                     @hostname = $2
                     @date_str = $3
@@ -250,6 +250,7 @@ module Sysstat
 
     class LinuxSar < Sar
         def initialize
+            @sysinfo_regexp = /^Linux\s+(\S+)\s+\((\S+)\)\s+(.*)/
             super(
                 # Statistics covered with '-A' option:
                 SarMetric.new(
