@@ -20,7 +20,7 @@ module Sysstat
 
     class SarMetric
         attr_reader :name
-        @@time_regexp = "\\d{2}:\\d{2}:\\d{2}|Average:"
+        @@time_regexp = "\\d{2}:\\d{2}:\\d{2}|Average"
         def initialize(label_regexp, name, description, skip, *flag)
             @label_regexp = label_regexp
             @name = name
@@ -86,7 +86,7 @@ module Sysstat
             file.each do |line|
                 line.chomp!
                 next if /^$/ =~ line
-                next if /^Average:/ =~ line
+                next if /^Average/ =~ line
                 next if @ignore_regexp and @ignore_regexp =~ line
                 debug_print(DEBUG_PARSE, "#{nline}:\t#{line}\n")
                 if @sysinfo_regexp and @sysinfo_regexp =~ line
@@ -239,7 +239,7 @@ module Sysstat
                 obj = LinuxSar.new
             when /macosx|darwin/
                 obj = MacOSXSar.new
-            when /sunos/
+            when /sunos|solaris/
                 obj = SunOSSar.new
             else
                 raise "Unknown OS: #{os}\n"
@@ -454,9 +454,96 @@ module Sysstat
         end
     end
 
-#    class SunOSSar < Sar
-#        def initialize
-#            super()
-#        end
-#    end
+    class SunOSSar < Sar
+        def initialize
+            @sysinfo_regexp = /SunOS\s+(.*)\s+([0-9\/]+)/
+            super(
+                SarMetric.new(
+                    '%usr',
+                    'cpu',
+                    '(-u) CPU utilization',
+                    0
+                ),
+                SarMetric.new(
+                    'device\s+%busy',
+                    'blkdev',
+                    '(-d) activity for each block device (for example, disk or tape drive) with the exception of XDC disks and tape drives',
+                    0,
+                    'have_instance'
+                ),
+                SarMetric.new(
+                    'runq-sz',
+                    'runq',
+                    '(-q) average queue length while occupied, and percent of time occupied',
+                    0
+                ),
+                SarMetric.new(
+                    'bread/s',
+                    'buffer',
+                    '(-b) buffer activity',
+                    0
+                ),
+                SarMetric.new(
+                    'swpin/s',
+                    'swap',
+                    '(-w) system   swapping   and   switching activity',
+                    0
+                ),
+                SarMetric.new(
+                    'scall/s',
+                    'syscall',
+                    '(-c) system calls',
+                    0
+                ),
+                SarMetric.new(
+                    'iget/s',
+                    'fsaccess',
+                    '(-a) use of file access system  routines',
+                    0
+                ),
+                SarMetric.new(
+                    'rawch/s',
+                    'tty',
+                    '(-y) TTY device activity',
+                    0
+                ),
+                SarMetric.new(
+                    'proc-sz',
+                    'tables',
+                    '(-v) status  of  process,  i-node,  file tables',
+                    0
+                ),
+                SarMetric.new(
+                    'msg/s',
+                    'sem',
+                    '(-m) message and semaphore activities',
+                    0
+                ),
+                SarMetric.new(
+                    'atch/s',
+                    'paging1',
+                    '(-p) paging activities',
+                    0
+                ),
+                SarMetric.new(
+                    'pgout/s',
+                    'paging2',
+                    '(-g) paging activities',
+                    0
+                ),
+                SarMetric.new(
+                    'freemem',
+                    'freemem',
+                    '(-r) unused memory pages and disk blocks',
+                    0
+                ),
+                SarMetric.new(
+                    'sml_mem',
+                    'kma',
+                    '(-k) kernel memory allocation (KMA) activities',
+                    0
+                )
+            )
+        end
+    end
 end
