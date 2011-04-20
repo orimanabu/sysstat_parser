@@ -157,10 +157,10 @@ module Sysstat
                 's1' => 'disk.s1',
                 '--' => 'disk.--',
 #                 'in' => 'faults.in',
-#                 'sy' => 'faults.sy',
+#                 'sy' => 'faults.sy',	# XXX
 #                 'cs' => 'faults.cs',
 #                 'us' => 'cpu.us',
-#                 'sy' => 'cpu.sy',
+#                 'sy' => 'cpu.sy',	# XXX
 #                 'id' => 'cpu.id',
                 'epi' => 'paging.epi',
                 'epo' => 'paging.epo',
