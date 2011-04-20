@@ -82,7 +82,7 @@ then converted CSV lines are:
   require 'sysstat/sar'
 
   # create an instance
-  sar = Sysstat::LinuxSar.new
+  sar = Sysstat::SarFactory.create(%x{uname -s})
 
   # parse output of "sar -f sardata"
   sar.parse(filename)
