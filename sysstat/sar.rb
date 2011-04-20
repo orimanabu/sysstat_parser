@@ -444,39 +444,39 @@ module Sysstat
                 SarMetric.new(
                     '%usr',
                     'cpu',
-                    'XXX',
+                    'CPU activity',
                     0
                 ),
                 SarMetric.new(
                     'pgout/s',
                     'pageout',
-                    'XXX',
+                    'page-out activity',
                     0
                 ),
                 SarMetric.new(
                     'pgin/s',
                     'pagein',
-                    'XXX',
+                    'page-in and page fault activity',
                     0
                 ),
                 SarMetric.new(
                     'device',
                     'disk',
-                    'XXX',
+                    'disk activity',
                     0,
                     'have_instance'
                 ),
                 SarMetric.new(
                     'IFACE\s+Ipkts/s',
                     'net_dev',
-                    'XXX',
+                    'network device statistics',
                     0,
                     'have_instance'
                 ),
                 SarMetric.new(
                     'IFACE\s+Ierrs/s',
                     'net_edev',
-                    'XXX',
+                    'network device error statistics',
                     0,
                     'have_instance'
                 )
