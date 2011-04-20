@@ -5,7 +5,8 @@ require 'sysstat/sysstat'
 
 module Sysstat
     class SarData
-        attr_reader :name, :time, :instance, :data
+        attr_accessor :time
+        attr_reader :name, :instance, :data
         def initialize(name, time, instance, data)
             @name = name
             @time = time
@@ -41,6 +42,22 @@ module Sysstat
             line.gsub!(Regexp.new("(#{@@time_regexp})\\s+"), '')
             time = Regexp.last_match(1)
             array = line.split(/\s+/)[@skip .. -1]
+
+            # nil time case:
+            # Solaris blkdev doesn't have time strings in each line...
+            #   21:17:25   fd0               0     0.0       0       0     0.0     0.0
+            #              nfs1              0     0.0       0       0     0.0     0.0
+            #              sd0              34     0.3      49     825     0.0     6.9
+            #              sd0,a            34     0.3      49     825     0.0     6.9
+            #              sd0,b             0     0.0       0       0     0.0     0.0
+            #              sd0,c             0     0.0       0       0     0.0     0.0
+            #              sd0,h             0     0.0       0       0     0.0     0.0
+            #              sd0,i             0     0.0       0       0     0.0     0.0
+            #              sd0,q             0     0.0       0       0     0.0     0.0
+            #              sd0,r             0     0.0       0       0     0.0     0.0
+            #              sd1               0     0.0       0       0     0.0     0.0
+            array.shift unless time
+
             if @flag
                 if @flag == "have_instance"
                     return SarData.new(@name, time, array.shift, array)
@@ -83,6 +100,7 @@ module Sysstat
             file = File.open(path)
             nline = 0
             current_metric = nil
+            current_time = nil
             file.each do |line|
                 line.chomp!
                 next if /^$/ =~ line
@@ -101,9 +119,14 @@ module Sysstat
                         @labels[sd.name] = sd.data
                     else
                         sd = metric(current_metric).parse(line)
+
+                        # workaround for nil time case
+                        sd.time = current_time unless sd.time
+
                         debug_print(DEBUG_PARSE, "### data: #{sd.inspect}\n")
                         @data[current_metric][sd.instance] = Hash.new unless @data[current_metric][sd.instance]
                         @data[current_metric][sd.instance][sd.time] = sd.data
+                        current_time = sd.time
                     end
                 end
                 nline = nline + 1
