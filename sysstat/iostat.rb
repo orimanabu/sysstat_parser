@@ -87,6 +87,7 @@ module Sysstat
         def match_exclude_filter(dev)
             return unless @exclude_filter
             re = Regexp.new(@exclude_filter)
+            re =~ dev
         end
 
         def print_csv
