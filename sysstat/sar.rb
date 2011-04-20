@@ -80,6 +80,7 @@ module Sysstat
                 @metrics[m.name] = m
             end
             @labels = Hash.new
+            @sysinfo = Hash.new
         end
 
         def metric(name)
@@ -95,6 +96,9 @@ module Sysstat
             return nil
         end
 
+        def parse_sysinfo(line)
+        end
+
         def parse(path)
             debug_print(DEBUG_PARSE, "=== parse ===\n")
             file = File.open(path)
@@ -107,27 +111,22 @@ module Sysstat
                 next if /^Average/ =~ line
                 next if @ignore_regexp and @ignore_regexp =~ line
                 debug_print(DEBUG_PARSE, "#{nline}:\t#{line}\n")
-                if @sysinfo_regexp and @sysinfo_regexp =~ line
-                    @kernel_version = $1
-                    @hostname = $2
-                    @date_str = $3
+                next if parse_sysinfo(line)
+                if sd = match(line)
+                    debug_print(DEBUG_PARSE, "\t=== block (#{sd.name}) start ===\n")
+                    @data[sd.name] = Hash.new unless @data[sd.name]
+                    current_metric = sd.name
+                    @labels[sd.name] = sd.data
                 else
-                    if sd = match(line)
-                        debug_print(DEBUG_PARSE, "\t=== block (#{sd.name}) start ===\n")
-                        @data[sd.name] = Hash.new unless @data[sd.name]
-                        current_metric = sd.name
-                        @labels[sd.name] = sd.data
-                    else
-                        sd = metric(current_metric).parse(line)
+                    sd = metric(current_metric).parse(line)
 
-                        # workaround for nil time case
-                        sd.time = current_time unless sd.time
+                    # workaround for nil time case
+                    sd.time = current_time unless sd.time
 
-                        debug_print(DEBUG_PARSE, "### data: #{sd.inspect}\n")
-                        @data[current_metric][sd.instance] = Hash.new unless @data[current_metric][sd.instance]
-                        @data[current_metric][sd.instance][sd.time] = sd.data
-                        current_time = sd.time
-                    end
+                    debug_print(DEBUG_PARSE, "### data: #{sd.inspect}\n")
+                    @data[current_metric][sd.instance] = Hash.new unless @data[current_metric][sd.instance]
+                    @data[current_metric][sd.instance][sd.time] = sd.data
+                    current_time = sd.time
                 end
                 nline = nline + 1
             end
@@ -157,9 +156,7 @@ module Sysstat
 
         def dump
             print "=== dump ===\n";
-            print "kernel_version=", @kernel_version, "\n"
-            print "hostname=", @hostname, "\n"
-            print "date_str=", @date_str, "\n"
+            print "sysinfo: #{@sysinfo.inspect}\n"
             print "\n"
             data.keys.sort.each do |metric|
                 print "<#{metric}>\n"
@@ -273,7 +270,17 @@ module Sysstat
 
     class LinuxSar < Sar
         def initialize
-            @sysinfo_regexp = /^Linux\s+(\S+)\s+\((\S+)\)\s+(.*)/
+            def parse_sysinfo(line)
+                if line =~ /^(Linux)\s+(\S+)\s+\((\S+)\)\s+(.*)/
+                    @sysinfo = {
+                        :os => Regexp.last_match(1),
+                        :kernel_version => Regexp.last_match(2),
+                        :hostname => Regexp.last_match(3),
+                        :date_str => Regexp.last_match(4)
+                    }
+                end
+            end
+
             super(
                 # Statistics covered with '-A' option:
                 SarMetric.new(
@@ -479,7 +486,16 @@ module Sysstat
 
     class SunOSSar < Sar
         def initialize
-            @sysinfo_regexp = /SunOS\s+(.*)\s+([0-9\/]+)/
+            def parse_sysinfo(line)
+                if line =~ /^(SunOS)\s+(.*?)\s+([0-9\/]+)$/
+                    @sysinfo = {
+                        :os => Regexp.last_match(1),
+                        :kernel_version => Regexp.last_match(2),
+                        :date_str => Regexp.last_match[3]
+                    }
+                end
+            end
+
             super(
                 SarMetric.new(
                     '%usr',
