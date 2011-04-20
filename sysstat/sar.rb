@@ -182,7 +182,7 @@ module Sysstat
 
         def print_csv_header
             debug_print(DEBUG_PARSE, "=== csv header ===\n")
-            print "time, "
+            print %Q{"",}
             ncolumn = 0
             debug_print(DEBUG_CSV, "[label] number of metrics: #{data.keys.length}\n")
 #            labels.keys.sort.each do |metric|
@@ -198,7 +198,7 @@ module Sysstat
                         else
                             label = "#{metric}.#{instance}:#{column}"
                         end
-                        print "#{label}, "
+                        print %Q{"#{label}",}
                     end
                 end
             end
@@ -210,7 +210,7 @@ module Sysstat
             debug_print(DEBUG_PARSE, "=== csv data ===\n")
             get_times.each do |time|
                 next if time == "Average:"
-                print "#{time}, "
+                print %Q{"#{time}",}
                 ncolumn = 0
                 debug_print(DEBUG_CSV, "[data] number of metrics: #{data.keys.length}\n")
                 data.keys.sort.each do |metric|
@@ -221,7 +221,7 @@ module Sysstat
                         timedata = data[metric][instance]
                         next if match_exclude_filter(metric, instance)
                         if timedata[time]
-                            print timedata[time].join(", ")
+                            print timedata[time].map{|v| %Q("#{v}")}.join(",")
                         else
                             # if devices appear/disappear during sar mesurement, fill with blank columns.
                             # e.g. disk2 dissappears at 07:39:33 and appears again at 07:39:34
@@ -243,9 +243,9 @@ module Sysstat
                             #    07:39:32, 2, 16, 0, 0, 0, 0,
                             #    07:39:33, 1, 8, 0, 0, , ,
                             #    07:39:34, 0, 0, 0, 0, 0, 0,
-                            print labels[metric].map{}.join(", ")
+                            print labels[metric].map{}.join(",")
                         end
-                        print ", "
+                        print ","
                     end
                 end
                 debug_print(DEBUG_CSV, "[data] number of columns: #{ncolumn}\n")
