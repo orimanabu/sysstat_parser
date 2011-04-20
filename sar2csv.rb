@@ -24,7 +24,7 @@ opts.on("--help") do
 Usage: sar2csv [--os OS | --exclude REGEXP | --dump | --debug LEVEL | --header-only] SAR_OUTPUT
          parse SAR_OUTPUT and print in CSV format.
          OS is an operating system on which SAR_OUTPUT created.
-           "linux", "macosx", "solaris" is supported.
+           "linux", "macosx", and "solaris" are supported.
          SAR_OUTPUT is output of "sar -f SARDATA".
          You can exclude metrics using REGEXP.
 END

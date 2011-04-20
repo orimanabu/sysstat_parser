@@ -22,7 +22,7 @@ opts.on("--help") do
 Usage: vmstat2csv.rb [--os OS | --dump | --debug LEVEL] VMSTAT_OUTPUT
          parse VMSTAT_OUTPUT and print in CSV format.
          OS is an operating system on which VMSTAT_OUTPUT created.
-           "linux", "macosx", "solaris" is supported.
+           "linux", "macosx", and "solaris" are supported.
 END
     exit
 end
