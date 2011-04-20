@@ -62,17 +62,21 @@ then converted CSV lines are:
            "linux" or "macosx" is supported.
          You can exclude devices using REGEXP.
 
-* Modules
-** Supported sysstat commands:
-*** RHEL4, 5, 6
+* Supported/Tested sysstat commands:
+** RHEL4, 5, 6
   - sar
   - vmstat
   - iostat
 
-*** MacOSX 10.6
+** MacOSX 10.6
   - sar
   - vmstat
 
+** Solaris10
+  - sar
+  - vmstat
+
+* Modules
 ** Sysstat::Sar
 *** How to use:
   require 'sysstat/sar'
