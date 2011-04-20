@@ -2,6 +2,7 @@
 # -*- coding: utf-8; ruby-indent-level: 4 -*- vi: set ts=4 sw=4 et sts=4:
 
 require 'sysstat/sysstat'
+
 module Sysstat
     class Vmstat
         include Sysstat
@@ -74,7 +75,7 @@ module Sysstat
                 obj = LinuxVmstat.new
             when /macosx|darwin/
                 obj = MacOSXVmstat.new
-            when /sunos/
+            when /sunos|solaris/
                 obj = SunOSVmstat.new
             else
                 raise "Unknown OS: #{os}\n"

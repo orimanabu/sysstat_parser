@@ -122,7 +122,7 @@ module Sysstat
                 obj = LinuxIostat.new
             when /macosx|darwin/
                 obj = MacOSXIostat.new
-            when /sunos/
+            when /sunos|solaris/
                 obj = SunOSIostat.new
             else
                 raise "Unknown OS: #{os}\n"
