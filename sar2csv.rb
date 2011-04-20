@@ -5,18 +5,18 @@ require 'optparse'
 require 'sysstat/sar'
 
 options = Hash.new
-options['os'] = open('|uname -s') {|file| file.gets.chomp.downcase}
+options[:os] = %x{uname -s}.chomp
 opts = OptionParser.new
-opts.on("--os OS") { |os| options['os'] = os.downcase }
-opts.on("--exclude REGEXP") { |regexp| options['exclude_filter'] = regexp }
-opts.on("--dump") { |v| options['dump'] = v }
-opts.on("--header-only") { |v| options['header_only'] = v }
+opts.on("--os OS") { |os| options[:os] = os }
+opts.on("--exclude REGEXP") { |regexp| options[:exclude_filter] = regexp }
+opts.on("--dump") { |v| options[:dump] = v }
+opts.on("--header-only") { |v| options[:header_only] = v }
 opts.on("--debug LEVEL") do |level|
     case level
-    when "csv"      then options['debug'] = Sysstat::DEBUG_CSV
-    when "parse"    then options['debug'] = Sysstat::DEBUG_PARSE
-    when "all"      then options['debug'] = Sysstat::DEBUG_ALL
-    else                 optoins['debug'] = Sysstat::DEBUG_NONE
+    when "csv"      then options[:debug] = Sysstat::DEBUG_CSV
+    when "parse"    then options[:debug] = Sysstat::DEBUG_PARSE
+    when "all"      then options[:debug] = Sysstat::DEBUG_ALL
+    else                 optoins[:debug] = Sysstat::DEBUG_NONE
     end
 end
 opts.on("--help") do
@@ -32,11 +32,11 @@ END
 end
 opts.parse!(ARGV)
 
-sar = Sysstat::SarFactory.create(options['os'])
-sar.debug(options['debug'])
+sar = Sysstat::SarFactory.create(options[:os])
+sar.debug(options[:debug])
 sar.parse(ARGV.shift)
-(sar.dump; exit) if options['dump']
-sar.exclude_filter = /#{options['exclude_filter']}/ if options['exclude_filter']
+(sar.dump; exit) if options[:dump]
+sar.exclude_filter = /#{options[:exclude_filter]}/ if options[:exclude_filter]
 sar.print_csv_header
-exit if options['header_only']
+exit if options[:header_only]
 sar.print_csv_data

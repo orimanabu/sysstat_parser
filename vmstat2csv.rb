@@ -5,16 +5,16 @@ require 'optparse'
 require 'sysstat/vmstat'
 
 options = Hash.new
-options['os'] = open('|uname -s') {|file| file.gets.chomp.downcase}
+options[:os] = %x{uname -s}.chomp
 opts = OptionParser.new
-opts.on("--os OS") { |os| options['os'] = os.downcase }
-opts.on("--dump") { |v| options['dump'] = v }
+opts.on("--os OS") { |os| options[:os] = os }
+opts.on("--dump") { |v| options[:dump] = v }
 opts.on("--debug LEVEL") do |level|
     case level
-    when "csv"      then options['debug'] = Sysstat::DEBUG_CSV
-    when "parse"    then options['debug'] = Sysstat::DEBUG_PARSE
-    when "all"      then options['debug'] = Sysstat::DEBUG_ALL
-    else                 optoins['debug'] = Sysstat::DEBUG_NONE
+    when "csv"      then options[:debug] = Sysstat::DEBUG_CSV
+    when "parse"    then options[:debug] = Sysstat::DEBUG_PARSE
+    when "all"      then options[:debug] = Sysstat::DEBUG_ALL
+    else                 optoins[:debug] = Sysstat::DEBUG_NONE
     end
 end
 opts.on("--help") do
@@ -28,8 +28,8 @@ END
 end
 opts.parse!(ARGV)
 
-vmstat = Sysstat::VmstatFactory.create(options['os'])
-vmstat.debug(options['debug'])
+vmstat = Sysstat::VmstatFactory.create(options[:os])
+vmstat.debug(options[:debug])
 vmstat.parse(ARGV.shift)
-(vmstat.dump; exit) if options['dump']
+(vmstat.dump; exit) if options[:dump]
 vmstat.print_csv
