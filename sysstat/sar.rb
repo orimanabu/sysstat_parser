@@ -269,18 +269,18 @@ module Sysstat
     end
 
     class LinuxSar < Sar
-        def initialize
-            def parse_sysinfo(line)
-                if line =~ /^(Linux)\s+(\S+)\s+\((\S+)\)\s+(.*)/
-                    @sysinfo = {
-                        :os => Regexp.last_match(1),
-                        :kernel_version => Regexp.last_match(2),
-                        :hostname => Regexp.last_match(3),
-                        :date_str => Regexp.last_match(4)
-                    }
-                end
+        def parse_sysinfo(line)
+            if line =~ /^(Linux)\s+(\S+)\s+\((\S+)\)\s+(.*)/
+                @sysinfo = {
+                    :os => Regexp.last_match(1),
+                    :kernel_version => Regexp.last_match(2),
+                    :hostname => Regexp.last_match(3),
+                    :date_str => Regexp.last_match(4)
+                }
             end
+        end
 
+        def initialize
             super(
                 # Statistics covered with '-A' option:
                 SarMetric.new(
@@ -485,17 +485,17 @@ module Sysstat
     end
 
     class SunOSSar < Sar
-        def initialize
-            def parse_sysinfo(line)
-                if line =~ /^(SunOS)\s+(.*?)\s+([0-9\/]+)$/
-                    @sysinfo = {
-                        :os => Regexp.last_match(1),
-                        :kernel_version => Regexp.last_match(2),
-                        :date_str => Regexp.last_match[3]
-                    }
-                end
+        def parse_sysinfo(line)
+            if line =~ /^(SunOS)\s+(.*?)\s+([0-9\/]+)$/
+                @sysinfo = {
+                    :os => Regexp.last_match(1),
+                    :kernel_version => Regexp.last_match(2),
+                    :date_str => Regexp.last_match[3]
+                }
             end
+        end
 
+        def initialize
             super(
                 SarMetric.new(
                     '%usr',
