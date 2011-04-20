@@ -131,11 +131,60 @@ module Sysstat
         end
     end
 
-#    class SunOSVmstat < Vmstat
-#        def initialize
-#            super()
-#        end
-#    end
+    class SunOSVmstat < Vmstat
+        def initialize
+            super({
+                'ignore_regexp' => /^\s*(kthr|memory)/,
+                'header_regexp' => /^\s*(r\s+b\s+|swap)/
+            })
+            @header2label = {
+                'r' => 'kthr.r',
+                'b' => 'kthr.b',
+                'w' => 'kthr.w',
+                'swap' => 'memory.swap',
+                'free' => 'memory.free',
+                're' => 'page.re',
+                'mf' => 'page.mf',
+                'si' => 'page.si',
+                'so' => 'page.so',
+                'pi' => 'page.pi',
+                'po' => 'page.po',
+                'fr' => 'page.fr',
+                'de' => 'page.de',
+                'sr' => 'page.sr',
+                'f0' => 'disk.f0',
+                's0' => 'disk.s0',
+                's1' => 'disk.s1',
+                '--' => 'disk.--',
+#                 'in' => 'faults.in',
+#                 'sy' => 'faults.sy',
+#                 'cs' => 'faults.cs',
+#                 'us' => 'cpu.us',
+#                 'sy' => 'cpu.sy',
+#                 'id' => 'cpu.id',
+                'epi' => 'paging.epi',
+                'epo' => 'paging.epo',
+                'epf' => 'paging.epf',
+                'api' => 'paging.api',
+                'apo' => 'paging.apo',
+                'apf' => 'paging.apf',
+                'fpi' => 'paging.fpi',
+                'fpo' => 'paging.fpo',
+                'fpf' => 'paging.fpf'
+            }
+        end
+
+        def init_labels(line)
+            debug_print(DEBUG_ALL, "### init_labels ###\n")
+            line.gsub!(/^\s*/, "")
+            array = line.split(/\s+/)
+            array.each do |x|
+                label = @header2label[x] ? @header2label[x] : x
+                labels.push(label)
+            end
+            @labels_initialized = true
+        end
+   end
 end
 
 ## RHEL4
