@@ -178,7 +178,7 @@ module Sysstat
         end
 
         def print_csv_header
-            debug_print(DEBUG_PARSE, "=== csv header ===\n")
+            debug_print(DEBUG_CSV, "=== csv header ===\n")
             print %Q{"",}
             ncolumn = 0
             debug_print(DEBUG_CSV, "[label] number of metrics: #{data.keys.length}\n")
@@ -204,7 +204,7 @@ module Sysstat
         end
 
         def print_csv_data
-            debug_print(DEBUG_PARSE, "=== csv data ===\n")
+            debug_print(DEBUG_CSV, "=== csv data ===\n")
             get_times.each do |time|
                 next if time == "Average:"
                 print %Q{"#{time}",}
