@@ -23,7 +23,7 @@ opts.on("--help") do
 Usage: iostat2csv.rb [--os OS | --exclude REGEXP | --dump | --debug LEVEL] IOSTAT_OUTPUT
          parse VMSTAT_OUTPUT and print in CSV format.
          OS is an operating system on which IOSTAT_OUTPUT created.
-           "linux" or "macosx" is supported.
+           "linux", "macosx", "solaris" is supported.
          You can exclude devices using REGEXP.
 END
     exit
