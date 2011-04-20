@@ -5,7 +5,7 @@ Sysstat parsers written in ruby.
 *** Usage: sar2csv [--os OS | --exclude REGEXP | --dump | --debug LEVEL | --header-only] SAR_OUTPUT
          parse SAR_OUTPUT and print in CSV format.
          OS is an operating system on which SAR_OUTPUT created.
-           "linux" or "macosx" is supported.
+           "linux", "macosx", "solaris" is supported.
          SAR_OUTPUT is output of "sar -f SARDATA".
          You can exclude metrics using REGEXP.
 
@@ -53,13 +53,13 @@ then converted CSV lines are:
 *** Usage: vmstat2csv.rb [--os OS | --dump | --debug LEVEL] VMSTAT_OUTPUT
          parse VMSTAT_OUTPUT and print in CSV format.
          OS is an operating system on which VMSTAT_OUTPUT created.
-           "linux" or "macosx" is supported.
+           "linux", "macosx", "solaris" is supported.
 
 ** iostat2csv.rb
 *** Usage: iostat2csv.rb [--os OS | --exclude REGEXP | --dump | --debug LEVEL] IOSTAT_OUTPUT
          parse VMSTAT_OUTPUT and print in CSV format.
          OS is an operating system on which IOSTAT_OUTPUT created.
-           "linux" or "macosx" is supported.
+           "linux", "macosx", "solaris" is supported.
          You can exclude devices using REGEXP.
 
 * Supported/Tested sysstat commands:
