@@ -2,7 +2,7 @@ Sysstat parsers written in ruby.
 
 * Commands
 ** sar2csv.rb
-*** Usage: sar2csv.rb [--exclude REGEXP] SAR_OUTPUT
+*** Usage: sar2csv [--os OS | --exclude REGEXP | --dump | --debug LEVEL | --header-only] SAR_OUTPUT
          parse SAR_OUTPUT and print in CSV format.
          OS is an operating system on which SAR_OUTPUT created.
            "linux" or "macosx" is supported.
@@ -50,13 +50,13 @@ then converted CSV lines are:
   17:01:29, 0.00, 0.00, 0.01, 0.00, 0.00, 99.99, 0.00, 0.00, 0.00, 0.00, 0.00, 100.00, 0.00, 0.00, 0.00, 0.00, 0.00, 100.00, 80.80, 1.90, 1.90, 0.00,
 
 ** vmstat2csv.rb
-*** Usage: vmstat2csv.rb [--os OS | --debug LEVEL] VMSTAT_OUTPUT
+*** Usage: vmstat2csv.rb [--os OS | --dump | --debug LEVEL] VMSTAT_OUTPUT
          parse VMSTAT_OUTPUT and print in CSV format.
          OS is an operating system on which VMSTAT_OUTPUT created.
            "linux" or "macosx" is supported.
 
 ** iostat2csv.rb
-*** Usage: iostat2csv.rb [--os OS | --exclude REGEXP | --debug LEVEL] IOSTAT_OUTPUT
+*** Usage: iostat2csv.rb [--os OS | --exclude REGEXP | --dump | --debug LEVEL] IOSTAT_OUTPUT
          parse VMSTAT_OUTPUT and print in CSV format.
          OS is an operating system on which IOSTAT_OUTPUT created.
            "linux" or "macosx" is supported.
