@@ -9,6 +9,7 @@ options['os'] = open('|uname -s') {|file| file.gets.chomp.downcase}
 opts = OptionParser.new
 opts.on("--os OS") { |os| options['os'] = os.downcase }
 opts.on("--exclude REGEXP") { |regexp| options['exclude_filter'] = regexp }
+opts.on("--dump") { |v| options['dump'] = v }
 opts.on("--header-only") { |v| options['header_only'] = v }
 opts.on("--debug LEVEL") do |level|
     case level
@@ -34,7 +35,7 @@ opts.parse!(ARGV)
 sar = Sysstat::SarFactory.create(options['os'])
 sar.debug(options['debug'])
 sar.parse(ARGV.shift)
-#sar.dump
+(sar.dump; exit) if options['dump']
 sar.exclude_filter = /#{options['exclude_filter']}/ if options['exclude_filter']
 sar.print_csv_header
 exit if options['header_only']
