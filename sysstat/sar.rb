@@ -21,7 +21,7 @@ module Sysstat
 
     class SarMetric
         attr_reader :name
-        @@time_regexp = "\\d{2}:\\d{2}:\\d{2}|Average"
+        @@time_regexp = "\\d{2}:\\d{2}:\\d{2}(?:\s[AP]M)?|Average"
         def initialize(label_regexp, name, description, skip, *flag)
             @label_regexp = label_regexp
             @name = name
@@ -69,10 +69,11 @@ module Sysstat
 
     class Sar
         include Sysstat
-        attr_writer :exclude_filter
+        attr_writer :include_filter, :exclude_filter
         attr_reader :data, :metrics, :labels, :kernel_version, :hostname, :date_str
 
         def initialize(*metrics)
+            @include_filter = nil
             @exclude_filter = nil
             @data = Hash.new
             @metrics = Hash.new
@@ -124,8 +125,10 @@ module Sysstat
                     sd.time = current_time unless sd.time
 
                     debug_print(DEBUG_PARSE, "### data: #{sd.inspect}\n")
-                    @data[current_metric][sd.instance] = Hash.new unless @data[current_metric][sd.instance]
-                    @data[current_metric][sd.instance][sd.time] = sd.data
+#                    @data[current_metric][sd.instance] = Hash.new unless @data[current_metric][sd.instance]
+#                    @data[current_metric][sd.instance][sd.time] = sd.data
+                    @data[current_metric][sd.instance] = Array.new unless @data[current_metric][sd.instance]
+                    @data[current_metric][sd.instance].push(sd)
                     current_time = sd.time
                 end
                 nline = nline + 1
@@ -150,8 +153,9 @@ module Sysstat
         def get_times
             metric = data.keys[0]
             instance = data[metric].keys[0]
-            times = data[metric][instance].keys
-            return times.sort
+#            times = data[metric][instance].keys
+#            return times.sort
+            return data[metric][instance].map{|sd| sd.time}
         end
 
         def dump
@@ -171,6 +175,12 @@ module Sysstat
             end
         end
 
+        def match_include_filter(metric, instance)
+            return nil unless @include_filter
+            re = Regexp.new(@include_filter)
+            re =~ "#{metric}.#{instance}"
+        end
+
         def match_exclude_filter(metric, instance)
             return nil unless @exclude_filter
             re = Regexp.new(@exclude_filter)
@@ -188,6 +198,7 @@ module Sysstat
                 debug_print(DEBUG_CSV, "[label] #{data[metric].keys.sort.inspect}\n")
                 ncolumn = ncolumn + data[metric].keys.length
                 sort_instances(metric).each do |instance|
+                    next unless match_include_filter(metric, instance)
                     next if match_exclude_filter(metric, instance)
                     labels[metric].each do |column|
                         if instance == "none"
@@ -205,7 +216,9 @@ module Sysstat
 
         def print_csv_data
             debug_print(DEBUG_CSV, "=== csv data ===\n")
-            get_times.each do |time|
+            times = get_times
+            times.each_index do |t|
+                time = times[t]
                 next if time == "Average:"
                 print %Q{"#{time}",}
                 ncolumn = 0
@@ -215,10 +228,14 @@ module Sysstat
                     debug_print(DEBUG_CSV, "[data] #{data[metric].keys.inspect}\n")
                     ncolumn = ncolumn + data[metric].keys.length
                     sort_instances(metric).each do |instance|
-                        timedata = data[metric][instance]
+#                        timedata = data[metric][instance]
+                        sdarray = data[metric][instance]
+                        next unless match_include_filter(metric, instance)
                         next if match_exclude_filter(metric, instance)
-                        if timedata[time]
-                            print timedata[time].map{|v| %Q("#{v}")}.join(",")
+#                        if timedata[time]
+#                            print timedata[time].map{|v| %Q("#{v}")}.join(",")
+                        if sdarray[t].time == time
+                            print sdarray[t].data.map{|v| %Q("#{v}")}.join(",")
                         else
                             # if devices appear/disappear during sar mesurement, fill with blank columns.
                             # e.g. disk2 dissappears at 07:39:33 and appears again at 07:39:34
@@ -240,7 +257,7 @@ module Sysstat
                             #    07:39:32, 2, 16, 0, 0, 0, 0,
                             #    07:39:33, 1, 8, 0, 0, , ,
                             #    07:39:34, 0, 0, 0, 0, 0, 0,
-                            print labels[metric].map{}.join(",")
+#                            print labels[metric].map{}.join(",")
                         end
                         print ","
                     end
