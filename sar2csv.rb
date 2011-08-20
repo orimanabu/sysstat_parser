@@ -39,6 +39,7 @@ sar.parse(ARGV.shift)
 (sar.dump; exit) if options[:dump]
 sar.include_filter = /#{options[:include_filter]}/ if options[:include_filter]
 sar.exclude_filter = /#{options[:exclude_filter]}/ if options[:exclude_filter]
+sar.print_sysinfo
 sar.print_csv_header
 exit if options[:header_only]
 sar.print_csv_data

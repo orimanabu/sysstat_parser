@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
 # -*- coding: utf-8; ruby-indent-level: 4 -*- vi: set ts=4 sw=4 et sts=4:
 
+require 'time'
 require 'sysstat/sysstat'
 
 module Sysstat
@@ -98,6 +99,9 @@ module Sysstat
         end
 
         def parse_sysinfo(line)
+        end
+
+        def print_sysinfo
         end
 
         def parse(path)
@@ -214,13 +218,39 @@ module Sysstat
             print "\n"
         end
 
+        def parse_time(time_str, *adjust_days)
+            if @sysinfo[:date_str]
+                str = [@sysinfo[:date_str], time_str].join(' ')
+                tobj = Time.parse(str)
+                tobj + (60 * 60 * 24 * adjust_days[0])
+            else
+                tobj = Time.parse(time_str)
+            end
+        end
+
+        def format_time_csv(timeobj)
+            date = "%04d-%02d-%02d" % [timeobj.year, timeobj.month, timeobj.mday]
+            time = "%02d:%02d:%02d" % [timeobj.hour, timeobj.min, timeobj.min]
+            %Q{"#{date}","#{time}",}
+        end
+
         def print_csv_data
             debug_print(DEBUG_CSV, "=== csv data ===\n")
+            prev_unix_time = 0;
+            adjust_days = 0;
             times = get_times
             times.each_index do |t|
                 time = times[t]
                 next if time == "Average:"
-                print %Q{"#{time}",}
+
+                tobj = parse_time(time, adjust_days)
+                if (tobj.to_i < prev_unix_time)
+                    adjust_days = adjust_days + 1
+                    tobj = parse_time(time, adjust_days)
+                end
+                print format_time_csv(tobj)
+                prev_unix_time = tobj.to_i
+
                 ncolumn = 0
                 debug_print(DEBUG_CSV, "[data] number of metrics: #{data.keys.length}\n")
                 data.keys.sort.each do |metric|
@@ -299,6 +329,11 @@ module Sysstat
                     :date_str => Regexp.last_match(4)
                 }
             end
+        end
+
+        def print_sysinfo
+            print %Q{"#{@sysinfo[:os]}","#{@sysinfo[:kernel_version]}","#{@sysinfo[:hostname]}","#{@sysinfo[:date_str]}",}
+            print "\n"
         end
 
         def initialize
@@ -514,6 +549,11 @@ module Sysstat
                     :date_str => Regexp.last_match[3]
                 }
             end
+        end
+
+        def print_sysinfo
+            print %Q{"#{@sysinfo[:os]}","#{@sysinfo[:kernel_version]}","#{@sysinfo[:date_str]}",}
+            print "\n"
         end
 
         def initialize
