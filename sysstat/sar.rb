@@ -220,25 +220,25 @@ module Sysstat
             print "\n"
         end
 
-        def get_tobj_from_date_time(date_str, time_str, adjust_days)
+        def get_time_obj_from_date_time(date_str, time_str, adjust_days)
             str = [date_str, time_str].join(' ')
-            tobj = Time.parse(str)
-            tobj + (60 * 60 * 24 * adjust_days)
+            time_obj = Time.parse(str)
+            time_obj + (60 * 60 * 24 * adjust_days)
         end
 
         def parse_time(time_str, adjust_days)
             if @start_date
-                get_tobj_from_date_time(@start_date, time_str, adjust_days)
+                get_time_obj_from_date_time(@start_date, time_str, adjust_days)
             elsif @sysinfo[:date_str]
-                get_tobj_from_date_time(@sysinfo[:date_str], time_str, adjust_days)
+                get_time_obj_from_date_time(@sysinfo[:date_str], time_str, adjust_days)
             else
-                tobj = Time.parse(time_str)
+                time_obj = Time.parse(time_str)
             end
         end
 
-        def format_time_csv(timeobj)
-            date = "%04d-%02d-%02d" % [timeobj.year, timeobj.month, timeobj.mday]
-            time = "%02d:%02d:%02d" % [timeobj.hour, timeobj.min, timeobj.min]
+        def format_time_csv(time_obj)
+            date = "%04d-%02d-%02d" % [time_obj.year, time_obj.month, time_obj.mday]
+            time = "%02d:%02d:%02d" % [time_obj.hour, time_obj.min, time_obj.min]
             %Q{"#{date}","#{time}",}
         end
 
@@ -251,13 +251,13 @@ module Sysstat
                 time = times[t]
                 next if time == "Average:"
 
-                tobj = parse_time(time, adjust_days)
-                if (tobj.to_i < prev_unix_time)
+                time_obj = parse_time(time, adjust_days)
+                if (time_obj.to_i < prev_unix_time)
                     adjust_days = adjust_days + 1
-                    tobj = parse_time(time, adjust_days)
+                    time_obj = parse_time(time, adjust_days)
                 end
-                print format_time_csv(tobj)
-                prev_unix_time = tobj.to_i
+                print format_time_csv(time_obj)
+                prev_unix_time = time_obj.to_i
 
                 ncolumn = 0
                 debug_print(DEBUG_CSV, "[data] number of metrics: #{data.keys.length}\n")
