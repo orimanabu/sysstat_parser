@@ -234,7 +234,8 @@ module Sysstat
                         next if match_exclude_filter(metric, instance)
 #                        if timedata[time]
 #                            print timedata[time].map{|v| %Q("#{v}")}.join(",")
-                        if sdarray[t].time == time
+                        if sdarray[t] and sdarray[t].time == time
+                            debug_print(DEBUG_CSV, "[data] found: time=#{time}, metric=#{metric}, instance=#{instance}\n")
                             print sdarray[t].data.map{|v| %Q("#{v}")}.join(",")
                         else
                             # if devices appear/disappear during sar mesurement, fill with blank columns.
@@ -258,6 +259,9 @@ module Sysstat
                             #    07:39:33, 1, 8, 0, 0, , ,
                             #    07:39:34, 0, 0, 0, 0, 0, 0,
 #                            print labels[metric].map{}.join(",")
+                            debug_print(DEBUG_CSV, "[data] xxxxx: time=#{time}, metric=#{metric}, instance=#{instance}\n")
+                            sdarray.insert(t, []);
+                            print labels[metric].map{}.join(",")
                         end
                         print ","
                     end
