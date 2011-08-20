@@ -27,7 +27,7 @@ Usage: sar2csv [--os OS | --include REGEXP | --exclude REGEXP | --dump | --debug
          OS is an operating system on which SAR_OUTPUT created.
            "linux", "macosx", and "solaris" are supported.
          SAR_OUTPUT is output of "sar -f SARDATA".
-         You can exclude metrics using REGEXP.
+         You can include/exclude metrics using REGEXP.
 END
     exit
 end
