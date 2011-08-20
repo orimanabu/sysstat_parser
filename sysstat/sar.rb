@@ -71,11 +71,13 @@ module Sysstat
     class Sar
         include Sysstat
         attr_writer :include_filter, :exclude_filter
+        attr_writer :start_date
         attr_reader :data, :metrics, :labels, :kernel_version, :hostname, :date_str
 
         def initialize(*metrics)
             @include_filter = nil
             @exclude_filter = nil
+            @start_date = nil
             @data = Hash.new
             @metrics = Hash.new
             metrics.each do |m|
@@ -218,11 +220,17 @@ module Sysstat
             print "\n"
         end
 
-        def parse_time(time_str, *adjust_days)
-            if @sysinfo[:date_str]
-                str = [@sysinfo[:date_str], time_str].join(' ')
-                tobj = Time.parse(str)
-                tobj + (60 * 60 * 24 * adjust_days[0])
+        def get_tobj_from_date_time(date_str, time_str, adjust_days)
+            str = [date_str, time_str].join(' ')
+            tobj = Time.parse(str)
+            tobj + (60 * 60 * 24 * adjust_days)
+        end
+
+        def parse_time(time_str, adjust_days)
+            if @start_date
+                get_tobj_from_date_time(@start_date, time_str, adjust_days)
+            elsif @sysinfo[:date_str]
+                get_tobj_from_date_time(@sysinfo[:date_str], time_str, adjust_days)
             else
                 tobj = Time.parse(time_str)
             end

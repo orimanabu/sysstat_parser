@@ -12,6 +12,7 @@ opts.on("--include REGEXP") { |regexp| options[:include_filter] = regexp }
 opts.on("--exclude REGEXP") { |regexp| options[:exclude_filter] = regexp }
 opts.on("--dump") { |v| options[:dump] = v }
 opts.on("--header-only") { |v| options[:header_only] = v }
+opts.on("--start-date DATE") { |v| options[:start_date] = v }
 opts.on("--debug LEVEL") do |level|
     case level
     when "csv"      then options[:debug] = Sysstat::DEBUG_CSV
@@ -22,7 +23,7 @@ opts.on("--debug LEVEL") do |level|
 end
 opts.on("--help") do
     print <<END
-Usage: sar2csv [--os OS | --include REGEXP | --exclude REGEXP | --dump | --debug LEVEL | --header-only] SAR_OUTPUT
+Usage: sar2csv [--os OS | --include REGEXP | --exclude REGEXP | --dump | --debug LEVEL | --header-only | --start-date DATE] SAR_OUTPUT
          parse SAR_OUTPUT and print in CSV format.
          OS is an operating system on which SAR_OUTPUT created.
            "linux", "macosx", and "solaris" are supported.
@@ -39,6 +40,7 @@ sar.parse(ARGV.shift)
 (sar.dump; exit) if options[:dump]
 sar.include_filter = /#{options[:include_filter]}/ if options[:include_filter]
 sar.exclude_filter = /#{options[:exclude_filter]}/ if options[:exclude_filter]
+sar.start_date = options[:start_date] if options[:start_date]
 sar.print_sysinfo
 sar.print_csv_header
 exit if options[:header_only]
