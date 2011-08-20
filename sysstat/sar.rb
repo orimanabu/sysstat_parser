@@ -176,7 +176,7 @@ module Sysstat
         end
 
         def match_include_filter(metric, instance)
-            return nil unless @include_filter
+            return true unless @include_filter
             re = Regexp.new(@include_filter)
             re =~ "#{metric}.#{instance}"
         end
